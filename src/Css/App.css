@@ -1,3 +1,10 @@
-.App {
+body {
   background-color: #828d9b;
 }
+
+/*
+.App {
+    background-color: color.scale(#66717f, $lightness: 20%);
+
+}
+*/
