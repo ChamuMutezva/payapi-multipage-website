@@ -1,0 +1,6 @@
+@use 'sass:color';
+
+.App {
+    background-color: color.scale(#66717f, $lightness: 20%);
+
+}
