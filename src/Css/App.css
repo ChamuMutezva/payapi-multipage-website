@@ -1,10 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+*, *::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.btn {
+  max-width: 252px;
+  background-color: #BA4270;
+  color: #ffffff;
+  border: 1px solid transparent;
+  padding: 0.7rem 3rem;
+  border-radius: 24px;
+}
+
+header nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 24px;
+}
+header .menu__control {
+  position: relative;
+}
+header .close__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+header .hamburger, header .close__menu {
+  background: inherit;
+  border: transparent;
+}
+header .modal {
+  display: none;
+  position: absolute;
+  width: 50%;
+  width: 80%;
+  right: 0;
+  top: 0px;
+  background-color: #1b262f;
+}
+header .nav__list {
+  padding-top: 139px;
+  padding-bottom: 139px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+header .nav__list::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 1px;
+  background: white;
+  top: 95px;
+  left: 50%;
+  margin-left: -40%;
+}
+header li {
+  list-style: none;
+}
+header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 body {
   background-color: #828d9b;
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
 }
-
-/*
-.App {
-    background-color: color.scale(#66717f, $lightness: 20%);
-
-}
-*/

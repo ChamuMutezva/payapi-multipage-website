@@ -45,7 +45,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://modest-dubinsky-6fc7ee.netlify.app)
+[live site ](https://payapi-multipage-website.netlify.app/)
 
 ## My process
 
@@ -66,6 +66,14 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 **setting dart sass in react app**
 [set up instructions](https://medium.com/nerd-for-tech/add-sass-to-your-react-app-in-2021-here-is-how-c7260c323a5a)
+
+**centering an absolute positioned element**
+  - Add left: 50% to the element that you want to center. You will notice that this aligns the left edge of the child    element with the 50% line of the parent.
+  - Add a negative left margin that is equal to half the width of the element. This moves us back onto the halfway mark.
+  - Next, we’ll do a similar process for the vertical axis. Add top: 50% to the child
+  - And then add a negative top margin equal to half its height.
+
+[how to center an absolute positioned element](https://thoughtbot.com/blog/positioning)
 
 
 ```html

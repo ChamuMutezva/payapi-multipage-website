@@ -1,0 +1,61 @@
+@use '../../base';
+@use '../../components';
+header {
+    nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 24px;
+    }
+    .menu__control {
+        position: relative;
+    }
+    .close__menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .hamburger, .close__menu {
+        background: inherit;
+        border: transparent;
+    }
+    .modal {
+        display: none;
+        position: absolute;
+        width: 50%;
+        width: 80%;
+        right: 0;
+        top: 0px;
+        background-color: base.$bg-modal;
+       
+    }
+    .nav__list {
+        
+        padding-top: 139px;
+        padding-bottom: 139px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 56px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: 1px;
+            background: white;            
+            top: 95px;
+            left: 50%;            
+            margin-left: -40%;
+        }
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: base.$tx-white;
+    }
+}
