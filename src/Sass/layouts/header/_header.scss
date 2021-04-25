@@ -2,6 +2,19 @@
 @use '../../components';
 
 header {
+    position: relative;
+   padding-bottom: 40px;
+    &::before {
+       position: absolute;
+        content: "";
+        width: 100%;
+        min-height: 230px;
+       // background-color: base.$bg-main-color;
+        background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+    }
     nav {
         position: relative;
         display: flex;
@@ -18,13 +31,14 @@ header {
         position: absolute;
         top: 0;
         left: 0;
-        display: none;
+       // display: none;
     }
 
     .hamburger,
     .close__menu {
         background: inherit;
         border: transparent;
+       // display: none;
     }
 
     .modal {
@@ -63,7 +77,7 @@ header {
         list-style: none;
     }
 
-    a {
+    .anchor {
         text-decoration: none;
         color: base.$tx-white;
     }
@@ -84,5 +98,43 @@ header {
         letter-spacing: -0.25px;
         text-align: center;
         color: base.$tx-grey;
+        margin-bottom: 25px;
+    }
+
+    .modal__open{
+        display: block;
+    }    
+    .toggle__btn__close {
+        display: block;
+        position: relative;
+    }
+    .toggle__btn__open {
+        display: none;
+    }
+}
+
+.form {
+    position: relative;
+    .email {
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 327px;
+        padding: .7rem 1rem;
+        width: 100%;
+        border-radius: 24px;
+        border: 1px solid transparent;
+        font-weight: 700;
+    }
+    .form__questions {
+        margin: 24px auto 0;
+        text-align: center;
+        color: #6C8294;
+    }
+    .form__anchor {
+        color: #6C8294;
+        font-weight: 700;
+    }
+    .sr-only {
+        @include base.screen-reader;
     }
 }

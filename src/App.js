@@ -1,9 +1,9 @@
 import './Sass/App.scss'
-import AboutPage from './pages/about/about_page'
+import HomePage from './pages/home/header/Home_header'
 function App() {
   return (
     <div className="App">
-     <AboutPage />
+     <HomePage />
     </div>
   );
 }
