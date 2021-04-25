@@ -1,26 +1,32 @@
 @use '../../base';
 @use '../../components';
+
 header {
     nav {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 40px 24px;
+        padding: 40px 24px 0;
     }
+
     .menu__control {
         position: relative;
     }
+
     .close__menu {
         position: absolute;
         top: 0;
         left: 0;
         display: none;
     }
-    .hamburger, .close__menu {
+
+    .hamburger,
+    .close__menu {
         background: inherit;
         border: transparent;
     }
+
     .modal {
         display: none;
         position: absolute;
@@ -29,10 +35,11 @@ header {
         right: 0;
         top: 0px;
         background-color: base.$bg-modal;
-       
+
     }
+
     .nav__list {
-        
+
         padding-top: 139px;
         padding-bottom: 139px;
         display: flex;
@@ -45,17 +52,37 @@ header {
             content: "";
             width: 80%;
             height: 1px;
-            background: white;            
+            background: white;
             top: 95px;
-            left: 50%;            
+            left: 50%;
             margin-left: -40%;
         }
     }
+
     li {
         list-style: none;
     }
+
     a {
         text-decoration: none;
         color: base.$tx-white;
+    }
+
+    // hero section
+    .hero__summary {
+        padding: 0 24px;
+    }
+
+    .hero__img {
+        width: 52%;
+        margin: auto;
+    }
+
+    .hero__title {
+        font-size: base.calculateRem(32);
+        line-height: 36px;
+        letter-spacing: -0.25px;
+        text-align: center;
+        color: base.$tx-grey;
     }
 }

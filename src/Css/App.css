@@ -61,7 +61,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 24px;
+  padding: 40px 24px 0;
 }
 header .menu__control {
   position: relative;
@@ -72,7 +72,8 @@ header .close__menu {
   left: 0;
   display: none;
 }
-header .hamburger, header .close__menu {
+header .hamburger,
+header .close__menu {
   background: inherit;
   border: transparent;
 }
@@ -110,9 +111,24 @@ header a {
   text-decoration: none;
   color: #ffffff;
 }
+header .hero__summary {
+  padding: 0 24px;
+}
+header .hero__img {
+  width: 52%;
+  margin: auto;
+}
+header .hero__title {
+  font-size: 2rem;
+  line-height: 36px;
+  letter-spacing: -0.25px;
+  text-align: center;
+  color: #36536b;
+}
 
 body {
   background-color: #828d9b;
   font-family: "Public Sans", sans-serif;
   font-size: 15px;
+  overflow-x: hidden;
 }
