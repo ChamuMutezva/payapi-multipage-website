@@ -48,7 +48,7 @@ img:not([alt]) {
   }
 }
 .btn {
-  max-width: 327px;
+  max-width: 252px;
   width: 100%;
   background-color: #BA4270;
   color: #ffffff;
@@ -58,9 +58,22 @@ img:not([alt]) {
   margin: auto;
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .btn {
+    margin: 0;
+    display: inline-block;
+  }
+}
 
 .js__primary {
   font-weight: 700;
+  max-width: 327px;
+}
+@media screen and (min-width: 768px) {
+  .js__primary {
+    margin: auto;
+    display: block;
+  }
 }
 
 header {
@@ -105,14 +118,15 @@ header .modal {
   right: 0;
   top: 0px;
   background-color: #1b262f;
+  padding-bottom: 335px;
 }
 header .nav__list {
   padding-top: 139px;
-  padding-bottom: 139px;
+  padding-bottom: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 56px;
+  gap: 32px;
 }
 header .nav__list::before {
   position: absolute;
@@ -155,6 +169,37 @@ header .toggle__btn__close {
 }
 header .toggle__btn__open {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  header::before {
+    min-height: 340px;
+    background-position: 50% 100%;
+    background-size: 120%;
+  }
+  header .menu__control {
+    display: none;
+  }
+  header .modal {
+    padding-bottom: 10px;
+    background-color: transparent;
+  }
+  header .modal__open {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header .nav__list {
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: flex-start;
+  }
+  header .nav__list::before {
+    width: 0;
+  }
+  header .anchor {
+    color: #36536b;
+  }
 }
 
 .form {

@@ -1,16 +1,27 @@
 @use '../base';
+
 .btn {
-	max-width: 327px;
+	max-width: 252px;
 	width: 100%;
 	background-color: base.$bg-btn-pink;
-    color: base.$tx-white;
+	color: base.$tx-white;
 	border: 1px solid transparent;
 	padding: 0.7rem 3rem;
 	border-radius: 24px;
 	margin: auto;
 	display: block;
+
+	@include base.mQ(768px) {
+		margin: 0;
+		display: inline-block;
+	}
 }
 
 .js__primary {
 	font-weight: 700;
+	max-width: 327px;
+	@include base.mQ(768px) {
+		margin: auto;
+		display: block;
+	}
 }

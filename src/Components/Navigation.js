@@ -35,19 +35,10 @@ const Navigation = () => {
                             contact
                             </a>
                     </li>
-                    <li>
-                        <Buttton />
-                    </li>
-                </ul>
-                {/*
-             .toggle__btn__close {
-        display: block;
-    }
-    .toggle__btn__open {
-        display: none;
-    }
-            */}
 
+                </ul>
+
+                <Buttton />
             </div>
             <div className="menu__control">
                 <button className={`hamburger ${ShowMenu ? "toggle__btn__close" : "toggle__btn__open"}`} onClick={hamburgerClick}>
