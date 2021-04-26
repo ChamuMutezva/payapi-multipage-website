@@ -223,9 +223,9 @@ header .toggle__btn__open {
 }
 @media screen and (min-width: 1280px) {
   header::before {
-    min-height: 420px;
-    background-position: 105% 105%;
-    background-size: 39%;
+    min-height: 640px;
+    background-position: 130% 140%;
+    background-size: 55%;
   }
   header nav {
     padding: 40px 165px 0;
@@ -239,7 +239,7 @@ header .toggle__btn__open {
     display: flex;
     flex-direction: row-reverse;
     padding: 0 165px;
-    margin-top: 56px;
+    margin-top: 32px;
   }
   header .hero__container {
     flex: 1 1 40%;
@@ -253,8 +253,11 @@ header .toggle__btn__open {
     font-size: 4.5rem;
     line-height: 72px;
     letter-spacing: -0.55px;
-    margin-top: 100px;
+    margin-top: -54px;
     margin-bottom: 54px;
+  }
+  header .hero__img {
+    width: 95%;
   }
 }
 
