@@ -79,6 +79,12 @@ img:not([alt]) {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .js__secondary--btn {
+    margin-right: 165px;
+  }
+}
+
 header {
   position: relative;
   padding-bottom: 40px;
@@ -213,6 +219,21 @@ header .toggle__btn__open {
     font-size: 3rem;
     line-height: 56px;
     letter-spacing: -0.37px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header::before {
+    min-height: 340px;
+    background-position: 105% 105%;
+    background-size: 39%;
+  }
+  header nav {
+    padding: 40px 165px 0;
+  }
+  header .modal {
+    width: 75%;
+    justify-content: space-between;
+    margin: auto;
   }
 }
 

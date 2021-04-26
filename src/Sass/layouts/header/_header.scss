@@ -173,6 +173,23 @@ header {
         }
 
     }
+    //desktop
+
+    @include base.mQ(1280px) {
+        &::before {
+            min-height: 340px;
+            background-position: 105% 105%;
+            background-size: 39%;
+        }
+        nav {
+            padding: 40px 165px 0;
+        }
+        .modal {
+            width: 75%;
+            justify-content: space-between;
+            margin: auto;
+        }
+    }
 }
 
 .form {

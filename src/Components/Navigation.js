@@ -38,7 +38,7 @@ const Navigation = () => {
 
                 </ul>
 
-                <Buttton />
+                <Buttton secondary={true}/>
             </div>
             <div className="menu__control">
                 <button className={`hamburger ${ShowMenu ? "toggle__btn__open" : "toggle__btn__close"}`} onClick={hamburgerClick}>
