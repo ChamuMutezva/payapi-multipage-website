@@ -84,17 +84,17 @@ header {
         color: base.$tx-white;
     }
 
-    // hero section
-    .hero__summary {
+    // cta section
+    .cta__summary {
         padding: 0 24px;
     }
 
-    .hero__img {
+    .cta__img {
         width: 52%;
         margin: auto;
     }
 
-    .hero__title {
+    .cta__title {
         font-size: base.calculateRem(32);
         font-family: base.$heading-font;
         line-height: 36px;
@@ -160,13 +160,13 @@ header {
             color: base.$tx-grey;
         }
 
-        // hero section
-        .hero__summary {
+        // cta section
+        .cta__summary {
             max-width: 573px;
             margin: auto;
         }
 
-        .hero__title {
+        .cta__title {
             font-size: base.calculateRem(48);
             line-height: 56px;
             letter-spacing: -0.37px;
@@ -193,23 +193,23 @@ header {
             margin: auto;
         }
 
-        .hero {
+        .cta {
             display: flex;
             flex-direction: row-reverse;
             padding: 0 165px;
             margin-top: 32px;
         }
 
-        .hero__container {
+        .cta__container {
             flex: 1 1 40%;
         }
 
-        .hero__summary {
+        .cta__summary {
             flex: 1 1 60%;
             max-width: 100%;
         }
 
-        .hero__title {
+        .cta__title {
             text-align: left;
             font-size: base.calculateRem(72);
             line-height: 72px;
@@ -217,7 +217,7 @@ header {
             margin-top: -54px;
             margin-bottom: 54px;
         }
-        .hero__img {
+        .cta__img {
             width: 95%;          
         }
     }
@@ -235,6 +235,9 @@ header {
         border-radius: 24px;
         border: 1px solid transparent;
         font-weight: 700;
+    }
+    &:focus-within {
+        border: 2px solid rgb(29, 4, 4);
     }
 
     .form__questions {
