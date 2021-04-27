@@ -1,0 +1,46 @@
+@use '../base';
+
+.card {
+    margin-bottom: 35px;
+    margin-top: 15px;
+    padding: 0 24px;
+
+    .card__title {
+        text-align: center;
+        font-size: base.calculateRem(36);
+        line-height: 36px;
+        letter-spacing: -0.26px;
+        font-family: base.$heading-font;
+        color: base.$tx-grey;
+    }
+    .card__subtitle {
+        font-family: base.$heading-font;
+        color: base.$tx-grey;
+        text-align: center;
+        font-size: base.calculateRem(18);
+        line-height: 25px;
+        letter-spacing: -0.14px;
+    }
+
+    .card__description {
+        margin-top: 25px;
+    }
+
+    .card__summary {
+        font-size: base.calculateRem(15);
+        line-height: 28px;
+        font-weight: 300;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .card__img {
+        margin: auto;
+        width: 100%;
+    }
+
+    .js__primaryImg {
+        width: 32%;
+        margin: auto;
+    }
+}

@@ -85,6 +85,46 @@ img:not([alt]) {
   }
 }
 
+.card {
+  margin-bottom: 35px;
+  margin-top: 15px;
+  padding: 0 24px;
+}
+.card .card__title {
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 36px;
+  letter-spacing: -0.26px;
+  font-family: "DM Serif Display", serif;
+  color: #36536b;
+}
+.card .card__subtitle {
+  font-family: "DM Serif Display", serif;
+  color: #36536b;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 25px;
+  letter-spacing: -0.14px;
+}
+.card .card__description {
+  margin-top: 25px;
+}
+.card .card__summary {
+  font-size: 0.9375rem;
+  line-height: 28px;
+  font-weight: 300;
+  padding: 20px 0;
+  text-align: center;
+}
+.card .card__img {
+  margin: auto;
+  width: 100%;
+}
+.card .js__primaryImg {
+  width: 32%;
+  margin: auto;
+}
+
 header {
   position: relative;
   padding-bottom: 40px;
