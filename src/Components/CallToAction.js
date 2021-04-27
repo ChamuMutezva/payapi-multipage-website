@@ -1,8 +1,8 @@
 import Button from './Button'
-const CallToAction = () => {
+const CallToAction = (props) => {
     return (
         <div className="cta__summary">
-            <h1 className="cta__title">Start building with our APIs for absolutely free.</h1>
+            <h1 className="cta__title">{props.ctaTitle}</h1>
             <form className="form">
                 <label className="sr-only" htmlFor="email">Email (Required):</label>
                 <input type="email"

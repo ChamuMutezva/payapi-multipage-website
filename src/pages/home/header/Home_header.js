@@ -9,7 +9,7 @@ const HomeHeader = () => {
                 <div className="cta__container">
                     <img className="cta__img" src={Phone_img} alt="payapi in action on mobile phone" />
                 </div>
-                <CallToAction />
+                <CallToAction ctaTitle="Start building with our APIs for absolutely free."/>
             </div>
 
         </header>

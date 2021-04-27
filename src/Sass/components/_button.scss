@@ -11,7 +11,7 @@
 	margin: auto;
 	display: block;
 
-	@include base.mQ(768px) {
+	@include base.mQ(720px) {
 		margin: 0;
 		max-width: 173px;
 		display: inline-block;
@@ -23,7 +23,7 @@
 	font-weight: 700;
 	max-width: 327px;
 
-	@include base.mQ(768px) {
+	@include base.mQ(720px) {
 		max-width: 173px;
 		margin-left: -48px;
 		display: inline-block;

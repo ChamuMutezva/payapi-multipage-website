@@ -1,5 +1,5 @@
 import './Sass/App.scss'
-import HomePage from './pages/home/header/Home_header'
+import HomePage from './pages/home/home_page'
 function App() {
   return (
     <div className="App">

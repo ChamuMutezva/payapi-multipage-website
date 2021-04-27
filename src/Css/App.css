@@ -58,7 +58,7 @@ img:not([alt]) {
   margin: auto;
   display: block;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .btn {
     margin: 0;
     max-width: 173px;
@@ -71,7 +71,7 @@ img:not([alt]) {
   font-weight: 700;
   max-width: 327px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .js__primary {
     max-width: 173px;
     margin-left: -48px;
@@ -153,6 +153,7 @@ header li {
 header .anchor {
   text-decoration: none;
   color: #ffffff;
+  font-weight: 700;
 }
 header .cta__summary {
   padding: 0 24px;
@@ -180,11 +181,17 @@ header .toggle__btn__close {
 header .toggle__btn__open {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   header::before {
     min-height: 340px;
     background-position: 50% 100%;
     background-size: 120%;
+  }
+  header .cta__container {
+    margin-top: 25px;
+  }
+  header .cta__img {
+    width: 32%;
   }
   header .menu__control {
     display: none;
@@ -219,9 +226,13 @@ header .toggle__btn__open {
     font-size: 3rem;
     line-height: 56px;
     letter-spacing: -0.37px;
+    margin-top: -20px;
   }
 }
 @media screen and (min-width: 1280px) {
+  header {
+    padding-bottom: 0;
+  }
   header::before {
     min-height: 640px;
     background-position: 130% 140%;
@@ -294,18 +305,131 @@ header .toggle__btn__open {
   height: 1px;
   overflow: hidden;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .form .email {
     margin: 0;
     display: inline-block;
   }
   .form .form__questions {
-    text-align: left;
+    text-align: center;
   }
 }
 @media screen and (min-width: 1280px) {
   .form .email {
     max-width: 295px;
+  }
+  .form .form__questions {
+    text-align: left;
+  }
+}
+
+.main {
+  margin-top: 48px;
+}
+.main .hero__container {
+  background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: 50% -110%;
+  background-color: #1b262f;
+  padding-bottom: 100px;
+}
+.main .hero__images {
+  padding: 52px 24px;
+  max-width: 536px;
+  display: grid;
+  grid-gap: 30px 0;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  place-items: center;
+  margin: auto;
+}
+.main .hero__images .hero__img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+@media screen and (min-width: 375px) {
+  .main .hero__images {
+    place-items: flex-start;
+  }
+  .main .hero__images .hero__img:nth-child(2n) {
+    justify-self: end;
+  }
+}
+@media screen and (min-width: 498px) {
+  .main .hero__images .hero__img:not(:first-child) {
+    justify-self: end;
+  }
+  .main .hero__images .hero__img:nth-child(4n) {
+    justify-self: start;
+  }
+  .main .hero__images .hero__img:nth-child(5n) {
+    justify-self: center;
+  }
+}
+.main .hero__signup {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 5px;
+  max-width: 457px;
+  margin: auto;
+}
+.main .hero__title {
+  font-size: 2rem;
+  line-height: 36px;
+  font-family: "DM Serif Display", serif;
+  letter-spacing: -0.25px;
+}
+.main .hero__summary {
+  font-size: 0.9375rem;
+  line-height: 28px;
+  font-weight: 200;
+  padding: 12px 24px;
+}
+.main .link--btn {
+  font-size: 1rem;
+  letter-spacing: -0.12px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  padding: 0.9rem 1.8rem;
+  border-radius: 24px;
+  display: block;
+  margin: 56px auto 0;
+  max-width: 130px;
+}
+@media screen and (min-width: 720px) {
+  .main {
+    margin-top: 60px;
+  }
+  .main .hero__container {
+    background-size: 50%;
+    background-position: -25% 130%;
+    padding-top: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main {
+    margin-top: -61px;
+  }
+  .main .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: center;
+    padding: 0 165px;
+  }
+  .main .hero__title {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 56px;
+    letter-spacing: -0.37px;
+  }
+  .main .hero__summary {
+    text-align: left;
+    padding: 20px 0;
+  }
+  .main .link--btn {
+    margin-left: 0;
   }
 }
 

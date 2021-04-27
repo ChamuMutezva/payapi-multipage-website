@@ -1,0 +1,95 @@
+@use '../../base';
+@use '../../components';
+
+.main {
+    margin-top: 48px;
+
+    .hero__container {
+        background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-size: 120%;
+        background-position: 50% -110%;
+        background-color: base.$bg-dark-grey;
+        padding-bottom: 100px;
+    }
+
+    .hero__images {
+        @include base.home-hero-img;
+    }
+
+    .hero__signup {
+        color: base.$tx-white;
+        text-align: center;
+        padding-top: 5px;
+        max-width: 457px;
+        margin: auto;
+    }
+
+    .hero__title {
+        font-size: base.calculateRem(32);
+        line-height: 36px;
+        font-family: base.$heading-font;
+        letter-spacing: -0.25px;
+    }
+
+    .hero__summary {
+        font-size: base.calculateRem(15);
+        line-height: 28px;
+        font-weight: 200;
+        padding: 12px 24px;
+    }
+
+    .link--btn {
+        font-size: 1rem;
+        letter-spacing: -0.12px;
+        color: white;
+        text-decoration: none;
+        border: 1px solid base.$tx-white;
+        padding: 0.9rem 1.8rem;
+        border-radius: 24px;
+        display: block;
+        margin: 56px auto 0;
+        max-width: 130px;
+    }
+
+    @include base.mQ(720px) {
+        margin-top: 60px;
+
+        .hero__container {
+            background-size: 50%;
+            background-position: -25% 130%;
+            padding-top: 100px;
+        }
+
+
+    }
+
+    @include base.mQ(1280px) {
+        margin-top: -61px;
+
+        .hero {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: left;
+            align-items: center;
+            padding: 0 165px;
+        }
+
+        .hero__title {
+            text-align: left;
+            font-size: base.calculateRem(48);
+            line-height: 56px;
+            letter-spacing: -0.37px;
+        }
+
+        .hero__summary {
+            text-align: left;
+            padding: 20px 0;
+        }
+
+        .link--btn {
+            margin-left: 0;
+        }
+    }
+}

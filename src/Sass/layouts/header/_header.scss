@@ -50,7 +50,7 @@ header {
         width: 80%;
         right: 0;
         top: 0px;
-        background-color: base.$bg-modal;
+        background-color: base.$bg-dark-grey;
         padding-bottom: 335px;
     }
 
@@ -82,6 +82,7 @@ header {
     .anchor {
         text-decoration: none;
         color: base.$tx-white;
+        font-weight: 700;
     }
 
     // cta section
@@ -117,11 +118,19 @@ header {
         display: none;
     }
 
-    @include base.mQ(768px) {
+    @include base.mQ(720px) {
         &::before {
             min-height: 340px;
             background-position: 50% 100%;
             background-size: 120%;
+        }
+
+        .cta__container {
+            margin-top: 25px;
+        }
+
+        .cta__img {
+            width: 32%;
         }
 
         .menu__control {
@@ -134,11 +143,6 @@ header {
             align-items: center;
             padding-bottom: 10px;
             background-color: transparent;
-        }
-
-        .modal__open {
-            //  display: flex;
-
         }
 
         nav {
@@ -170,6 +174,7 @@ header {
             font-size: base.calculateRem(48);
             line-height: 56px;
             letter-spacing: -0.37px;
+            margin-top: -20px;
         }
 
     }
@@ -177,6 +182,7 @@ header {
     //desktop
 
     @include base.mQ(1280px) {
+        padding-bottom: 0;
         &::before {
             min-height: 640px;
             background-position: 130% 140%;
@@ -217,8 +223,9 @@ header {
             margin-top: -54px;
             margin-bottom: 54px;
         }
+
         .cta__img {
-            width: 95%;          
+            width: 95%;
         }
     }
 }
@@ -236,6 +243,7 @@ header {
         border: 1px solid transparent;
         font-weight: 700;
     }
+
     &:focus-within {
         border: 2px solid rgb(29, 4, 4);
     }
@@ -256,19 +264,24 @@ header {
         @include base.screen-reader;
     }
 
-    @include base.mQ(768px) {
+    @include base.mQ(720px) {
+
         .email {
             margin: 0;
             display: inline-block;
         }
+
         .form__questions {
-            text-align: left;
+            text-align: center;
         }
     }
 
     @include base.mQ(1280px) {
         .email {
             max-width: 295px;
+        }
+        .form__questions {
+            text-align: left;
         }
     }
 
