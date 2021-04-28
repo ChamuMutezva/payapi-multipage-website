@@ -163,6 +163,7 @@ header nav {
 }
 header .menu__control {
   position: relative;
+  z-index: 3;
 }
 header .close__menu {
   position: absolute;
@@ -228,6 +229,7 @@ header .cta__title {
 }
 header .modal__open {
   display: block;
+  z-index: 2;
 }
 header .toggle__btn__close {
   display: block;
@@ -329,6 +331,7 @@ header .toggle__btn__open {
 
 .form {
   position: relative;
+  z-index: 1;
 }
 .form .email {
   display: block;

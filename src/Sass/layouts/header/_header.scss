@@ -27,6 +27,7 @@ header {
 
     .menu__control {
         position: relative;
+        z-index: 3;
     }
 
     .close__menu {
@@ -52,6 +53,7 @@ header {
         top: 0px;
         background-color: base.$bg-dark-grey;
         padding-bottom: 335px;
+      //  z-index: 2;
     }
 
     .nav__list {
@@ -107,6 +109,7 @@ header {
 
     .modal__open {
         display: block;
+        z-index: 2;
     }
 
     .toggle__btn__close {
@@ -232,7 +235,7 @@ header {
 
 .form {
     position: relative;
-
+    z-index: 1;
     .email {
         display: block;
         margin: 0 auto 20px;
