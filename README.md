@@ -44,8 +44,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-[live site ](https://payapi-multipage-website.netlify.app/)
+- Live URL: [Payapi](https://payapi-multipage-website.netlify.app/)
 
 ## My process
 

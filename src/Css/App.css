@@ -124,6 +124,21 @@ img:not([alt]) {
   width: 32%;
   margin: auto;
 }
+@media screen and (min-width: 720px) {
+  .card {
+    padding: 0;
+  }
+  .card .cards__two {
+    padding: 0 39px;
+    display: flex;
+    margin: auto;
+  }
+  .card .card__title {
+    font-size: 3rem;
+    line-height: 36px;
+    letter-spacing: -0.37px;
+  }
+}
 
 header {
   position: relative;

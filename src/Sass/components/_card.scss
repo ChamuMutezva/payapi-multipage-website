@@ -13,6 +13,7 @@
         font-family: base.$heading-font;
         color: base.$tx-grey;
     }
+
     .card__subtitle {
         font-family: base.$heading-font;
         color: base.$tx-grey;
@@ -42,5 +43,22 @@
     .js__primaryImg {
         width: 32%;
         margin: auto;
+    }
+
+    @include base.mQ(720px) {
+
+         padding: 0 ;
+        // max-width: 573px;
+        .cards__two {
+            padding: 0 39px;
+            display: flex;
+            margin: auto;
+        }
+
+        .card__title {
+            font-size: base.calculateRem(48);
+            line-height: 36px;
+            letter-spacing: -0.37px;
+        }
     }
 }
