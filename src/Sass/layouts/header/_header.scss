@@ -93,7 +93,7 @@ header {
     }
 
     .cta__img {
-        width: 52%;
+        width: 54%;
         margin: auto;
     }
 
@@ -103,7 +103,7 @@ header {
         line-height: 36px;
         letter-spacing: -0.25px;
         text-align: center;
-        color: base.$tx-grey;
+        color: base.$tx-dark-grey;
         margin-bottom: 25px;
     }
 
@@ -164,7 +164,7 @@ header {
         }
 
         .anchor {
-            color: base.$tx-grey;
+            color: base.$tx-dark-grey;
         }
 
         // cta section
