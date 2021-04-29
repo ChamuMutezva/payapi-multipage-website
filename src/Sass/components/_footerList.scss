@@ -8,11 +8,21 @@
     background-color: #1b262f;
     padding-bottom: 100px;
 
+    .logo--link {
+       // background-color: turquoise;
+        &:focus > img {
+            outline: 2px solid base.$anchor-focus;
+        }
+    }
+
     .footer__logo {
         margin: auto;
         padding-top: 45px;
         padding-bottom: 40px;
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        &:focus {
+            outline: 2px solid base.$anchor-focus;
+        }
     }
 }
 
@@ -30,6 +40,9 @@
     .anchor {
         color: base.$tx-white;
         text-decoration: none;
+        &:focus {
+            outline: 2px solid base.$anchor-focus;
+        }
     }
 
     
@@ -40,7 +53,11 @@
     justify-content: center;
     align-items: center;
     margin-top: 45px;
+
     .anchor {
+        &:focus {
+            outline: 2px solid base.$anchor-focus;
+        }
         &:not(:last-child) {
             margin-right: 25px;
         }
