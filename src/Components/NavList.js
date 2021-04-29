@@ -1,6 +1,7 @@
-const NavListItems = () => {
+const NavListItems = (props) => {
+    const footerList = props.footerList ? "js__footer__list" : ""
     return (
-        <ul className="nav__list">
+        <ul className={`nav__list ${footerList}`}>
             <li className="nav__list__item">
                 <a href="/" className="anchor">
                     Pricing

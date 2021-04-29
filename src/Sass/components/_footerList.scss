@@ -1,0 +1,48 @@
+@use '../base';
+
+.footer {
+    background-image: url('../../assets/shared//desktop//bg-pattern-circle.svg');
+    background-repeat: no-repeat;
+    background-size: 144%;
+    background-position: -80px 180px;
+    background-color: #1b262f;
+    padding-bottom: 100px;
+
+    .footer__logo {
+        margin: auto;
+        padding-top: 45px;
+        padding-bottom: 40px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    }
+}
+
+.js__footer__list {
+    text-align: center;
+
+    .nav__list__item {
+        list-style-type: none;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .anchor {
+        color: base.$tx-white;
+        text-decoration: none;
+    }
+
+    
+}
+
+.social__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    .anchor {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+}

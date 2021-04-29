@@ -19,8 +19,7 @@ const Navigation = () => {
                     <img src={Logo} alt="well come to payapi" />
                 </a>
             </div>
-            <div className={`modal ${ShowMenu ? "modal__open" : ""}`}>
-                
+            <div className={`modal ${ShowMenu ? "modal__open" : ""}`}>                
                 <NavListItems />
                 <Buttton secondary={true}/>
             </div>

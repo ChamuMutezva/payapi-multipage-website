@@ -17,6 +17,16 @@ header {
         opacity: 0.4;
     }
 
+    .logo--link { 
+        &:focus > img {
+            outline: 2px solid base.$anchor-focus;
+        }
+        img {
+           // outline: 2px solid transparent;
+            padding: .4rem;
+        }       
+    }
+
     nav {
         position: relative;
         display: flex;
@@ -41,7 +51,10 @@ header {
     .close__menu {
         background: inherit;
         border: transparent;
-        // display: none;
+        
+        &:focus {
+            outline: 3px dotted base.$anchor-focus;
+        }
     }
 
     .modal {
@@ -85,6 +98,12 @@ header {
         text-decoration: none;
         color: base.$tx-white;
         font-weight: 700;
+        border: 2px solid transparent;
+
+        &:focus {
+            outline: 2px solid base.$anchor-focus;
+        }
+
     }
 
     // cta section
@@ -243,8 +262,12 @@ header {
         padding: .7rem 1rem;
         width: 100%;
         border-radius: 24px;
-        border: 1px solid transparent;
+        border: 3px solid transparent;
         font-weight: 700;
+
+        &:focus {
+            outline: 3px solid base.$anchor-focus;
+        }
     }
 
     &:focus-within {

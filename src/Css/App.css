@@ -52,11 +52,14 @@ img:not([alt]) {
   width: 100%;
   background-color: #BA4270;
   color: #ffffff;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   padding: 0.7rem 3rem;
   border-radius: 24px;
   margin: auto;
   display: block;
+}
+.btn:focus {
+  outline: 3px solid black;
 }
 @media screen and (min-width: 720px) {
   .btn {
@@ -190,6 +193,45 @@ img:not([alt]) {
   padding-bottom: 50px;
 }
 
+.footer {
+  background-image: url("../../assets/shared//desktop//bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-size: 144%;
+  background-position: -80px 180px;
+  background-color: #1b262f;
+  padding-bottom: 100px;
+}
+.footer .footer__logo {
+  margin: auto;
+  padding-top: 45px;
+  padding-bottom: 40px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.js__footer__list {
+  text-align: center;
+}
+.js__footer__list .nav__list__item {
+  list-style-type: none;
+}
+.js__footer__list .nav__list__item:not(:last-child) {
+  margin-bottom: 25px;
+}
+.js__footer__list .anchor {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.social__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+.social__icons .anchor:not(:last-child) {
+  margin-right: 25px;
+}
+
 header {
   position: relative;
   padding-bottom: 40px;
@@ -203,6 +245,12 @@ header::before {
   background-position: 50% 100%;
   background-repeat: no-repeat;
   opacity: 0.4;
+}
+header .logo--link:focus > img {
+  outline: 2px solid #BA4270;
+}
+header .logo--link img {
+  padding: 0.4rem;
 }
 header nav {
   position: relative;
@@ -224,6 +272,10 @@ header .hamburger,
 header .close__menu {
   background: inherit;
   border: transparent;
+}
+header .hamburger:focus,
+header .close__menu:focus {
+  outline: 3px dotted #BA4270;
 }
 header .modal {
   display: none;
@@ -260,6 +312,10 @@ header .anchor {
   text-decoration: none;
   color: #ffffff;
   font-weight: 700;
+  border: 2px solid transparent;
+}
+header .anchor:focus {
+  outline: 2px solid #BA4270;
 }
 header .cta__summary {
   padding: 0 24px;
@@ -390,8 +446,11 @@ header .toggle__btn__open {
   padding: 0.7rem 1rem;
   width: 100%;
   border-radius: 24px;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   font-weight: 700;
+}
+.form .email:focus {
+  outline: 3px solid #BA4270;
 }
 .form:focus-within {
   border: 2px solid #1d0404;
@@ -498,12 +557,16 @@ header .toggle__btn__open {
   letter-spacing: -0.12px;
   color: white;
   text-decoration: none;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   padding: 0.9rem 1.8rem;
   border-radius: 24px;
   display: block;
   margin: 56px auto 0;
   max-width: 130px;
+}
+.main .link--btn:focus {
+  outline: 2px solid #BA4270;
+  border: 2px solid transparent;
 }
 @media screen and (min-width: 720px) {
   .main {
