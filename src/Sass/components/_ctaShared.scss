@@ -1,0 +1,18 @@
+@use '../base';
+
+.cta__summary__shared {
+    .cta__title {
+        font-size: base.calculateRem(32);
+        font-family: base.$heading-font;
+        line-height: 36px;
+        letter-spacing: -0.25px;
+        text-align: center;
+        color: base.$tx-dark-grey;
+        margin-bottom: 25px;     
+    }
+    .form {       
+        max-width: 573px;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+}

@@ -48,7 +48,8 @@
 
     @include base.mQ(720px) {
 
-         padding: 0 ;
+        padding: 0;
+
         // max-width: 573px;
         .cards__two {
             padding: 0 39px;
@@ -62,25 +63,46 @@
             letter-spacing: -0.37px;
         }
 
-        .card__summary {            
+        .card__summary {
             max-width: 573px;
             margin: auto;
         }
 
-        .cards__two {
-            display: flex;
-            flex-wrap: nowrap;
-            padding: 39px;
-            gap: 15px;
+        .card__img {
+            width: 70%;
+            margin-bottom: -43px;
         }
 
-        .card__img {           
-            width: 70%;
-           margin-bottom: -43px;
-        }
         .js__primaryImg {
             margin-bottom: 43px;
             width: 40%;
+        }
+    }
+
+    @include base.mQ(1280px) {}
+}
+
+.cards__two {
+    @include base.mQ(720px) {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 39px;
+        gap: 15px;
+    }
+
+    @include base.mQ(1280px) {
+        padding: 0 165px;
+    }
+
+}
+
+.cards__one {
+    @include base.mQ(1280px) {
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 165px;
         }
     }
 }
