@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import tesla from "../../../assets/shared/desktop/tesla.svg"
 import microsoft from "../../../assets/shared/desktop/microsoft.svg"
 import hewlett from "../../../assets/shared/desktop/hewlett-packard.svg"
@@ -27,7 +28,7 @@ const Hero = () => {
                         with the tools they need to create easy and accessible experiences
                         for their users.
                     </p>
-                    <a className="link--btn" href="/">About Us</a>
+                    <Link to="/about" className="link--btn">About Us</Link>
                 </div>
             </div>
         </section>

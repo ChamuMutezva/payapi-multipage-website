@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Button from './Button'
 const CallToAction = (props) => {
     return (
@@ -12,9 +13,7 @@ const CallToAction = (props) => {
                 <Button primary={true} />
                 <p className="form__questions">
                     Have any questions?
-                              <a href="/" className="anchor form__anchor">
-                        Contact Us
-                                  </a>
+                   <Link to="/contact" className="anchor form__anchor">Contact Us</Link>
                 </p>
             </form>
         </div>

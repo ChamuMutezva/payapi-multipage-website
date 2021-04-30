@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import NavListItems from "../../../Components/NavList"
 import Logo from '../../../assets/shared/desktop/logo.svg'
 import Facebook from '../../../assets/shared/desktop/facebook.svg'
@@ -7,9 +8,9 @@ import LinkeIn from '../../../assets/shared/desktop/linkedin.svg'
 const Footer = () => {
     return (
         <footer className="footer">
-            <a className="logo--link" href="/">
+            <Link to="/" className="logo--link">
                 <img className="footer__logo" src={Logo} alt="well come to payapi" />
-            </a>
+            </Link>
             <NavListItems footerList={true} />
             <div className="social__icons">
                 <a className="anchor" href="/"><img src={Facebook} alt="visit us on facebook" /></a>
