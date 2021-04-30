@@ -1,7 +1,8 @@
+import PricingHeader from '../pricing/header/pricing_header'
 const PricingPage = () => {
     return(
         <div>
-            <h1>the pricing page</h1>
+            <PricingHeader />
         </div>
     )
 }

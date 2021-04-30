@@ -1,8 +1,9 @@
+import AboutHeader from './header/About_header'
 const AboutPage = () => {
-    return(
-        <div>
-            <h1>about page</h1>
-        </div>
+    return (
+        <>
+            <AboutHeader />
+        </>
     )
 }
 export default AboutPage

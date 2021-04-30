@@ -1,7 +1,8 @@
+import ContactHeader from '../contact/header/contact_header'
 const ContactPage  = () => {
     return(
         <>
-        <h1>Contact page page pages</h1>
+        <ContactHeader />
         </>
     )
 }
