@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from "react-router-dom"
 import Logo from '../assets/shared/desktop/logo.svg'
 import Hamburger from '../assets/shared/mobile/menu.svg'
 import Close from '../assets/shared/mobile/close.svg'
@@ -15,9 +16,9 @@ const Navigation = () => {
     return (
         <nav>
             <div className="logo__wrapper">
-                <a className="logo--link" href="/">
+                <Link to="/" className="logo--link" >
                     <img src={Logo} alt="well come to payapi" />
-                </a>
+                </Link>
             </div>
             <div className={`modal ${ShowMenu ? "modal__open" : ""}`}>                
                 <NavListItems />
