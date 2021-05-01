@@ -1,7 +1,7 @@
 @use '../../base';
 
 .main__pricing {
-    margin-top: 0;
+    margin-top: -10px;
     text-align: center;
     padding: 0 24px;
     .pricing__link--btn {
@@ -22,8 +22,21 @@
         align-items: center;
         gap: 10px;
     }
-
+    .pricing__title {
+        color: base.$tx-pink;
+        font-family: base.$heading-font;
+        line-height: 32px;
+        font-size: base.calculateRem(24);
+        letter-spacing: -0.18px;
+    }
     .sub__pricing__list {
-        background-color: firebrick;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+    }
+    .pricing__summary {
+        font-size: base.calculateRem(15);
+        font-weight: 900;
+        color: base.$tx-dark-grey;
+        margin-top: 24px;
     }
 }

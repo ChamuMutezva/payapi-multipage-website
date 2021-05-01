@@ -443,7 +443,7 @@ img:not([alt]) {
   }
   .header .nav__list {
     flex-direction: row;
-    padding-top: 50px;
+    padding-top: 55px;
     padding-bottom: 50px;
     justify-content: flex-start;
   }
@@ -675,7 +675,7 @@ img:not([alt]) {
 }
 
 .main__pricing {
-  margin-top: 0;
+  margin-top: -10px;
   text-align: center;
   padding: 0 24px;
 }
@@ -697,8 +697,22 @@ img:not([alt]) {
   align-items: center;
   gap: 10px;
 }
+.main__pricing .pricing__title {
+  color: #BA4270;
+  font-family: "DM Serif Display", serif;
+  line-height: 32px;
+  font-size: 1.5rem;
+  letter-spacing: -0.18px;
+}
 .main__pricing .sub__pricing__list {
-  background-color: firebrick;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.main__pricing .pricing__summary {
+  font-size: 0.9375rem;
+  font-weight: 900;
+  color: #36536b;
+  margin-top: 24px;
 }
 
 /*
