@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 import Button from './Button'
+import HeaderTitle from './HeaderTitle'
 const CallToAction = (props) => {
     return (
-        <div className="cta__summary">
-            <h1 className="cta__title">{props.ctaTitle}</h1>
+        <div className="cta__summary">           
+            <HeaderTitle title="Start building with our APIs for absolutely free."/>
             <form className="form">
                 <label className="sr-only" htmlFor="email">Email (Required):</label>
                 <input type="email"

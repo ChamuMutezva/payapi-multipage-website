@@ -1,7 +1,7 @@
 import Navigation from '../../../Components/Navigation'
 const AboutHeader = () => {
     return (
-        <header>
+        <header className="header header__secondary">
             <Navigation />       
         </header>
     )

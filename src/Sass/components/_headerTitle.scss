@@ -1,0 +1,35 @@
+@use '../base';
+
+.header__title {
+    font-size: base.calculateRem(32);
+    font-family: base.$heading-font;
+    line-height: 36px;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: base.$tx-dark-grey;
+    margin-bottom: 25px;
+
+    @include base.mQ(720px) {
+        font-size: base.calculateRem(48);
+        line-height: 56px;
+        letter-spacing: -0.37px;
+        margin-top: -20px;
+    }
+
+    @include base.mQ(1280px) {
+
+        text-align: left;
+        font-size: base.calculateRem(72);
+        line-height: 72px;
+        letter-spacing: -0.55px;
+        margin-top: -54px;
+        margin-bottom: 54px;
+
+    }
+}
+
+//secondary title 
+.secondary__title {
+   margin-top: 50px; 
+   margin-bottom: 0;
+}

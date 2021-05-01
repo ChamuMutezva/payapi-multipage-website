@@ -1,0 +1,29 @@
+@use '../../base';
+
+.main__pricing {
+    margin-top: 0;
+    text-align: center;
+    padding: 0 24px;
+    .pricing__link--btn {
+        color: base.$tx-dark-grey;
+        border: 1px solid base.$tx-dark-grey;
+        padding: 0.9rem 1rem;
+        max-width: 168px;
+        text-align: center;
+    }
+    .plan__list {
+        max-width: 134px;
+        margin: auto;
+    }
+    .plan__list__item {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sub__pricing__list {
+        background-color: firebrick;
+    }
+}

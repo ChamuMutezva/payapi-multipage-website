@@ -1,8 +1,9 @@
 @use '../../base';
 
-body {
+.App {
     background-color: base.$bg-very-light-grey;
     font-family: base.$main-font;
     font-size: 15px;
     overflow-x: hidden;
+    min-height: 100vh;
 }

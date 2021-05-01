@@ -1,7 +1,8 @@
 @use '../base';
 
 .cta__summary__shared {
-    .cta__title {
+    padding: 0 24px;
+    .header__title {
         font-size: base.calculateRem(32);
         font-family: base.$heading-font;
         line-height: 36px;
