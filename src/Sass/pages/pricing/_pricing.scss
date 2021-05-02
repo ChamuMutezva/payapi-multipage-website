@@ -13,9 +13,11 @@
         text-align: center;
         margin-top: 20px;
     }
+
     .plans {
         margin-bottom: 100px;
     }
+
     .plan {
         margin-bottom: 32px;
     }
@@ -62,8 +64,8 @@
 
     .pricing__summary {
         font-size: base.calculateRem(15);
-        font-weight: 900;
-        color: base.$tx-dark-grey;
+        font-weight: 500;
+        color: base.$tx-grey-mid;
         margin-top: 20px;
     }
 
@@ -77,4 +79,39 @@
         margin-top: 32px;
         display: block;
     }
+
+    // medium , tablet devices
+
+    @include base.mQ(720px) {
+        padding: 0 39px;
+
+        .plans {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            gap: 10px;
+        }
+    }
+
+    // desktop devices
+    @include base.mQ(1280px) {
+        padding: 80px 165px 0;
+
+        .pricing__title {
+            text-align: left;
+        }
+
+        .pricing__summary {
+            text-align: left;
+        }
+
+        .main__pricing__cost {
+            text-align: left;
+        }
+
+        .plan__list__item {
+            margin-left: 0;
+        }
+    }
+
 }

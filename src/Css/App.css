@@ -312,6 +312,16 @@ img:not([alt]) {
   margin-top: 50px;
   margin-bottom: 0;
 }
+@media screen and (min-width: 720px) {
+  .secondary__title {
+    margin-top: 65px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .secondary__title {
+    padding: 0 165px;
+  }
+}
 
 .header {
   position: relative;
@@ -552,6 +562,18 @@ img:not([alt]) {
 .header__secondary::before {
   background-position: -18% 115%;
 }
+@media screen and (min-width: 720px) {
+  .header__secondary::before {
+    background-position: -40% 100%;
+    background-size: 200%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__secondary::before {
+    background-position: -258% 143%;
+    background-size: 113%;
+  }
+}
 
 .main {
   margin-top: 48px;
@@ -726,8 +748,8 @@ img:not([alt]) {
 }
 .main__pricing .pricing__summary {
   font-size: 0.9375rem;
-  font-weight: 900;
-  color: #36536b;
+  font-weight: 500;
+  color: #6C8294;
   margin-top: 20px;
 }
 .main__pricing .main__pricing__cost {
@@ -739,6 +761,34 @@ img:not([alt]) {
   color: #36536b;
   margin-top: 32px;
   display: block;
+}
+@media screen and (min-width: 720px) {
+  .main__pricing {
+    padding: 0 39px;
+  }
+  .main__pricing .plans {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__pricing {
+    padding: 80px 165px 0;
+  }
+  .main__pricing .pricing__title {
+    text-align: left;
+  }
+  .main__pricing .pricing__summary {
+    text-align: left;
+  }
+  .main__pricing .main__pricing__cost {
+    text-align: left;
+  }
+  .main__pricing .plan__list__item {
+    margin-left: 0;
+  }
 }
 
 /*

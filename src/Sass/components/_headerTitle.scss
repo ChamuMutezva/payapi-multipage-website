@@ -30,6 +30,16 @@
 
 //secondary title 
 .secondary__title {
-   margin-top: 50px; 
-   margin-bottom: 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+
+    @include base.mQ(720px) {
+        margin-top: 65px;
+    }
+
+    @include base.mQ(1280px) { 
+        padding: 0 165px;
+    }
+
+
 }

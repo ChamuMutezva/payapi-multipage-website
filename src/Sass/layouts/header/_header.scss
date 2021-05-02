@@ -292,4 +292,16 @@
     &::before {             
         background-position: -18% 115%;    
     }
+    @include base.mQ(720px) {
+        &::before {
+            background-position: -40% 100%;
+            background-size: 200%;
+         }
+     }
+    @include base.mQ(1280px) {
+       &::before {
+        background-position: -258% 143%;
+        background-size: 113%;
+        }
+    }
 }
