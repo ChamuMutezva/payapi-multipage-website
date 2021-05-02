@@ -288,6 +288,7 @@ img:not([alt]) {
   text-align: center;
   color: #36536b;
   margin-bottom: 25px;
+  padding: 0 15px;
 }
 @media screen and (min-width: 720px) {
   .header__title {
@@ -315,11 +316,25 @@ img:not([alt]) {
 @media screen and (min-width: 720px) {
   .secondary__title {
     margin-top: 65px;
+    padding: 0 97px;
   }
 }
 @media screen and (min-width: 1280px) {
   .secondary__title {
     padding: 0 165px;
+  }
+}
+
+.paragraph {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #6C8294;
+  margin-top: 20px;
+  line-height: 28px;
+}
+@media screen and (min-width: 1280px) {
+  .paragraph {
+    text-align: left;
   }
 }
 
@@ -402,11 +417,15 @@ img:not([alt]) {
 .header .anchor {
   text-decoration: none;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 300;
   border: 2px solid transparent;
 }
 .header .anchor:focus {
   outline: 2px solid #BA4270;
+}
+.header .anchor:hover {
+  cursor: pointer;
+  font-weight: 900;
 }
 .header .cta__summary {
   padding: 0 24px;
@@ -747,10 +766,11 @@ img:not([alt]) {
   margin-top: 24px;
 }
 .main__pricing .pricing__summary {
-  font-size: 0.9375rem;
+  /*
+  font-size: base.calculateRem(15);
   font-weight: 500;
-  color: #6C8294;
-  margin-top: 20px;
+  color: base.$tx-grey-mid;
+  margin-top: 20px;*/
 }
 .main__pricing .main__pricing__cost {
   font-size: 3.5rem;
@@ -788,6 +808,40 @@ img:not([alt]) {
   }
   .main__pricing .plan__list__item {
     margin-left: 0;
+  }
+}
+
+.main__about {
+  margin-top: -10px;
+  text-align: center;
+}
+.main__about .mission__title {
+  color: #36536b;
+  font-family: "DM Serif Display", serif;
+  line-height: 32px;
+  font-size: 1.5rem;
+  letter-spacing: -0.18px;
+}
+.main__about .mission {
+  margin-bottom: 42px;
+}
+.main__about .hero__about__img {
+  margin: auto;
+}
+@media screen and (min-width: 720px) {
+  .main__about .mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 39px;
+  }
+  .main__about .mission__title {
+    flex: 1 1 33%;
+    text-align: left;
+  }
+  .main__about .mission__summary {
+    flex: 1 1 67%;
+    text-align: left;
   }
 }
 

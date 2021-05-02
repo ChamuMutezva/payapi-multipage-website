@@ -1,8 +1,11 @@
 import Navigation from '../../../Components/Navigation'
+import HeaderTitle from '../../../Components/HeaderTitle'
 const AboutHeader = () => {
     return (
         <header className="header header__secondary">
-            <Navigation />       
+            <Navigation />   
+            <HeaderTitle title="We empower innovators by delivering access to the financial system" 
+            secondary={true}/>      
         </header>
     )
 }

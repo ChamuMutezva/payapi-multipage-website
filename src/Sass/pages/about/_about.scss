@@ -1,0 +1,40 @@
+@use '../../base';
+
+.main__about {
+    margin-top: -10px;
+    text-align: center;
+   // padding: 0 24px;
+
+    .mission__title {
+        color: base.$tx-dark-grey;
+        font-family: base.$heading-font;
+        line-height: 32px;
+        font-size: base.calculateRem(24);
+        letter-spacing: -0.18px;
+    }
+
+    .mission {
+        margin-bottom: 42px;
+    }
+
+    .hero__about__img {
+        margin: auto;
+    }
+
+    @include base.mQ(720px) {
+        .mission {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 39px;
+        }
+        .mission__title {
+            flex: 1 1 33%;
+            text-align: left;
+        }
+        .mission__summary {
+            flex: 1 1 67%;
+            text-align: left;
+        }
+    }
+}

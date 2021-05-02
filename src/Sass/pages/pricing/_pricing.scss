@@ -48,7 +48,7 @@
         filter: opacity(0);
     }
 
-    .pricing__title {
+    .pricing__title {       
         color: base.$tx-pink;
         font-family: base.$heading-font;
         line-height: 32px;
@@ -56,17 +56,15 @@
         letter-spacing: -0.18px;
     }
 
-    .sub__pricing__list {
-        // border-top: 1px solid base.$tx-grey-mid;
-        // border-bottom: 1px solid base.$tx-grey-mid;
+    .sub__pricing__list {       
         margin-top: 24px;
     }
 
-    .pricing__summary {
+    .pricing__summary {/*
         font-size: base.calculateRem(15);
         font-weight: 500;
         color: base.$tx-grey-mid;
-        margin-top: 20px;
+        margin-top: 20px;*/
     }
 
     .main__pricing__cost {

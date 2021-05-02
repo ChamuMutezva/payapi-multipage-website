@@ -7,7 +7,7 @@ const Main = () => {
                 <div className="plan plan1">
                     <div className="sub__pricing">
                         <h2 className="pricing__title">Free Plan</h2>
-                        <p className="pricing__summary">Build and test
+                        <p className="paragraph pricing__summary">Build and test
                         using our core set of products with up to 100 API requests
                 </p>
                         <strong className="main__pricing__cost">$0.00</strong>
@@ -52,7 +52,7 @@ const Main = () => {
                 <div className="plan plan2">
                     <div className="sub__pricing">
                         <h2 className="pricing__title"> Basic Plan</h2>
-                        <p className="pricing__summary">Launch your project with unlimited
+                        <p className="paragraph pricing__summary">Launch your project with unlimited
                         requests and no contractual minimums
                 </p>
                         <strong className="main__pricing__cost">$249.00</strong>
@@ -97,7 +97,7 @@ const Main = () => {
                 <div className="plan plan2">
                     <div className="sub__pricing">
                         <h2 className="pricing__title"> Premium Plan</h2>
-                        <p className="pricing__summary">Get tailored solutions, volume pricing, and dedicated support for your team
+                        <p className="paragraph pricing__summary">Get tailored solutions, volume pricing, and dedicated support for your team
                 </p>
                         <strong className="main__pricing__cost">$499.00</strong>
                     </div>

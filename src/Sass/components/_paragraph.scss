@@ -1,0 +1,12 @@
+@use '../base';
+
+.paragraph {
+    font-size: base.calculateRem(15);
+    font-weight: 500;
+    color: base.$tx-grey-mid;
+    margin-top: 20px;
+    line-height: 28px;
+    @include base.mQ(1280px)  {
+        text-align: left;
+    }
+}

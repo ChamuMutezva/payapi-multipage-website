@@ -8,6 +8,7 @@
     text-align: center;
     color: base.$tx-dark-grey;
     margin-bottom: 25px;
+    padding: 0 15px;
 
     @include base.mQ(720px) {
         font-size: base.calculateRem(48);
@@ -35,6 +36,7 @@
 
     @include base.mQ(720px) {
         margin-top: 65px;
+        padding: 0 97px;
     }
 
     @include base.mQ(1280px) { 

@@ -97,11 +97,16 @@
     .anchor {
         text-decoration: none;
         color: base.$tx-white;
-        font-weight: 700;
+        font-weight: 300;
         border: 2px solid transparent;
 
         &:focus {
             outline: 2px solid base.$anchor-focus;
+        }
+
+        &:hover {
+            cursor: pointer;
+            font-weight: 900;
         }
 
     }
