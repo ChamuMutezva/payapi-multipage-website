@@ -37,10 +37,14 @@
     @include base.mQ(720px) {
         margin-top: 65px;
         padding: 0 97px;
+
     }
 
     @include base.mQ(1280px) { 
         padding: 0 165px;
+        .about__title {
+            padding: 0 260px;
+        }
     }
 
 

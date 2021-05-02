@@ -5,7 +5,7 @@ const AboutHeader = () => {
         <header className="header header__secondary">
             <Navigation />   
             <HeaderTitle title="We empower innovators by delivering access to the financial system" 
-            secondary={true}/>      
+            secondary={true} aboutTitle={true}/>      
         </header>
     )
 }
