@@ -4,24 +4,48 @@
     margin-top: -10px;
     text-align: center;
     padding: 0 24px;
+
     .pricing__link--btn {
         color: base.$tx-dark-grey;
         border: 1px solid base.$tx-dark-grey;
-        padding: 0.9rem 1rem;
+        padding: 0.7rem 1rem;
         max-width: 168px;
         text-align: center;
+        margin-top: 20px;
     }
+    .plans {
+        margin-bottom: 100px;
+    }
+    .plan {
+        margin-bottom: 32px;
+    }
+
     .plan__list {
-        max-width: 134px;
-        margin: auto;
+        //  max-width: 134px;
+        margin: 24px auto;
+        border-top: 1px solid base.$tx-grey-mid;
+        border-bottom: 1px solid base.$tx-grey-mid;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
+
+    .transactions {
+        justify-self: left;
+    }
+
     .plan__list__item {
-        display: flex;
-        text-align: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 134px;
+        margin: 14px auto;
         align-items: center;
-        gap: 10px;
     }
+
+    //hide image of items that are not selected
+    .not__ticked {
+        filter: opacity(0);
+    }
+
     .pricing__title {
         color: base.$tx-pink;
         font-family: base.$heading-font;
@@ -29,14 +53,28 @@
         font-size: base.calculateRem(24);
         letter-spacing: -0.18px;
     }
+
     .sub__pricing__list {
-        border-top: 1px solid grey;
-        border-bottom: 1px solid grey;
+        // border-top: 1px solid base.$tx-grey-mid;
+        // border-bottom: 1px solid base.$tx-grey-mid;
+        margin-top: 24px;
     }
+
     .pricing__summary {
         font-size: base.calculateRem(15);
         font-weight: 900;
         color: base.$tx-dark-grey;
-        margin-top: 24px;
+        margin-top: 20px;
+    }
+
+    .main__pricing__cost {
+        font-size: base.calculateRem(56);
+        line-height: 56px;
+        letter-spacing: -0.43px;
+        font-family: base.$heading-font;
+        font-weight: 700;
+        color: base.$tx-dark-grey;
+        margin-top: 32px;
+        display: block;
     }
 }

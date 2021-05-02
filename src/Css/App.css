@@ -506,6 +506,7 @@ img:not([alt]) {
   border-radius: 24px;
   border: 3px solid transparent;
   font-weight: 700;
+  box-shadow: 2px 2px 3px 2px #6C8294;
 }
 .form .email:focus {
   outline: 3px solid #BA4270;
@@ -682,20 +683,36 @@ img:not([alt]) {
 .main__pricing .pricing__link--btn {
   color: #36536b;
   border: 1px solid #36536b;
-  padding: 0.9rem 1rem;
+  padding: 0.7rem 1rem;
   max-width: 168px;
   text-align: center;
+  margin-top: 20px;
+}
+.main__pricing .plans {
+  margin-bottom: 100px;
+}
+.main__pricing .plan {
+  margin-bottom: 32px;
 }
 .main__pricing .plan__list {
-  max-width: 134px;
-  margin: auto;
+  margin: 24px auto;
+  border-top: 1px solid #6C8294;
+  border-bottom: 1px solid #6C8294;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.main__pricing .transactions {
+  justify-self: left;
 }
 .main__pricing .plan__list__item {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 134px;
+  margin: 14px auto;
   align-items: center;
-  gap: 10px;
+}
+.main__pricing .not__ticked {
+  filter: opacity(0);
 }
 .main__pricing .pricing__title {
   color: #BA4270;
@@ -705,14 +722,23 @@ img:not([alt]) {
   letter-spacing: -0.18px;
 }
 .main__pricing .sub__pricing__list {
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  margin-top: 24px;
 }
 .main__pricing .pricing__summary {
   font-size: 0.9375rem;
   font-weight: 900;
   color: #36536b;
-  margin-top: 24px;
+  margin-top: 20px;
+}
+.main__pricing .main__pricing__cost {
+  font-size: 3.5rem;
+  line-height: 56px;
+  letter-spacing: -0.43px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  color: #36536b;
+  margin-top: 32px;
+  display: block;
 }
 
 /*

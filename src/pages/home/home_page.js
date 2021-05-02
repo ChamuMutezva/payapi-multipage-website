@@ -1,6 +1,6 @@
 import HomeHeader from './header/Home_header'
 import Main from './main/Main'
-import Footer from './footer/Footer'
+import Footer from '../../Components/Footer'
 const HomePage = () => {
     return (
         <>
