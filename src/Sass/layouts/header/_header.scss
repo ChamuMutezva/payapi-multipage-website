@@ -102,6 +102,7 @@
 
         &:focus {
             outline: 2px solid base.$anchor-focus;
+            font-weight: 900;
         }
 
         &:hover {

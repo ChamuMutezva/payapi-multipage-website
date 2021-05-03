@@ -22,7 +22,41 @@
     }
 
     .hero__about__img {
-        margin: auto;
+        margin: 76px auto 50px;
+    }
+
+    .primary__about {
+        padding: 0 24px;
+
+    }
+
+    .about__list {
+        border-top: 1px solid base.$tx-grey-mid;
+        border-bottom: 1px solid base.$tx-grey-mid;
+        padding-top: 10px;
+    }
+
+    .about__list__summary {
+        font-size: base.calculateRem(16);
+        line-height: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: base.$tx-grey-mid;
+    }
+
+    .about__list__item {
+        margin-bottom: 28px;
+    }
+
+    .about__list__data {
+        font-size: base.calculateRem(56);
+        line-height: 72px;
+        letter-spacing: -0.43px;
+        color: base.$tx-pink;
+        font-family: base.$heading-font;
+
     }
 
     @include base.mQ(720px) {
@@ -42,6 +76,23 @@
             padding: 0;
             flex: 1 1 67%;
             text-align: left;
+        }
+
+        .about__list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+        }
+
+        .about__list__item {
+            border-top: 1px solid base.$tx-grey-mid;
+            border-bottom: 1px solid base.$tx-grey-mid;
+            width: 32%;
+        }
+        .about__list__summary {           
+            align-items: baseline;           
         }
     }
 

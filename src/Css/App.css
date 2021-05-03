@@ -13,6 +13,11 @@ body {
   line-height: 1.5;
 }
 
+/*remove styles on list items */
+li {
+  list-style: none;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -425,6 +430,7 @@ img:not([alt]) {
 }
 .header .anchor:focus {
   outline: 2px solid #BA4270;
+  font-weight: 900;
 }
 .header .anchor:hover {
   cursor: pointer;
@@ -832,7 +838,34 @@ img:not([alt]) {
   margin-bottom: 42px;
 }
 .main__about .hero__about__img {
-  margin: auto;
+  margin: 76px auto 50px;
+}
+.main__about .primary__about {
+  padding: 0 24px;
+}
+.main__about .about__list {
+  border-top: 1px solid #6C8294;
+  border-bottom: 1px solid #6C8294;
+  padding-top: 10px;
+}
+.main__about .about__list__summary {
+  font-size: 1rem;
+  line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6C8294;
+}
+.main__about .about__list__item {
+  margin-bottom: 28px;
+}
+.main__about .about__list__data {
+  font-size: 3.5rem;
+  line-height: 72px;
+  letter-spacing: -0.43px;
+  color: #BA4270;
+  font-family: "DM Serif Display", serif;
 }
 @media screen and (min-width: 720px) {
   .main__about .mission {
@@ -849,6 +882,21 @@ img:not([alt]) {
     padding: 0;
     flex: 1 1 67%;
     text-align: left;
+  }
+  .main__about .about__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+  .main__about .about__list__item {
+    border-top: 1px solid #6C8294;
+    border-bottom: 1px solid #6C8294;
+    width: 32%;
+  }
+  .main__about .about__list__summary {
+    align-items: baseline;
   }
 }
 @media screen and (min-width: 1280px) {

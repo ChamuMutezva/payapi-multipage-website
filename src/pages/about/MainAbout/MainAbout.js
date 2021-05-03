@@ -1,5 +1,6 @@
 import Mission from '../../../Components/Mission'
 import HeroAbout from './HeroAbout'
+import PrimaryAbout from './PrimaryAbout'
 const MainAbout = () => {
     return (
         <main className="main main__about">
@@ -16,41 +17,21 @@ const MainAbout = () => {
                              robust reporting for traditional financial institutions and developers."/>
             </div>
             <HeroAbout />
+            <PrimaryAbout />
+            <div className="missions">
+                <Mission title="The Culture"
+                summary=" We strongly believe there's always an opportunity to learn from each other outside of
+                day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups.
+                We always value cross-team collaboration and diversity of thought, no matter the job title."/>
+                 <Mission title="The People"
+                summary=" We're all passionate about building a more efficient and inclusive financial infrastructure
+                together. At PayAPI, we have diverse backgrounds and skills."/>
+            </div>
 
+         
+   
 
-
-
-
-
-
-
-    Team Members
-    300+
-
-    Offices in the US
-    3
-
-    Transactions analyzed
-    10M+
-
-    The Culture
-
-    We strongly believe there's always an opportunity to learn from each other outside of
-    day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups.
-    We always value cross-team collaboration and diversity of thought, no matter the job title.
-
-    The People
-
-    We're all passionate about building a more efficient and inclusive financial infrastructure
-    together. At PayAPI, we have diverse backgrounds and skills.
-
-    Ready to start?
-    Enter email address
-    Schedule a Demo
-
-    Pricing
-    About
-    Contact
+   
         </main>
     )
 }
