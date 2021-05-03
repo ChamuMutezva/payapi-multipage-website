@@ -1,6 +1,7 @@
 import Mission from '../../../Components/Mission'
 import HeroAbout from './HeroAbout'
 import PrimaryAbout from './PrimaryAbout'
+import CallToActionShared from '../../../Components/CallToActionShared'
 const MainAbout = () => {
     return (
         <main className="main main__about">
@@ -20,18 +21,15 @@ const MainAbout = () => {
             <PrimaryAbout />
             <div className="missions">
                 <Mission title="The Culture"
-                summary=" We strongly believe there's always an opportunity to learn from each other outside of
+                    summary=" We strongly believe there's always an opportunity to learn from each other outside of
                 day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups.
                 We always value cross-team collaboration and diversity of thought, no matter the job title."/>
-                 <Mission title="The People"
-                summary=" We're all passionate about building a more efficient and inclusive financial infrastructure
+                <Mission title="The People"
+                    summary=" We're all passionate about building a more efficient and inclusive financial infrastructure
                 together. At PayAPI, we have diverse backgrounds and skills."/>
             </div>
 
-         
-   
-
-   
+            <CallToActionShared />
         </main>
     )
 }

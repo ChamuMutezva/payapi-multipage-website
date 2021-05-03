@@ -868,10 +868,17 @@ img:not([alt]) {
   font-family: "DM Serif Display", serif;
 }
 @media screen and (min-width: 720px) {
+  .main__about {
+    margin-top: 10px;
+  }
+  .main__about .missions {
+    margin-bottom: 96px;
+    margin-top: 15px;
+  }
   .main__about .mission {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     padding: 0 39px;
   }
   .main__about .mission__title {
@@ -891,12 +898,17 @@ img:not([alt]) {
     border-bottom: 1px solid transparent;
   }
   .main__about .about__list__item {
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-top: 1px solid #6C8294;
     border-bottom: 1px solid #6C8294;
     width: 32%;
   }
   .main__about .about__list__summary {
     align-items: baseline;
+  }
+  .main__about .primary__about {
+    padding: 0 39px;
   }
 }
 @media screen and (min-width: 1280px) {

@@ -60,10 +60,17 @@
     }
 
     @include base.mQ(720px) {
+        margin-top: 10px;
+
+        .missions {
+            margin-bottom: 96px;
+            margin-top: 15px;
+        }
+
         .mission {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: baseline;
             padding: 0 39px;
         }
 
@@ -87,12 +94,20 @@
         }
 
         .about__list__item {
+            padding-top: 16px;
+            padding-bottom: 16px;
             border-top: 1px solid base.$tx-grey-mid;
             border-bottom: 1px solid base.$tx-grey-mid;
             width: 32%;
         }
-        .about__list__summary {           
-            align-items: baseline;           
+
+        .about__list__summary {
+            align-items: baseline;
+        }
+
+        .primary__about {
+            padding: 0 39px;
+
         }
     }
 
