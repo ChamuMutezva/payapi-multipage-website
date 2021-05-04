@@ -1,5 +1,5 @@
 import FormContact from './FormContact'
-import Hero from '../../home/main/Hero'
+import Hero  from '../../../Components/HeroComponent'
 const MainContact = () => {
     return (
         <main className="main main__about">

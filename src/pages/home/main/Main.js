@@ -1,4 +1,4 @@
-import Hero from './Hero'
+import Hero from '../../../Components/HeroComponent'
 import Secondary from './Secondary'
 import CallToActionShared from '../../../Components/CallToActionShared'
 const Main = () => {
