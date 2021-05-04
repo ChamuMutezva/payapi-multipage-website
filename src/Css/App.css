@@ -328,11 +328,13 @@ img:not([alt]) {
   .secondary__title {
     padding: 0 165px;
   }
-  .secondary__title .about__title {
-    padding: 0 260px;
-  }
 }
 
+@media screen and (min-width: 1280px) {
+  .about__title {
+    padding: 10px 300px 0 260px;
+  }
+}
 .paragraph {
   font-size: 0.9375rem;
   font-weight: 500;
@@ -914,6 +916,9 @@ img:not([alt]) {
 @media screen and (min-width: 1280px) {
   .main__about {
     margin-top: 10px;
+  }
+  .main__about .mission {
+    padding: 0;
   }
   .main__about .missions {
     padding: 0 260px;

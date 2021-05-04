@@ -41,11 +41,14 @@
     }
 
     @include base.mQ(1280px) { 
-        padding: 0 165px;
-        .about__title {
-            padding: 0 260px;
-        }
+        padding: 0 165px;      
     }
 
 
+}
+
+@include base.mQ(1280px) {    
+    .about__title {
+        padding: 10px 300px 0 260px;
+    }
 }
