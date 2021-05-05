@@ -11,7 +11,7 @@ const CallToAction = (props) => {
                     className="email" name="email"
                     id="email" required aria-required="true"
                     placeholder="Enter email address" />
-                <Button primary={true} />
+                <Button primary={true} title="Schedule a demo" />
                 <p className="form__questions">
                     Have any questions?
                    <Link to="/contact" className="anchor form__anchor">Contact Us</Link>

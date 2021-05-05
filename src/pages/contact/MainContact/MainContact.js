@@ -1,10 +1,14 @@
 import FormContact from './FormContact'
-import Hero  from '../../../Components/HeroComponent'
+import HeroImages  from '../../../Components/HeroImages'
+import CallToActionShared from '../../../Components/CallToActionShared'
 const MainContact = () => {
     return (
         <main className="main main__about">
            <FormContact />
-           <Hero />
+           <div className="hero hero__contact">
+               <HeroImages />
+           </div>
+           <CallToActionShared />
         </main>
     )
 }

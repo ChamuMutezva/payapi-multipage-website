@@ -39,3 +39,11 @@
 		margin-right: 165px;
 	}
 }
+
+.js__form--btn {
+	margin-left: 0;
+	color: base.$tx-dark-grey;
+	background: inherit;
+	border: 1px solid base.$tx-dark-grey;
+	max-width: 152px;
+}

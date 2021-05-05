@@ -1,0 +1,41 @@
+@use '../base';
+
+.form__contact {
+    padding: 15px 24px;
+    max-width: 447px;
+    margin: auto;
+
+    .details {
+        position: relative;
+        margin-bottom: 24px;
+    }
+
+    .form__inputs {
+        display: block;
+        width: 100%;
+        padding: 20px 0 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: inherit;
+        border-bottom: 1px solid black;
+    }
+
+    .input__label {
+        font-size: base.calculateRem(12);
+        line-height: 25px;
+        letter-spacing: -0.12px;
+        position: absolute;
+        top: -5px;
+        left: 0;
+    }
+    .details__check {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-start;
+    }
+    .check__label {
+        text-align: left;
+        margin-left: 15px;
+    }
+}
