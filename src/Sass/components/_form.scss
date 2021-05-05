@@ -18,7 +18,16 @@
         border-left: none;
         border-right: none;
         background-color: inherit;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid base.$tx-dark-grey;
+
+        &:focus {
+            outline: 3px solid base.$tx-dark-grey;
+        }
+
+        &:hover {
+            outline: 3px solid base.$tx-dark-grey;
+        }
+
     }
 
     .input__label {
@@ -29,13 +38,17 @@
         top: -5px;
         left: 0;
     }
+
     .details__check {
         display: flex;
         align-items: baseline;
         justify-content: flex-start;
     }
+
     .check__label {
         text-align: left;
         margin-left: 15px;
     }
+
+    
 }

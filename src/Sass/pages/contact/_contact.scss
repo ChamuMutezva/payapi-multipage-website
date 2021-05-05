@@ -1,0 +1,12 @@
+@use '../../base';
+
+.main__contact {
+    @include base.mQ(1280px) {
+        .contact__primary {
+            padding: 30px 0px 30px 165px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

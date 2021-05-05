@@ -6,15 +6,19 @@ import google from "../assets/shared/desktop/google.svg"
 import nvidia from "../assets/shared/desktop/nvidia.svg"
 const HeroImages = (props) => {
     const heroImageHome = props.heroHome ? "hero__img__home" : ""
-    return(
-        <div className="hero__images">
-                    <img className={`hero__tesla hero__img ${heroImageHome}`} src={tesla} alt="tesla corporation private limited" />
-                    <img className={`hero__microsoft hero__img ${heroImageHome}`} src={microsoft} alt="microsoft corporation private limited" />
-                    <img className={`hero__hewlett hero__img ${heroImageHome}`} src={hewlett} alt="hewlett parkard corporation private limited" />
-                    <img className={`hero__oracle hero__img ${heroImageHome}`} src={oracle} alt="oracle corporation private limited" />
-                    <img className={`hero__google hero__img ${heroImageHome}`} src={google} alt="google corporation private limited" />
-                    <img className={`hero__nvidia hero__img ${heroImageHome}`} src={nvidia} alt="nvidia corporation private limited" />
-                </div>
+    const heroTitle= props.heroTitle ? "hero__title" : ""
+    return (
+        <div className="hero__image__container">
+            <h3 className={`${heroTitle}`}>{props.title}</h3>
+            <div className="hero__images">
+                <img className={`hero__tesla hero__img ${heroImageHome}`} src={tesla} alt="tesla corporation private limited" />
+                <img className={`hero__microsoft hero__img ${heroImageHome}`} src={microsoft} alt="microsoft corporation private limited" />
+                <img className={`hero__hewlett hero__img ${heroImageHome}`} src={hewlett} alt="hewlett parkard corporation private limited" />
+                <img className={`hero__oracle hero__img ${heroImageHome}`} src={oracle} alt="oracle corporation private limited" />
+                <img className={`hero__google hero__img ${heroImageHome}`} src={google} alt="google corporation private limited" />
+                <img className={`hero__nvidia hero__img ${heroImageHome}`} src={nvidia} alt="nvidia corporation private limited" />
+            </div>
+        </div>
     )
 }
 export default HeroImages

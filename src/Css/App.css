@@ -66,6 +66,10 @@ img:not([alt]) {
 .btn:focus {
   outline: 3px solid black;
 }
+.btn:hover {
+  outline: 3px solid black;
+  cursor: pointer;
+}
 @media screen and (min-width: 720px) {
   .btn {
     margin: 0;
@@ -373,7 +377,13 @@ img:not([alt]) {
   border-left: none;
   border-right: none;
   background-color: inherit;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #36536b;
+}
+.form__contact .form__inputs:focus {
+  outline: 3px solid #36536b;
+}
+.form__contact .form__inputs:hover {
+  outline: 3px solid #36536b;
 }
 .form__contact .input__label {
   font-size: 0.75rem;
@@ -967,6 +977,15 @@ img:not([alt]) {
   }
   .main__about .missions {
     padding: 0 260px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main__contact .contact__primary {
+    padding: 30px 0px 30px 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

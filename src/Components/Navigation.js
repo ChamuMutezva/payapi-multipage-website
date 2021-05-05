@@ -22,7 +22,7 @@ const Navigation = () => {
             </div>
             <div className={`modal ${ShowMenu ? "modal__open" : ""}`}>                
                 <NavListItems />
-                <Buttton secondary={true}/>
+                <Buttton secondary={true} title="Schedule a demo"/>
             </div>
             <div className="menu__control">
                 <button className={`hamburger ${ShowMenu ? "toggle__btn__open" : "toggle__btn__close"}`} onClick={hamburgerClick}>
