@@ -103,6 +103,7 @@ img:not([alt]) {
   background: inherit;
   border: 1px solid #36536b;
   max-width: 152px;
+  display: block;
 }
 
 .card {
@@ -757,7 +758,7 @@ img:not([alt]) {
     flex-direction: row-reverse;
     justify-content: left;
     align-items: center;
-    padding: 0 165px;
+    padding: 0 165px 0 0;
   }
   .main .hero__title {
     text-align: left;
