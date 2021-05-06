@@ -7,7 +7,8 @@ const MainContact = () => {
             <div className="contact__primary">
                 <FormContact />
                 <div className="hero hero__contact">
-                    <HeroImages title="Join the thousands of innovators already building with us"/>
+                    <HeroImages heroTitle={true}
+                     title="Join the thousands of innovators already building with us"/>
                 </div>
             </div>
             <CallToActionShared />
