@@ -9,7 +9,13 @@ const FormContact = () => {
     company: "",
     title: "",
     message: "",
-    terms: ""
+    terms: "",
+    touched: {
+      fullName: false,
+      company: false,
+      title: false,
+      email: false,
+    }
 
   }
 
@@ -17,6 +23,7 @@ const FormContact = () => {
 
   const onChange = (e) => {
     const { name, value, type, checked } = e.target
+
     if (type === "checked") {
       setData({ ...formData, [name]: checked })
     } else {
@@ -31,8 +38,60 @@ const FormContact = () => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
+    // const { fullName, email, company, title, message, terms } = formData
+    //const data = { fullName, email, company, title, message, terms }
+    console.log(evt.target)
     console.log(formData)
+    //console.log(data)
   }
+
+ 
+  const validate = () => {
+    const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    // Object to collect error feedback and to display on the form
+    const errors = {
+      fullName: '',
+      title: '',
+      company: '',
+      email: '',
+    }
+
+    //validate fullname
+    if (
+      (formData.touched.fullName && formData.fullName.length < 3) ||
+      (formData.touched.fullName && formData.fullName.length > 12)
+    ) {
+      errors.fullName = 'First name must be between 2 and 12'
+    }
+
+    //validate email
+    
+    if (
+      (formData.touched.email && formData.email.match(validEmail) !== true) ||
+      (formData.touched.email && formData.email.length < 6)
+    ) {
+      errors.email = 'email must be between 2 and 12'
+    }
+
+    //validate company
+    if (
+      (formData.touched.company && formData.company.length < 3) ||
+      (formData.touched.company && formData.company.length > 50)
+    ) {
+      errors.company = 'Company name must be between 2 and 50'
+    }
+
+    //validate title
+    if (
+      (formData.touched.title && formData.title.length < 2) ||
+      (formData.touched.title && formData.title.length > 8)
+    ) {
+      errors.title = 'Title  must be between 2 and 12'
+    }
+    return errors
+  }
+
+  const errors = validate()
 
   const { fullName, email, company, title, message, terms } = formData
   return (
@@ -54,6 +113,8 @@ const FormContact = () => {
         <label className="input__label name__label" htmlFor="fullname">
           Name
          </label>
+        <br />
+        {errors.fullName && <small>{errors.fullName}</small>}
 
       </div>
 
@@ -67,12 +128,16 @@ const FormContact = () => {
           required
           id="email"
           value={email}
+          onBlur={onBlur}
           onChange={onChange}
 
         />
         <label className="input__label" htmlFor="email">
           Email
          </label>
+
+         <br />
+        {errors.email && <small>{errors.email}</small>}
 
       </div>
 
@@ -86,12 +151,15 @@ const FormContact = () => {
           required
           id="companyname"
           value={company}
+          onBlur={onBlur}
           onChange={onChange}
 
         />
         <label className="input__label name__label" htmlFor="companyname">
           Company Name
          </label>
+        <br />
+        {errors.company && <small>{errors.company}</small>}
 
       </div>
 
@@ -105,12 +173,16 @@ const FormContact = () => {
           required
           id="titled"
           value={title}
+          onBlur={onBlur}
           onChange={onChange}
 
         />
         <label className="input__label name__label" htmlFor="titled">
           Title
          </label>
+
+        <br />
+        {errors.title && <small>{errors.title}</small>}
 
       </div>
 
