@@ -114,6 +114,9 @@
     @include base.mQ(1280px) {
 
         margin-top: 10px;
+        .about__list {
+            padding: 1rem base.calculateRem(165);
+        }
 
         .mission {          
             padding: 0;
@@ -121,6 +124,21 @@
 
         .missions {
             padding: 0 260px;
+        }
+        .about__img {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 170px;
+                height: 665px;
+                background-image: url('../../../assets/shared/desktop/bg-pattern-circle.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: -90px;
+                left: -65px;
+                /* z-index: 10; */
+            }
         }
     }
 }

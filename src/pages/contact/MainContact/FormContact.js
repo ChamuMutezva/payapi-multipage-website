@@ -59,7 +59,9 @@ const FormContact = () => {
       (formData.touched.fullName && formData.fullName.length < 3) ||
       (formData.touched.fullName && formData.fullName.length > 30)
     ) {
-      errors.fullName = 'First name must be between 2 and 30'
+      errors.fullName = 'First name must be between 3 and 30'
+     // const nameErr = document.getElementById("fullname")
+     // nameErr.style.borderBottom = "2px solid red"
     }
 
     //validate email

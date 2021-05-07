@@ -105,6 +105,17 @@ img:not([alt]) {
   max-width: 152px;
   display: block;
 }
+.js__form--btn:focus {
+  outline: 3px solid black;
+  color: #ffffff;
+  background-color: #36536b;
+}
+.js__form--btn:hover {
+  outline: 3px solid black;
+  color: #ffffff;
+  background-color: #36536b;
+  cursor: pointer;
+}
 
 .card {
   margin-bottom: 35px;
@@ -981,11 +992,29 @@ img:not([alt]) {
   .main__about {
     margin-top: 10px;
   }
+  .main__about .about__list {
+    padding: 1rem 10.3125rem;
+  }
   .main__about .mission {
     padding: 0;
   }
   .main__about .missions {
     padding: 0 260px;
+  }
+  .main__about .about__img {
+    position: relative;
+  }
+  .main__about .about__img::before {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 665px;
+    background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -90px;
+    left: -65px;
+    /* z-index: 10; */
   }
 }
 
