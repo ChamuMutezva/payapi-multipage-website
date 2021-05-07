@@ -50,5 +50,14 @@
         margin-left: 15px;
     }
 
+    .error__alert {
+        text-align: left;
+        margin-left: 0;
+        display: block;
+        margin-top: -20px;
+        color: base.$error-color;
+        font-size: base.calculateRem(11);
+    }
+
     
 }

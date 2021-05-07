@@ -403,6 +403,14 @@ img:not([alt]) {
   text-align: left;
   margin-left: 15px;
 }
+.form__contact .error__alert {
+  text-align: left;
+  margin-left: 0;
+  display: block;
+  margin-top: -20px;
+  color: #ff0000;
+  font-size: 0.6875rem;
+}
 
 .header {
   position: relative;

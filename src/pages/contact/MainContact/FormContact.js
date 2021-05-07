@@ -37,12 +37,10 @@ const FormContact = () => {
   }
 
   const handleSubmit = (evt) => {
-    evt.preventDefault()
-    // const { fullName, email, company, title, message, terms } = formData
-    //const data = { fullName, email, company, title, message, terms }
+    evt.preventDefault()    
     console.log(evt.target)
     console.log(formData)
-    //console.log(data)
+    alert("Form submitted successfully")
   }
 
  
@@ -59,18 +57,17 @@ const FormContact = () => {
     //validate fullname
     if (
       (formData.touched.fullName && formData.fullName.length < 3) ||
-      (formData.touched.fullName && formData.fullName.length > 12)
+      (formData.touched.fullName && formData.fullName.length > 30)
     ) {
-      errors.fullName = 'First name must be between 2 and 12'
+      errors.fullName = 'First name must be between 2 and 30'
     }
 
     //validate email
     
     if (
-      (formData.touched.email && formData.email.match(validEmail) !== true) ||
-      (formData.touched.email && formData.email.length < 6)
+      (formData.touched.email && !formData.email.match(validEmail)) 
     ) {
-      errors.email = 'email must be between 2 and 12'
+      errors.email = 'email is not valid'
     }
 
     //validate company
@@ -78,7 +75,7 @@ const FormContact = () => {
       (formData.touched.company && formData.company.length < 3) ||
       (formData.touched.company && formData.company.length > 50)
     ) {
-      errors.company = 'Company name must be between 2 and 50'
+      errors.company = 'Company name must not be empty'
     }
 
     //validate title
@@ -114,7 +111,7 @@ const FormContact = () => {
           Name
          </label>
         <br />
-        {errors.fullName && <small>{errors.fullName}</small>}
+        {errors.fullName && <small className="error__alert">{errors.fullName}</small>}
 
       </div>
 
@@ -137,7 +134,7 @@ const FormContact = () => {
          </label>
 
          <br />
-        {errors.email && <small>{errors.email}</small>}
+        {errors.email && <small className="error__alert">{errors.email}</small>}
 
       </div>
 
@@ -159,7 +156,7 @@ const FormContact = () => {
           Company Name
          </label>
         <br />
-        {errors.company && <small>{errors.company}</small>}
+        {errors.company && <small className="error__alert">{errors.company}</small>}
 
       </div>
 
@@ -182,7 +179,7 @@ const FormContact = () => {
          </label>
 
         <br />
-        {errors.title && <small>{errors.title}</small>}
+        {errors.title && <small className="error__alert">{errors.title}</small>}
 
       </div>
 
