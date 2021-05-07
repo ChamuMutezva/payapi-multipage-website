@@ -3,7 +3,7 @@
 
 .header {
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: base.calculateRem(40);
 
     &::before {
         position: absolute;
@@ -32,7 +32,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 40px 24px 0;
+        padding: base.calculateRem(40) base.calculateRem(24) 0;
     }
 
     .menu__control {
@@ -65,14 +65,13 @@
         right: 0;
         top: 0px;
         background-color: base.$bg-dark-grey;
-        padding-bottom: 335px;
+        padding-bottom: base.calculateRem(335);
       //  z-index: 2;
     }
 
     .nav__list {
-
-        padding-top: 139px;
-        padding-bottom: 36px;
+        padding-top: base.calculateRem(139);
+        padding-bottom: base.calculateRem(36);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -114,7 +113,7 @@
 
     // cta section
     .cta__summary {
-        padding: 0 24px;
+        padding: 0 base.calculateRem(24);
     }
 
     .cta__img {
@@ -144,7 +143,7 @@
         }
 
         .cta__container {
-            margin-top: 25px;
+            margin-top: base.calculateRem(25);
         }
 
         .cta__img {
@@ -164,13 +163,13 @@
         }
 
         nav {
-            padding: 40px 39px 0;
+            padding: base.calculateRem(40)  base.calculateRem(39) 0;
         }
 
         .nav__list {
             flex-direction: row;
-            padding-top: 55px;
-            padding-bottom: 50px;
+            padding-top: base.calculateRem(55);
+            padding-bottom: base.calculateRem(50);
             justify-content: flex-start;
 
             &::before {
@@ -213,8 +212,8 @@
         .cta {
             display: flex;
             flex-direction: row-reverse;
-            padding: 0 165px;
-            margin-top: 32px;
+            padding: 0 base.calculateRem(165);
+            margin-top: base.calculateRem(32);
         }
 
         .cta__container {
@@ -237,7 +236,7 @@
     z-index: 1;
     .email {
         display: block;
-        margin: 0 auto 20px;
+        margin: 0 auto base.calculateRem(20);
         max-width: 327px;
         padding: .7rem 1rem;
         width: 100%;
@@ -256,7 +255,7 @@
     }
 
     .form__questions {
-        margin: 24px auto 0;
+        margin: base.calculateRem(24) auto 0;
         text-align: center;
         color: #6C8294;
     }

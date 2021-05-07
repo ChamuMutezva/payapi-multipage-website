@@ -425,7 +425,7 @@ img:not([alt]) {
 
 .header {
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
 }
 .header::before {
   position: absolute;
@@ -448,7 +448,7 @@ img:not([alt]) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 24px 0;
+  padding: 2.5rem 1.5rem 0;
 }
 .header .menu__control {
   position: relative;
@@ -476,11 +476,11 @@ img:not([alt]) {
   right: 0;
   top: 0px;
   background-color: #1b262f;
-  padding-bottom: 335px;
+  padding-bottom: 20.9375rem;
 }
 .header .nav__list {
-  padding-top: 139px;
-  padding-bottom: 36px;
+  padding-top: 8.6875rem;
+  padding-bottom: 2.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -514,7 +514,7 @@ img:not([alt]) {
   font-weight: 900;
 }
 .header .cta__summary {
-  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 .header .cta__img {
   width: 54%;
@@ -538,7 +538,7 @@ img:not([alt]) {
     background-size: 120%;
   }
   .header .cta__container {
-    margin-top: 25px;
+    margin-top: 1.5625rem;
   }
   .header .cta__img {
     width: 32%;
@@ -554,12 +554,12 @@ img:not([alt]) {
     background-color: transparent;
   }
   .header nav {
-    padding: 40px 39px 0;
+    padding: 2.5rem 2.4375rem 0;
   }
   .header .nav__list {
     flex-direction: row;
-    padding-top: 55px;
-    padding-bottom: 50px;
+    padding-top: 3.4375rem;
+    padding-bottom: 3.125rem;
     justify-content: flex-start;
   }
   .header .nav__list::before {
@@ -593,8 +593,8 @@ img:not([alt]) {
   .header .cta {
     display: flex;
     flex-direction: row-reverse;
-    padding: 0 165px;
-    margin-top: 32px;
+    padding: 0 10.3125rem;
+    margin-top: 2rem;
   }
   .header .cta__container {
     flex: 1 1 40%;
@@ -614,7 +614,7 @@ img:not([alt]) {
 }
 .form .email {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 1.25rem;
   max-width: 327px;
   padding: 0.7rem 1rem;
   width: 100%;
@@ -630,7 +630,7 @@ img:not([alt]) {
   border: 2px solid #1d0404;
 }
 .form .form__questions {
-  margin: 24px auto 0;
+  margin: 1.5rem auto 0;
   text-align: center;
   color: #6C8294;
 }
@@ -1004,17 +1004,23 @@ img:not([alt]) {
   .main__about .about__img {
     position: relative;
   }
-  .main__about .about__img::before {
+  .main__about .about__img::before, .main__about .about__img::after {
     content: "";
     position: absolute;
     width: 170px;
-    height: 665px;
+    height: 170px;
     background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
     background-repeat: no-repeat;
-    background-size: contain;
-    top: -90px;
-    left: -65px;
-    /* z-index: 10; */
+    background-size: 290%;
+    left: 0px;
+  }
+  .main__about .about__img::before {
+    top: -170px;
+    transform: rotate(90deg);
+  }
+  .main__about .about__img::after {
+    bottom: -170px;
+    transform: rotate(180deg);
   }
 }
 
