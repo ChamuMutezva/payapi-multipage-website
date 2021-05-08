@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Ticked from '../../../assets/shared/desktop/icon-check.svg'
 import CallToActionShared from '../../../Components/CallToActionShared'
 const Main = () => {
@@ -43,7 +44,7 @@ const Main = () => {
                                 <span className="transactions">Income</span>
                             </li>
                         </ul>
-                        <a className="link--btn pricing__link--btn" href="/">Request Access </a>
+                        <Link className="link--btn pricing__link--btn" to="/contact">Request Access </Link>
                     </div>
                 </div>
 
@@ -88,7 +89,7 @@ const Main = () => {
                                 <span className="transactions">Income</span>
                             </li>
                         </ul>
-                        <a className="link--btn pricing__link--btn" href="/">Request Access </a>
+                        <Link className="link--btn pricing__link--btn" to="/contact">Request Access </Link>
                     </div>
                 </div>
 
@@ -132,7 +133,7 @@ const Main = () => {
                                 <span className="transactions">Income</span>
                             </li>
                         </ul>
-                        <a className="link--btn pricing__link--btn" href="/">Request Access </a>
+                        <Link className="link--btn pricing__link--btn" to="/contact">Request Access </Link>
                     </div>
                 </div>
             </div>

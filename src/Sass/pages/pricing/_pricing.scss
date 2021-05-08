@@ -1,9 +1,9 @@
 @use '../../base';
 
 .main__pricing {
-    margin-top: -10px;
+    margin-top: -(base.calculateRem(10));
     text-align: center;
-    padding: 0 24px;
+    padding: 0 base.calculateRem(24);
 
     .pricing__link--btn {
         color: base.$tx-dark-grey;
@@ -11,24 +11,29 @@
         padding: 0.7rem 1rem;
         max-width: 168px;
         text-align: center;
-        margin-top: 20px;
+        margin-top: base.calculateRem(20);
+        &:hover, &:focus {
+            color: base.$tx-white;
+            background-color: base.$tx-dark-grey;
+            //border: none;
+        }
     }
 
     .plans {
-        margin-bottom: 100px;
+        margin-bottom: base.calculateRem(100);
     }
 
     .plan {
-        margin-bottom: 32px;
+        margin-bottom: base.calculateRem(32);
     }
 
     .plan__list {
         //  max-width: 134px;
-        margin: 24px auto;
+        margin: base.calculateRem(24) auto;
         border-top: 1px solid base.$tx-grey-mid;
         border-bottom: 1px solid base.$tx-grey-mid;
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: base.calculateRem(12);
+        padding-bottom: base.calculateRem(12);
     }
 
     .transactions {
@@ -39,7 +44,7 @@
         display: grid;
         grid-template-columns: 1fr 2fr;
         max-width: 134px;
-        margin: 14px auto;
+        margin: base.calculateRem(14) auto;
         align-items: center;
     }
 
@@ -57,7 +62,7 @@
     }
 
     .sub__pricing__list {       
-        margin-top: 24px;
+        margin-top: base.calculateRem(24);
     }
 
     .pricing__summary {/*
@@ -74,14 +79,14 @@
         font-family: base.$heading-font;
         font-weight: 700;
         color: base.$tx-dark-grey;
-        margin-top: 32px;
+        margin-top: base.calculateRem(32);
         display: block;
     }
 
     // medium , tablet devices
 
     @include base.mQ(720px) {
-        padding: 0 39px;
+        padding: 0 base.calculateRem(39);
 
         .plans {
             display: flex;
@@ -93,7 +98,7 @@
 
     // desktop devices
     @include base.mQ(1280px) {
-        padding: 80px 165px 0;
+        padding: base.calculateRem(80) base.calculateRem(165) 0;
 
         .pricing__title {
             text-align: left;

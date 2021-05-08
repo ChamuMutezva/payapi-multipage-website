@@ -33,14 +33,15 @@
 
 	@include base.mQ(720px) {
 		max-width: 173px;
-		margin-left: -48px;
+	//	margin-left: -48px;
+		margin-left: -(base.calculateRem(48));
 		display: inline-block;
 	}
 }
 
 .js__secondary--btn {
 	@include base.mQ(1280px) {
-		margin-right: 165px;
+		margin-right: base.calculateRem(165);
 	}
 }
 

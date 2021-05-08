@@ -86,14 +86,14 @@ img:not([alt]) {
 @media screen and (min-width: 720px) {
   .js__primary {
     max-width: 173px;
-    margin-left: -48px;
+    margin-left: -3rem;
     display: inline-block;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .js__secondary--btn {
-    margin-right: 165px;
+    margin-right: 10.3125rem;
   }
 }
 
@@ -118,9 +118,9 @@ img:not([alt]) {
 }
 
 .card {
-  margin-bottom: 35px;
-  margin-top: 15px;
-  padding: 0 24px;
+  margin-bottom: 2.1875rem;
+  margin-top: 0.9375rem;
+  padding: 0 1.5rem;
 }
 .card .card__title {
   text-align: center;
@@ -139,13 +139,13 @@ img:not([alt]) {
   letter-spacing: -0.14px;
 }
 .card .card__description {
-  margin-top: 25px;
+  margin-top: 1.5625rem;
 }
 .card .card__summary {
   font-size: 0.9375rem;
   line-height: 28px;
   font-weight: 300;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   text-align: center;
   color: #6C8294;
 }
@@ -162,7 +162,7 @@ img:not([alt]) {
     padding: 0;
   }
   .card .cards__two {
-    padding: 0 39px;
+    padding: 0 2.4375rem;
     display: flex;
     margin: auto;
   }
@@ -177,24 +177,33 @@ img:not([alt]) {
   }
   .card .card__img {
     width: 70%;
-    margin-bottom: -43px;
+    margin-bottom: -2.6875rem;
   }
   .card .js__primaryImg {
-    margin-bottom: 43px;
+    margin-bottom: 2.6875rem;
     width: 40%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .card .card__summary {
+    text-align: left;
+  }
+  .card .card__title {
+    text-align: left;
+  }
+}
+
 @media screen and (min-width: 720px) {
   .cards__two {
     display: flex;
     flex-wrap: nowrap;
-    padding: 39px;
+    padding: 2.4375rem;
     gap: 15px;
   }
 }
 @media screen and (min-width: 1280px) {
   .cards__two {
-    padding: 0 165px;
+    padding: 0 10.3125rem;
   }
 }
 
@@ -203,7 +212,17 @@ img:not([alt]) {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 165px;
+    padding: 0 10.3125rem;
+  }
+  .cards__one .card .card__img {
+    margin-left: 0;
+  }
+  .cards__one .card:last-child {
+    flex-direction: row-reverse;
+  }
+  .cards__one .card:last-child .card__img {
+    margin-right: 0;
+    margin-left: auto;
   }
 }
 
@@ -293,8 +312,9 @@ img:not([alt]) {
   color: #ffffff;
   text-decoration: none;
 }
-.js__footer__list .anchor:focus {
+.js__footer__list .anchor:focus, .js__footer__list .anchor:focus {
   outline: 2px solid #BA4270;
+  font-weight: 900;
 }
 @media screen and (min-width: 720px) {
   .js__footer__list {
@@ -316,15 +336,15 @@ img:not([alt]) {
   letter-spacing: -0.25px;
   text-align: center;
   color: #36536b;
-  margin-bottom: 25px;
-  padding: 0 15px;
+  margin-bottom: 1.5625rem;
+  padding: 0 0.9375rem;
 }
 @media screen and (min-width: 720px) {
   .header__title {
     font-size: 3rem;
     line-height: 56px;
     letter-spacing: -0.37px;
-    margin-top: -20px;
+    margin-top: -1.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -333,30 +353,30 @@ img:not([alt]) {
     font-size: 4.5rem;
     line-height: 72px;
     letter-spacing: -0.55px;
-    margin-top: -54px;
-    margin-bottom: 54px;
+    margin-top: -6rem;
+    margin-bottom: 3.375rem;
   }
 }
 
 .secondary__title {
-  margin-top: 50px;
+  margin-top: 3.125rem;
   margin-bottom: 0;
 }
 @media screen and (min-width: 720px) {
   .secondary__title {
-    margin-top: 65px;
-    padding: 0 97px;
+    margin-top: 4.0625rem;
+    padding: 0 6.0625rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .secondary__title {
-    padding: 0 165px;
+    padding: 0 10.3125rem;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .about__title {
-    padding: 10px 300px 0 260px;
+    padding: 0.625rem 18.75rem 0 16.25rem;
   }
 }
 .paragraph {
@@ -594,7 +614,7 @@ img:not([alt]) {
     display: flex;
     flex-direction: row-reverse;
     padding: 0 10.3125rem;
-    margin-top: 2rem;
+    margin-top: 0;
   }
   .header .cta__container {
     flex: 1 1 40%;
@@ -770,7 +790,10 @@ img:not([alt]) {
 }
 @media screen and (min-width: 1280px) {
   .main {
-    margin-top: -61px;
+    margin-top: -2.6875rem;
+  }
+  .main .secondary__cards {
+    margin-bottom: 6.25rem;
   }
   .main .hero {
     display: flex;
@@ -803,9 +826,9 @@ img:not([alt]) {
 }
 
 .main__pricing {
-  margin-top: -10px;
+  margin-top: -0.625rem;
   text-align: center;
-  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 .main__pricing .pricing__link--btn {
   color: #36536b;
@@ -813,20 +836,24 @@ img:not([alt]) {
   padding: 0.7rem 1rem;
   max-width: 168px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+.main__pricing .pricing__link--btn:hover, .main__pricing .pricing__link--btn:focus {
+  color: #ffffff;
+  background-color: #36536b;
 }
 .main__pricing .plans {
-  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
 }
 .main__pricing .plan {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 .main__pricing .plan__list {
-  margin: 24px auto;
+  margin: 1.5rem auto;
   border-top: 1px solid #6C8294;
   border-bottom: 1px solid #6C8294;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .main__pricing .transactions {
   justify-self: left;
@@ -835,7 +862,7 @@ img:not([alt]) {
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 134px;
-  margin: 14px auto;
+  margin: 0.875rem auto;
   align-items: center;
 }
 .main__pricing .not__ticked {
@@ -849,7 +876,7 @@ img:not([alt]) {
   letter-spacing: -0.18px;
 }
 .main__pricing .sub__pricing__list {
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 .main__pricing .pricing__summary {
   /*
@@ -865,12 +892,12 @@ img:not([alt]) {
   font-family: "DM Serif Display", serif;
   font-weight: 700;
   color: #36536b;
-  margin-top: 32px;
+  margin-top: 2rem;
   display: block;
 }
 @media screen and (min-width: 720px) {
   .main__pricing {
-    padding: 0 39px;
+    padding: 0 2.4375rem;
   }
   .main__pricing .plans {
     display: flex;
@@ -881,7 +908,7 @@ img:not([alt]) {
 }
 @media screen and (min-width: 1280px) {
   .main__pricing {
-    padding: 80px 165px 0;
+    padding: 5rem 10.3125rem 0;
   }
   .main__pricing .pricing__title {
     text-align: left;

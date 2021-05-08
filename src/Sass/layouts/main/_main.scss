@@ -74,7 +74,11 @@
     }
 
     @include base.mQ(1280px) {
-        margin-top: -61px;
+        margin-top: -(base.calculateRem(43));
+
+        .secondary__cards {
+            margin-bottom: base.calculateRem(100);
+        }
 
         .hero {
             display: flex;

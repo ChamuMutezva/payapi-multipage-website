@@ -7,14 +7,14 @@
     letter-spacing: -0.25px;
     text-align: center;
     color: base.$tx-dark-grey;
-    margin-bottom: 25px;
-    padding: 0 15px;
+    margin-bottom:  base.calculateRem(25);
+    padding: 0  base.calculateRem(15);
 
     @include base.mQ(720px) {
         font-size: base.calculateRem(48);
         line-height: 56px;
         letter-spacing: -0.37px;
-        margin-top: -20px;
+        margin-top: -(base.calculateRem(20));
     }
 
     @include base.mQ(1280px) {
@@ -23,25 +23,25 @@
         font-size: base.calculateRem(72);
         line-height: 72px;
         letter-spacing: -0.55px;
-        margin-top: -54px;
-        margin-bottom: 54px;
+        margin-top: -(base.calculateRem(96));
+        margin-bottom: base.calculateRem(54);
 
     }
 }
 
 //secondary title 
 .secondary__title {
-    margin-top: 50px;
+    margin-top:  base.calculateRem(50);
     margin-bottom: 0;
 
     @include base.mQ(720px) {
-        margin-top: 65px;
-        padding: 0 97px;
+        margin-top:  base.calculateRem(65);
+        padding: 0  base.calculateRem(97);
 
     }
 
     @include base.mQ(1280px) { 
-        padding: 0 165px;      
+        padding: 0  base.calculateRem(165);      
     }
 
 
@@ -49,6 +49,6 @@
 
 @include base.mQ(1280px) {    
     .about__title {
-        padding: 10px 300px 0 260px;
+        padding:  base.calculateRem(10)  base.calculateRem(300) 0  base.calculateRem(260);
     }
 }

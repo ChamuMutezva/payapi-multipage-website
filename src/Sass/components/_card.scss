@@ -1,9 +1,9 @@
 @use '../base';
 
 .card {
-    margin-bottom: 35px;
-    margin-top: 15px;
-    padding: 0 24px;
+    margin-bottom: base.calculateRem(35);
+    margin-top: base.calculateRem(15);
+    padding: 0 base.calculateRem(24);
 
     .card__title {
         text-align: center;
@@ -24,14 +24,14 @@
     }
 
     .card__description {
-        margin-top: 25px;
+        margin-top: base.calculateRem(25);
     }
 
     .card__summary {
         font-size: base.calculateRem(15);
         line-height: 28px;
         font-weight: 300;
-        padding: 20px 0;
+        padding: base.calculateRem(20) 0;
         text-align: center;
         color: base.$tx-grey-mid;
     }
@@ -52,7 +52,7 @@
 
         // max-width: 573px;
         .cards__two {
-            padding: 0 39px;
+            padding: 0 base.calculateRem(39);
             display: flex;
             margin: auto;
         }
@@ -70,28 +70,35 @@
 
         .card__img {
             width: 70%;
-            margin-bottom: -43px;
+            margin-bottom: -(base.calculateRem(43));
         }
 
         .js__primaryImg {
-            margin-bottom: 43px;
+            margin-bottom: base.calculateRem(43);
             width: 40%;
         }
     }
 
-    @include base.mQ(1280px) {}
+    @include base.mQ(1280px) {
+        .card__summary {
+           text-align: left;
+        }
+        .card__title {
+           text-align: left;
+        }
+    }
 }
 
 .cards__two {
     @include base.mQ(720px) {
         display: flex;
         flex-wrap: nowrap;
-        padding: 39px;
+        padding: base.calculateRem(39);
         gap: 15px;
     }
 
     @include base.mQ(1280px) {
-        padding: 0 165px;
+        padding: 0 base.calculateRem(165);
     }
 
 }
@@ -102,7 +109,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0 165px;
+            padding: 0 base.calculateRem(165);
+            .card__img {
+                margin-left: 0;
+            }
+            &:last-child {
+                flex-direction: row-reverse;
+                .card__img {
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+            }
         }
+       
     }
 }
