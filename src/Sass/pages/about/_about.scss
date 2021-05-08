@@ -1,7 +1,7 @@
 @use '../../base';
 
 .main__about {
-    margin-top: -10px;
+    margin-top: -(base.calculateRem(10));
     text-align: center;
     // padding: 0 24px;
 
@@ -14,26 +14,26 @@
     }
 
     .mission__summary {
-        padding: 0 24px;
+        padding: 0 base.calculateRem(24);
     }
 
     .mission {
-        margin-bottom: 42px;
+        margin-bottom: base.calculateRem(42);
     }
 
     .hero__about__img {
-        margin: 76px auto 50px;
+        margin: base.calculateRem(76) auto base.calculateRem(50);
     }
 
     .primary__about {
-        padding: 0 24px;
+        padding: 0 base.calculateRem(24);
 
     }
 
     .about__list {
         border-top: 1px solid base.$tx-grey-mid;
         border-bottom: 1px solid base.$tx-grey-mid;
-        padding-top: 10px;
+        padding-top: base.calculateRem(10);
     }
 
     .about__list__summary {
@@ -47,7 +47,7 @@
     }
 
     .about__list__item {
-        margin-bottom: 28px;
+        margin-bottom: base.calculateRem(28);
     }
 
     .about__list__data {
@@ -60,18 +60,18 @@
     }
 
     @include base.mQ(720px) {
-        margin-top: 10px;
+        margin-top: base.calculateRem(10);
 
         .missions {
-            margin-bottom: 96px;
-            margin-top: 15px;
+            margin-bottom: base.calculateRem(96);
+            margin-top: base.calculateRem(15);
         }
 
         .mission {
             display: flex;
             justify-content: center;
             align-items: baseline;
-            padding: 0 39px;
+            padding: 0 base.calculateRem(39);
         }
 
         .mission__title {
@@ -94,8 +94,8 @@
         }
 
         .about__list__item {
-            padding-top: 16px;
-            padding-bottom: 16px;
+            padding-top: base.calculateRem(16);
+            padding-bottom: base.calculateRem(16);
             border-top: 1px solid base.$tx-grey-mid;
             border-bottom: 1px solid base.$tx-grey-mid;
             width: 32%;
@@ -106,7 +106,7 @@
         }
 
         .primary__about {
-            padding: 0 39px;
+            padding: 0 base.calculateRem(39);
 
         }
     }
@@ -123,7 +123,8 @@
         }
 
         .missions {
-            padding: 0 260px;
+            padding: 0 base.calculateRem(260);
+            margin-bottom: base.calculateRem(150);
         }
         .about__img {
             position: relative;
@@ -138,11 +139,11 @@
                 left: 0px;             
             }
             &::before {                
-                top: -170px;               
+                top: -(base.calculateRem(170));               
                 transform: rotate(90deg);
             }
             &::after {               
-                bottom: -170px;               
+                bottom: -(base.calculateRem(170));               
                 transform: rotate(180deg);
             }
         }

@@ -218,11 +218,25 @@ img:not([alt]) {
     margin-left: 0;
   }
   .cards__one .card:last-child {
+    position: relative;
     flex-direction: row-reverse;
+    z-index: 2;
   }
   .cards__one .card:last-child .card__img {
     margin-right: 0;
     margin-left: auto;
+  }
+  .cards__one .card:last-child::before {
+    position: absolute;
+    top: -30px;
+    right: -127px;
+    content: "";
+    width: 400px;
+    height: 400px;
+    background-image: url("../../assets/shared/desktop/bg-pattern-circle.svg");
+    z-index: 1;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 }
 
@@ -925,7 +939,7 @@ img:not([alt]) {
 }
 
 .main__about {
-  margin-top: -10px;
+  margin-top: -0.625rem;
   text-align: center;
 }
 .main__about .mission__title {
@@ -936,21 +950,21 @@ img:not([alt]) {
   letter-spacing: -0.18px;
 }
 .main__about .mission__summary {
-  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 .main__about .mission {
-  margin-bottom: 42px;
+  margin-bottom: 2.625rem;
 }
 .main__about .hero__about__img {
-  margin: 76px auto 50px;
+  margin: 4.75rem auto 3.125rem;
 }
 .main__about .primary__about {
-  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 .main__about .about__list {
   border-top: 1px solid #6C8294;
   border-bottom: 1px solid #6C8294;
-  padding-top: 10px;
+  padding-top: 0.625rem;
 }
 .main__about .about__list__summary {
   font-size: 1rem;
@@ -962,7 +976,7 @@ img:not([alt]) {
   color: #6C8294;
 }
 .main__about .about__list__item {
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
 }
 .main__about .about__list__data {
   font-size: 3.5rem;
@@ -973,17 +987,17 @@ img:not([alt]) {
 }
 @media screen and (min-width: 720px) {
   .main__about {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
   .main__about .missions {
-    margin-bottom: 96px;
-    margin-top: 15px;
+    margin-bottom: 6rem;
+    margin-top: 0.9375rem;
   }
   .main__about .mission {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    padding: 0 39px;
+    padding: 0 2.4375rem;
   }
   .main__about .mission__title {
     flex: 1 1 33%;
@@ -1002,8 +1016,8 @@ img:not([alt]) {
     border-bottom: 1px solid transparent;
   }
   .main__about .about__list__item {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border-top: 1px solid #6C8294;
     border-bottom: 1px solid #6C8294;
     width: 32%;
@@ -1012,7 +1026,7 @@ img:not([alt]) {
     align-items: baseline;
   }
   .main__about .primary__about {
-    padding: 0 39px;
+    padding: 0 2.4375rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1026,7 +1040,8 @@ img:not([alt]) {
     padding: 0;
   }
   .main__about .missions {
-    padding: 0 260px;
+    padding: 0 16.25rem;
+    margin-bottom: 9.375rem;
   }
   .main__about .about__img {
     position: relative;
@@ -1042,11 +1057,11 @@ img:not([alt]) {
     left: 0px;
   }
   .main__about .about__img::before {
-    top: -170px;
+    top: -10.625rem;
     transform: rotate(90deg);
   }
   .main__about .about__img::after {
-    bottom: -170px;
+    bottom: -10.625rem;
     transform: rotate(180deg);
   }
 }
@@ -1063,11 +1078,11 @@ img:not([alt]) {
 }
 @media screen and (min-width: 1280px) {
   .main__contact .contact__primary {
-    padding: 30px 0px 30px 165px;
+    padding: 1.875rem 0px 1.875rem 10.3125rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 6rem;
   }
 }
 

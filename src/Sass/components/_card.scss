@@ -81,10 +81,11 @@
 
     @include base.mQ(1280px) {
         .card__summary {
-           text-align: left;
+            text-align: left;
         }
+
         .card__title {
-           text-align: left;
+            text-align: left;
         }
     }
 }
@@ -110,17 +111,35 @@
             justify-content: center;
             align-items: center;
             padding: 0 base.calculateRem(165);
+
             .card__img {
                 margin-left: 0;
             }
+
             &:last-child {
+                position: relative;
                 flex-direction: row-reverse;
+                z-index: 2;
+
                 .card__img {
                     margin-right: 0;
                     margin-left: auto;
                 }
+
+                &::before {
+                    position: absolute;
+                    top: -30px;
+                    right: -127px;
+                    content: "";
+                    width: 400px;
+                    height: 400px;
+                    background-image: url("../../assets/shared/desktop/bg-pattern-circle.svg");
+                    z-index: 1;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                }
             }
         }
-       
+
     }
 }

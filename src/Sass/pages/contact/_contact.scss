@@ -13,11 +13,11 @@
     }
     @include base.mQ(1280px) {
         .contact__primary {
-            padding: 30px 0px 30px 165px ;
+            padding: base.calculateRem(30) 0px base.calculateRem(30) base.calculateRem(165);
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 50px;
+            margin-bottom: base.calculateRem(96);
         }
     }
 }
