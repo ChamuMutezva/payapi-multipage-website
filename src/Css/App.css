@@ -266,6 +266,25 @@ img:not([alt]) {
   margin: auto;
   padding-bottom: 50px;
 }
+@media screen and (min-width: 1280px) {
+  .cta__summary__shared {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 165px;
+  }
+  .cta__summary__shared .form {
+    margin: 0;
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: right;
+  }
+  .cta__summary__shared .header__title {
+    flex: 1 1 50%;
+    text-align: left;
+    padding: 0;
+  }
+}
 
 .footer {
   background-image: url("../../assets/shared//desktop//bg-pattern-circle.svg");

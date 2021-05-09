@@ -2,6 +2,7 @@
 
 .cta__summary__shared {
     padding: 0 24px;
+
     .header__title {
         font-size: base.calculateRem(32);
         font-family: base.$heading-font;
@@ -9,11 +10,32 @@
         letter-spacing: -0.25px;
         text-align: center;
         color: base.$tx-dark-grey;
-        margin-bottom: 25px;     
+        margin-bottom: 25px;
     }
-    .form {       
+
+    .form {
         max-width: 573px;
         margin: auto;
         padding-bottom: 50px;
+    }
+
+    @include base.mQ(1280px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 0 165px;
+
+        .form {
+            margin: 0;
+            display: flex;
+            flex: 1 1 50%;
+            justify-content: right;
+        }
+
+        .header__title {
+            flex: 1 1 50%;
+            text-align: left;
+            padding: 0;
+        }
     }
 }
