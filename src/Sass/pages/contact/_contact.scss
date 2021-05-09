@@ -2,7 +2,7 @@
 
 .main__contact {
     .hero__contact {
-        margin-top: 50px;
+        margin-top: base.calculateRem(50);
     }
     .hero__title__contact {
         font-size: base.calculateRem(24);

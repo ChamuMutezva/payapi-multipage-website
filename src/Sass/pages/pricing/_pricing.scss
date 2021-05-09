@@ -12,7 +12,9 @@
         max-width: 168px;
         text-align: center;
         margin-top: base.calculateRem(20);
-        &:hover, &:focus {
+
+        &:hover,
+        &:focus {
             color: base.$tx-white;
             background-color: base.$tx-dark-grey;
             //border: none;
@@ -53,7 +55,7 @@
         filter: opacity(0);
     }
 
-    .pricing__title {       
+    .pricing__title {
         color: base.$tx-pink;
         font-family: base.$heading-font;
         line-height: 32px;
@@ -61,15 +63,8 @@
         letter-spacing: -0.18px;
     }
 
-    .sub__pricing__list {       
+    .sub__pricing__list {
         margin-top: base.calculateRem(24);
-    }
-
-    .pricing__summary {/*
-        font-size: base.calculateRem(15);
-        font-weight: 500;
-        color: base.$tx-grey-mid;
-        margin-top: 20px;*/
     }
 
     .main__pricing__cost {

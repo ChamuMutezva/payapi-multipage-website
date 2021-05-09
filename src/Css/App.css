@@ -584,7 +584,7 @@ img:not([alt]) {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     background-color: transparent;
   }
   .header nav {
@@ -617,7 +617,7 @@ img:not([alt]) {
     background-size: 55%;
   }
   .header nav {
-    padding: 40px 165px 0;
+    padding: 2.5rem 10.3125rem 0;
   }
   .header .modal {
     width: 75%;
@@ -715,7 +715,7 @@ img:not([alt]) {
 }
 
 .main {
-  margin-top: 48px;
+  margin-top: 3rem;
 }
 .main .hero__container {
   background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
@@ -724,7 +724,7 @@ img:not([alt]) {
   background-size: 120%;
   background-position: 50% -110%;
   background-color: #1b262f;
-  padding-bottom: 100px;
+  padding-bottom: 6.25rem;
 }
 .main .hero__images {
   padding: 52px 24px;
@@ -760,7 +760,7 @@ img:not([alt]) {
 .main .hero__signup {
   color: #ffffff;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 0.3125rem;
   max-width: 457px;
   margin: auto;
 }
@@ -774,7 +774,7 @@ img:not([alt]) {
   font-size: 0.9375rem;
   line-height: 28px;
   font-weight: 200;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
 }
 .main .link--btn {
   font-size: 1rem;
@@ -788,18 +788,20 @@ img:not([alt]) {
   margin: 56px auto 0;
   max-width: 130px;
 }
-.main .link--btn:focus {
-  outline: 2px solid #BA4270;
+.main .link--btn:focus, .main .link--btn:hover {
+  outline: 2px solid #1b262f;
   border: 2px solid transparent;
+  background-color: #ffffff;
+  color: #36536b;
 }
 @media screen and (min-width: 720px) {
   .main {
-    margin-top: 60px;
+    margin-top: 3.75rem;
   }
   .main .hero__container {
     background-size: 50%;
     background-position: -25% 130%;
-    padding-top: 100px;
+    padding-top: 6.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -814,7 +816,7 @@ img:not([alt]) {
     flex-direction: row-reverse;
     justify-content: left;
     align-items: center;
-    padding: 0 165px 0 0;
+    padding: 0 10.3125rem 0 0;
   }
   .main .hero__title {
     text-align: left;
@@ -824,7 +826,7 @@ img:not([alt]) {
   }
   .main .hero__summary {
     text-align: left;
-    padding: 20px 0;
+    padding: 1.25rem 0;
   }
   .main .link--btn {
     margin-left: 0;
@@ -838,7 +840,22 @@ img:not([alt]) {
   overflow-x: hidden;
   min-height: 100vh;
 }
+@media screen and (min-width: 1650px) {
+  .App {
+    width: 95%;
+    max-width: 1490px;
+    margin: 0 auto;
+  }
+}
 
+/*
+@include base.mQ(1650px) {
+    .App {
+    width: 95%;
+    max-width: 1490px;
+    margin: 0 auto;
+    }
+}*/
 .main__pricing {
   margin-top: -0.625rem;
   text-align: center;
@@ -891,13 +908,6 @@ img:not([alt]) {
 }
 .main__pricing .sub__pricing__list {
   margin-top: 1.5rem;
-}
-.main__pricing .pricing__summary {
-  /*
-  font-size: base.calculateRem(15);
-  font-weight: 500;
-  color: base.$tx-grey-mid;
-  margin-top: 20px;*/
 }
 .main__pricing .main__pricing__cost {
   font-size: 3.5rem;
@@ -1067,7 +1077,7 @@ img:not([alt]) {
 }
 
 .main__contact .hero__contact {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 .main__contact .hero__title__contact {
   font-size: 1.5rem;
@@ -1085,10 +1095,3 @@ img:not([alt]) {
     margin-bottom: 6rem;
   }
 }
-
-/*
-.App {
-    background-color: color.scale(#66717f, $lightness: 20%);
-
-}
-*/

@@ -5,5 +5,19 @@
     font-family: base.$main-font;
     font-size: 15px;
     overflow-x: hidden;
-    min-height: 100vh;
+    min-height: 100vh;  
+    
+    @include base.mQ(1650px) {
+        width: 95%;
+        max-width: 1490px;
+        margin: 0 auto;
+    }
 }
+/*
+@include base.mQ(1650px) {
+    .App {
+    width: 95%;
+    max-width: 1490px;
+    margin: 0 auto;
+    }
+}*/

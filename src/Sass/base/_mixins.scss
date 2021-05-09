@@ -1,4 +1,6 @@
 @use './base';
+
+//screean reader content - not visually seen  on the screen
 @mixin screen-reader {
   position: absolute;
   left: -10000px;
@@ -8,12 +10,14 @@
   overflow: hidden;
 }
 
+//media query control
 @mixin mQ($arg) {
   @media screen and (min-width: $arg) {
     @content;
   }
 }
 
+//hero image
 @mixin home-hero-img {
   padding: 52px 24px;
   max-width: 536px;

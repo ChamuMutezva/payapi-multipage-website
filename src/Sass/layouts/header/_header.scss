@@ -1,6 +1,7 @@
 @use '../../base';
 @use '../../components';
 
+//header section for all pages
 .header {
     position: relative;
     padding-bottom: base.calculateRem(40);
@@ -111,7 +112,7 @@
 
     }
 
-    // cta section
+    // cta section for home page
     .cta__summary {
         padding: 0 base.calculateRem(24);
     }
@@ -158,7 +159,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding-bottom: 10px;
+            padding-bottom: base.calculateRem(10);
             background-color: transparent;
         }
 
@@ -200,7 +201,7 @@
         }
 
         nav {
-            padding: 40px 165px 0;
+            padding: base.calculateRem(40) base.calculateRem(165) 0;
         }
 
         .modal {
@@ -257,11 +258,11 @@
     .form__questions {
         margin: base.calculateRem(24) auto 0;
         text-align: center;
-        color: #6C8294;
+        color: base.$tx-grey-mid;
     }
 
     .form__anchor {
-        color: #6C8294;
+        color: base.$tx-grey-mid;
         font-weight: 700;
     }
 

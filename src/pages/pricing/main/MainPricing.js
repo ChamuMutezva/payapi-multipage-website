@@ -9,8 +9,8 @@ const Main = () => {
                     <div className="sub__pricing">
                         <h2 className="pricing__title">Free Plan</h2>
                         <p className="paragraph pricing__summary">Build and test
-                        using our core set of products with up to 100 API requests
-                </p>
+                                 using our core set of products with up to 100 API requests
+                        </p>
                         <strong className="main__pricing__cost">$0.00</strong>
                     </div>
                     <div className="sub__pricing sub__pricing__list">

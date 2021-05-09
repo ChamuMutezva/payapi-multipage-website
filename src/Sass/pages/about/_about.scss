@@ -3,8 +3,7 @@
 .main__about {
     margin-top: -(base.calculateRem(10));
     text-align: center;
-    // padding: 0 24px;
-
+   
     .mission__title {
         color: base.$tx-dark-grey;
         font-family: base.$heading-font;

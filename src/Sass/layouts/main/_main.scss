@@ -2,7 +2,7 @@
 @use '../../components';
 
 .main {
-    margin-top: 48px;
+    margin-top: base.calculateRem(48);
 
     .hero__container {
         background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
@@ -11,7 +11,7 @@
         background-size: 120%;
         background-position: 50% -110%;
         background-color: base.$bg-dark-grey;
-        padding-bottom: 100px;
+        padding-bottom: base.calculateRem(100);
     }
 
     .hero__images {
@@ -21,7 +21,7 @@
     .hero__signup {
         color: base.$tx-white;
         text-align: center;
-        padding-top: 5px;
+        padding-top: base.calculateRem(5);
         max-width: 457px;
         margin: auto;
     }
@@ -37,7 +37,7 @@
         font-size: base.calculateRem(15);
         line-height: 28px;
         font-weight: 200;
-        padding: 12px 24px;
+        padding: base.calculateRem(12) base.calculateRem(24);
     }
 
     .link--btn {
@@ -52,9 +52,11 @@
         margin: 56px auto 0;
         max-width: 130px;
 
-        &:focus {
-            outline: 2px solid base.$anchor-focus;
+        &:focus, &:hover {
+            outline: 2px solid base.$bg-dark-grey;
             border: 2px solid transparent;
+            background-color: base.$tx-white;
+            color: base.$tx-dark-grey;
         }
     }
 
@@ -62,12 +64,12 @@
     
 
     @include base.mQ(720px) {
-        margin-top: 60px;
+        margin-top: base.calculateRem(60);
 
         .hero__container {
             background-size: 50%;
             background-position: -25% 130%;
-            padding-top: 100px;
+            padding-top: base.calculateRem(100);
         }
 
 
@@ -85,7 +87,7 @@
             flex-direction: row-reverse;
             justify-content: left;
             align-items: center;
-            padding: 0 165px 0 0;
+            padding: 0 base.calculateRem(165) 0 0;
         }
 
         .hero__title {
@@ -97,7 +99,7 @@
 
         .hero__summary {
             text-align: left;
-            padding: 20px 0;
+            padding: base.calculateRem(20) 0;
         }
 
         .link--btn {
