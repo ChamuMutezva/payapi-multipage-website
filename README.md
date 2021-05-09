@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Screenshot (Design preview)
 
-![mobile preview - home page](./assets/mobile.png)
-![desktop preview - home page](./assets/desktop.png)
+![mobile preview - home page](./src/assets/mobile.png)
+![desktop preview - home page](./src/assets/desktop.png)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
