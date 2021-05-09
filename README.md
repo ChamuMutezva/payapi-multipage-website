@@ -16,8 +16,6 @@ This is a solution to the [PayAPI multi-page website challenge on Frontend Mento
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -27,12 +25,17 @@ Users should be able to:
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements throughout the site
 - Receive an error message when the contact form is submitted if:
-  - The `Name`, `Email Address` or `Message` fields are empty should show "This field can't be empty"
+  - The `Name`, has less than 3 or more than 30 characters "First name must be between 3 and 30"
+  - The  `Message` field is empty , has less than 5 or more than 50 characters
+       should show "First name must be between 3 and 50"
   - The `Email Address` is not formatted correctly should show "Please use a valid email address"
+  - The `Title` has less than 2 characters, "Title  must be between 2 and 8"
+  - The `Company` has less than 3 characters , "Company name must not be empty"
 
-### Screenshot
+### Screenshot (Design preview)
 
-![](./screenshot.jpg)
+![mobile preview - home page](./assets/mobile.png)
+![desktop preview - home page](./assets/desktop.png)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 

@@ -87,6 +87,18 @@
         .card__title {
             text-align: left;
         }
+
+        .card__description {
+            max-width: 445px;
+        }
+
+        .card__img {
+            width: 100%;
+        }
+
+        .js__primaryImg {
+            width: 40%;
+        }
     }
 }
 
@@ -108,7 +120,7 @@
     @include base.mQ(1280px) {
         .card {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             padding: 0 base.calculateRem(165);
 
@@ -120,6 +132,7 @@
                 position: relative;
                 flex-direction: row-reverse;
                 z-index: 2;
+               // padding-left: base.calculateRem(165);
 
                 .card__img {
                     margin-right: 0;
@@ -128,14 +141,14 @@
 
                 &::before {
                     position: absolute;
-                    top: -30px;
-                    right: -127px;
+                    top: -10px;
+                    right: -75px;
                     content: "";
-                    width: 400px;
-                    height: 400px;
+                    width: 500px;
+                    height: 575px;
                     background-image: url("../../assets/shared/desktop/bg-pattern-circle.svg");
                     z-index: 1;
-                    background-size: 100% 100%;
+                    background-size: 150% 100%;
                     background-repeat: no-repeat;
                 }
             }

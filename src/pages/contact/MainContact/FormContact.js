@@ -15,6 +15,7 @@ const FormContact = () => {
       company: false,
       title: false,
       email: false,
+      message: false,
     }
 
   }
@@ -37,13 +38,13 @@ const FormContact = () => {
   }
 
   const handleSubmit = (evt) => {
-    evt.preventDefault()    
+    evt.preventDefault()
     console.log(evt.target)
     console.log(formData)
     alert("Form submitted successfully")
   }
 
- 
+
   const validate = () => {
     const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     // Object to collect error feedback and to display on the form
@@ -52,24 +53,26 @@ const FormContact = () => {
       title: '',
       company: '',
       email: '',
+      message: '',
     }
 
     //validate fullname
     if (
-      (formData.touched.fullName && formData.fullName.length < 3) ||
+      (formData.touched.fullName && formData.fullName.length <= 0) ||
       (formData.touched.fullName && formData.fullName.length > 30)
     ) {
       errors.fullName = 'First name must be between 3 and 30'
-     // const nameErr = document.getElementById("fullname")
-     // nameErr.style.borderBottom = "2px solid red"
     }
 
     //validate email
-    
-    if (
-      (formData.touched.email && !formData.email.match(validEmail)) 
-    ) {
-      errors.email = 'email is not valid'
+    if ((formData.touched.email && formData.email.length <= 0)) 
+    {
+      errors.email = 'Email cannot be empty'
+    }
+
+    if ((formData.touched.email && !formData.email.match(validEmail)))
+     {
+      errors.email = 'Please use a valid email address'
     }
 
     //validate company
@@ -85,7 +88,15 @@ const FormContact = () => {
       (formData.touched.title && formData.title.length < 2) ||
       (formData.touched.title && formData.title.length > 8)
     ) {
-      errors.title = 'Title  must be between 2 and 12'
+      errors.title = 'Title  must be between 2 and 8'
+    }
+
+    //validate message
+    if (
+      (formData.touched.message && formData.message.length < 5) ||
+      (formData.touched.message && formData.message.length > 50)
+    ) {
+      errors.message = 'Message  must be between 5 and 50'
     }
     return errors
   }
@@ -106,8 +117,9 @@ const FormContact = () => {
           required
           id="fullname"
           value={fullName}
-          onChange={onChange}
           onBlur={onBlur}
+          onChange={onChange}
+
         />
         <label className="input__label name__label" htmlFor="fullname">
           Name
@@ -135,7 +147,7 @@ const FormContact = () => {
           Email
          </label>
 
-         <br />
+        <br />
         {errors.email && <small className="error__alert">{errors.email}</small>}
 
       </div>
@@ -190,15 +202,19 @@ const FormContact = () => {
         <textarea name="message"
           className="form__inputs"
           id="message"
+          required
+          aria-required={true}
           value={message}
           onChange={onChange}
+          onBlur={onBlur}
           cols="30"
           rows="3"></textarea>
 
         <label className="input__label name__label" htmlFor="msg">
           Message
         </label>
-
+        <br />
+        {errors.message && <small className="error__alert">{errors.message}</small>}
       </div>
       <div className="details details__check">
         <input className="form__check"
