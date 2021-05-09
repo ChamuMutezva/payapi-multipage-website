@@ -17,6 +17,7 @@
         max-width: 573px;
         margin: auto;
         padding-bottom: 50px;
+        text-align: center;
     }
 
     @include base.mQ(1280px) {
