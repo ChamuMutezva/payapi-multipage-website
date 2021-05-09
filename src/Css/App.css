@@ -394,12 +394,13 @@ img:not([alt]) {
 @media screen and (min-width: 1280px) {
   .secondary__title {
     padding: 0 10.3125rem;
+    max-width: 1230px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .about__title {
-    padding: 0.625rem 18.75rem 0 16.25rem;
+    padding: 0.625rem 6.75rem 0 16.25rem;
   }
 }
 .paragraph {
@@ -416,18 +417,18 @@ img:not([alt]) {
 }
 
 .form__contact {
-  padding: 15px 24px;
+  padding: 0.9375rem 1.5rem;
   max-width: 447px;
   margin: auto;
 }
 .form__contact .details {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 .form__contact .form__inputs {
   display: block;
   width: 100%;
-  padding: 20px 0 0;
+  padding: 1.25rem 0 0;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -455,15 +456,21 @@ img:not([alt]) {
 }
 .form__contact .check__label {
   text-align: left;
-  margin-left: 15px;
+  margin-left: 0.9375rem;
 }
 .form__contact .error__alert {
   text-align: left;
   margin-left: 0;
   display: block;
-  margin-top: -20px;
+  margin-top: -1.25rem;
   color: #ff0000;
   font-size: 0.6875rem;
+}
+@media screen and (min-width: 1280px) {
+  .form__contact {
+    padding: 0.9375rem 0;
+    margin: 0;
+  }
 }
 
 .header {
@@ -1083,6 +1090,9 @@ img:not([alt]) {
     bottom: -10.625rem;
     transform: rotate(180deg);
   }
+  .main__about .hero__image__container {
+    max-width: 541px;
+  }
 }
 
 .main__contact .hero__contact {
@@ -1099,8 +1109,11 @@ img:not([alt]) {
   .main__contact .contact__primary {
     padding: 1.875rem 0px 1.875rem 10.3125rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 6rem;
+  }
+  .main__contact .hero__contact {
+    margin-top: 0;
   }
 }

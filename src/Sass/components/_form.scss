@@ -1,19 +1,19 @@
 @use '../base';
 
 .form__contact {
-    padding: 15px 24px;
+    padding: base.calculateRem(15) base.calculateRem(24);
     max-width: 447px;
     margin: auto;
 
     .details {
         position: relative;
-        margin-bottom: 24px;
+        margin-bottom: base.calculateRem(24);
     }
 
     .form__inputs {
         display: block;
         width: 100%;
-        padding: 20px 0 0;
+        padding: base.calculateRem(20) 0 0;
         border-top: none;
         border-left: none;
         border-right: none;
@@ -47,17 +47,21 @@
 
     .check__label {
         text-align: left;
-        margin-left: 15px;
+        margin-left: base.calculateRem(15);
     }
 
     .error__alert {
         text-align: left;
         margin-left: 0;
         display: block;
-        margin-top: -20px;
+        margin-top: -(base.calculateRem(20));
         color: base.$error-color;
         font-size: base.calculateRem(11);
     }
 
-    
+    @include base.mQ(1280px) {
+        padding: 0.9375rem 0;
+        margin: 0;
+    }
+
 }

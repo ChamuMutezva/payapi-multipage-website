@@ -41,7 +41,8 @@
     }
 
     @include base.mQ(1280px) { 
-        padding: 0  base.calculateRem(165);      
+        padding: 0  base.calculateRem(165);    
+        max-width: 1230px;  
     }
 
 
@@ -49,6 +50,6 @@
 
 @include base.mQ(1280px) {    
     .about__title {
-        padding:  base.calculateRem(10)  base.calculateRem(300) 0  base.calculateRem(260);
+        padding:  base.calculateRem(10)  base.calculateRem(108) 0  base.calculateRem(260);
     }
 }

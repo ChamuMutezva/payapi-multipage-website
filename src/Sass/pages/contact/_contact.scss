@@ -15,9 +15,12 @@
         .contact__primary {
             padding: base.calculateRem(30) 0px base.calculateRem(30) base.calculateRem(165);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: base.calculateRem(96);
+        }
+        .hero__contact {
+            margin-top: 0;
         }
     }
 }

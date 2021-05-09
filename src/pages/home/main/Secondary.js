@@ -23,15 +23,15 @@ const Secondary = () => {
             </div>
             <div className="cards__two">
                 <Card src={PersonalFinances} alt="personal finances steps" 
-                        title="" subtitle="Personal Finances" primary={true}
+                         subtitle="Personal Finances" primary={true}
                          summary=" Consolidate financial data from multiple sources and categorize transactions up to
                          2 years of history. Analyze reports to reconcile activities in your account."/>
                 <Card src={Bankings} alt="types of banking and coverage" 
-                        title="" subtitle="Banking & Coverage" primary={true}
+                         subtitle="Banking & Coverage" primary={true}
                          summary="With our platform, you can speed up account onboarding and support ongoing payments 
                         for checking, savings, credit card, and brokerage accounts."/>
                 <Card src={Consumer} alt="banking payments systems" 
-                        title="" subtitle="Consumer Payments" primary={true}
+                         subtitle="Consumer Payments" primary={true}
                          summary="It’s easier to set up secure bank payments with us through a flow designed with the 
                          user experience in mind. Customers could instantly authenticate their account."/>
 
