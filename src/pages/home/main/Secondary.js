@@ -10,6 +10,7 @@ const Secondary = () => {
         <section className="secondary__cards">
             <div className="cards__one">
                 <Card src={CardImplementation} alt="illustration on implementation"
+                     h2Title={true}
                     title="Easy to implement"
                     summary="Our API comes with just a few lines of code. You’ll be up and running in
                              no time. We built our documentation page to integrate payments functionality
@@ -23,6 +24,7 @@ const Secondary = () => {
             </div>
             <div className="cards__two">
                 <Card src={PersonalFinances} alt="personal finances steps" 
+                        
                          subtitle="Personal Finances" primary={true}
                          summary=" Consolidate financial data from multiple sources and categorize transactions up to
                          2 years of history. Analyze reports to reconcile activities in your account."/>

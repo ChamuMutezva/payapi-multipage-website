@@ -157,6 +157,9 @@ img:not([alt]) {
   width: 32%;
   margin: auto;
 }
+.card .js__h3Title__hidden {
+  display: none;
+}
 @media screen and (min-width: 720px) {
   .card {
     padding: 0;
