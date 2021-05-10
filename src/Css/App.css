@@ -570,18 +570,40 @@ img:not([alt]) {
   list-style: none;
 }
 .header .anchor {
+  position: relative;
   text-decoration: none;
   color: #ffffff;
   font-weight: 300;
   border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 0.1rem 0.5rem;
+  /*
+  &:hover::before {
+      position: absolute;
+      content: "";
+      bottom: -5px;
+      left: 10px;
+      width: 70%;
+      height: 4px;
+      background-color: firebrick
+  }
+  */
 }
-.header .anchor:focus {
+.header .anchor:focus, .header .anchor:hover {
   outline: 2px solid #BA4270;
   font-weight: 900;
 }
 .header .anchor:hover {
   cursor: pointer;
-  font-weight: 900;
+}
+.header .cta__questions {
+  margin: 1.5rem auto 0;
+  text-align: center;
+  color: #6C8294;
+}
+.header .cta__questions .cta__summary--anchor {
+  color: #6C8294;
+  font-weight: 700;
 }
 .header .cta__summary {
   padding: 0 1.5rem;
@@ -617,6 +639,7 @@ img:not([alt]) {
     display: none;
   }
   .header .modal {
+    width: 75%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -631,12 +654,13 @@ img:not([alt]) {
     padding-top: 3.4375rem;
     padding-bottom: 3.125rem;
     justify-content: flex-start;
+    gap: 15px;
   }
   .header .nav__list::before {
     width: 0;
   }
   .header .anchor {
-    color: #36536b;
+    color: #6C8294;
   }
   .header .cta__summary {
     max-width: 573px;
@@ -676,6 +700,9 @@ img:not([alt]) {
   .header .cta__img {
     width: 95%;
   }
+  .header .cta__questions {
+    text-align: left;
+  }
 }
 
 .form {
@@ -699,15 +726,6 @@ img:not([alt]) {
 .form:focus-within {
   border: 2px solid #1d0404;
 }
-.form .form__questions {
-  margin: 1.5rem auto 0;
-  text-align: center;
-  color: #6C8294;
-}
-.form .form__anchor {
-  color: #6C8294;
-  font-weight: 700;
-}
 .form .sr-only {
   position: absolute;
   left: -10000px;
@@ -717,20 +735,20 @@ img:not([alt]) {
   overflow: hidden;
 }
 @media screen and (min-width: 720px) {
+  .form {
+    text-align: center;
+  }
   .form .email {
     margin: 0;
     display: inline-block;
   }
-  .form .form__questions {
-    text-align: center;
-  }
 }
 @media screen and (min-width: 1280px) {
+  .form {
+    text-align: left;
+  }
   .form .email {
     max-width: 295px;
-  }
-  .form .form__questions {
-    text-align: left;
   }
 }
 

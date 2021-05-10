@@ -11,21 +11,20 @@
         content: "";
         width: 100%;
         min-height: 230px;
-        // background-color: base.$bg-main-color;
         background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
         background-position: 50% 100%;
         background-repeat: no-repeat;
         opacity: 0.4;
     }
 
-    .logo--link { 
-        &:focus > img {
+    .logo--link {
+        &:focus>img {
             outline: 2px solid base.$anchor-focus;
         }
+
         img {
-           // outline: 2px solid transparent;
             padding: .4rem;
-        }       
+        }
     }
 
     nav {
@@ -52,7 +51,7 @@
     .close__menu {
         background: inherit;
         border: transparent;
-        
+
         &:focus {
             outline: 3px dotted base.$anchor-focus;
         }
@@ -67,7 +66,6 @@
         top: 0px;
         background-color: base.$bg-dark-grey;
         padding-bottom: base.calculateRem(335);
-      //  z-index: 2;
     }
 
     .nav__list {
@@ -95,24 +93,50 @@
     }
 
     .anchor {
+        position: relative;
         text-decoration: none;
         color: base.$tx-white;
         font-weight: 300;
         border: 2px solid transparent;
+        border-radius: 20px;
+        padding: .1rem .5rem;
 
-        &:focus {
+        /*
+        &:hover::before {
+            position: absolute;
+            content: "";
+            bottom: -5px;
+            left: 10px;
+            width: 70%;
+            height: 4px;
+            background-color: firebrick
+        }
+        */
+         &:focus,
+        &:hover {
             outline: 2px solid base.$anchor-focus;
             font-weight: 900;
         }
-
+        
         &:hover {
             cursor: pointer;
-            font-weight: 900;
         }
 
     }
 
     // cta section for home page
+    .cta__questions {
+        margin: base.calculateRem(24) auto 0;
+        text-align: center;
+        color: base.$tx-grey-mid;
+
+        .cta__summary--anchor {
+            color: base.$tx-grey-mid;
+            font-weight: 700;
+        }
+
+    }
+
     .cta__summary {
         padding: 0 base.calculateRem(24);
     }
@@ -156,6 +180,7 @@
         }
 
         .modal {
+            width: 75%;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -164,7 +189,7 @@
         }
 
         nav {
-            padding: base.calculateRem(40)  base.calculateRem(39) 0;
+            padding: base.calculateRem(40) base.calculateRem(39) 0;
         }
 
         .nav__list {
@@ -172,6 +197,7 @@
             padding-top: base.calculateRem(55);
             padding-bottom: base.calculateRem(50);
             justify-content: flex-start;
+            gap: 15px;
 
             &::before {
                 width: 0;
@@ -179,14 +205,15 @@
         }
 
         .anchor {
-            color: base.$tx-dark-grey;
+            color: base.$tx-grey-mid;
         }
 
-        // cta section
+
+        // cta section      
         .cta__summary {
             max-width: 573px;
             margin: auto;
-        }       
+        }
 
     }
 
@@ -194,6 +221,7 @@
 
     @include base.mQ(1280px) {
         padding-bottom: 0;
+
         &::before {
             min-height: 640px;
             background-position: 130% 140%;
@@ -224,17 +252,24 @@
         .cta__summary {
             flex: 1 1 60%;
             max-width: 100%;
-        }       
+        }
 
         .cta__img {
             width: 95%;
         }
+
+        .cta__questions {
+            text-align: left;
+        }
     }
 }
+
+//header form
 
 .form {
     position: relative;
     z-index: 1;
+
     .email {
         display: block;
         margin: 0 auto base.calculateRem(20);
@@ -255,59 +290,48 @@
         border: 2px solid rgb(29, 4, 4);
     }
 
-    .form__questions {
-        margin: base.calculateRem(24) auto 0;
-        text-align: center;
-        color: base.$tx-grey-mid;
-    }
-
-    .form__anchor {
-        color: base.$tx-grey-mid;
-        font-weight: 700;
-    }
-
     // screen reader
     .sr-only {
         @include base.screen-reader;
     }
 
     @include base.mQ(720px) {
+        text-align: center;
 
         .email {
             margin: 0;
             display: inline-block;
         }
 
-        .form__questions {
-            text-align: center;
-        }
     }
 
     @include base.mQ(1280px) {
+        text-align: left;
+
         .email {
             max-width: 295px;
         }
-        .form__questions {
-            text-align: left;
-        }
+
     }
 
 }
 
 .header__secondary {
-    &::before {             
-        background-position: -18% 115%;    
+    &::before {
+        background-position: -18% 115%;
     }
+
     @include base.mQ(720px) {
         &::before {
             background-position: -40% 100%;
             background-size: 200%;
-         }
-     }
+        }
+    }
+
     @include base.mQ(1280px) {
-       &::before {
-        background-position: -258% 143%;
-        background-size: 113%;
+        &::before {
+            background-position: -258% 143%;
+            background-size: 113%;
         }
     }
 }
