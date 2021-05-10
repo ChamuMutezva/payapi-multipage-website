@@ -46,10 +46,7 @@
         margin: auto;
     }
 
-    .js__h3Title__hidden {
-        display: none;
-    }
-
+  
     @include base.mQ(720px) {
 
         padding: 0;
