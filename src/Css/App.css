@@ -443,12 +443,12 @@ img:not([alt]) {
 }
 .form__contact .details {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .form__contact .form__inputs {
   display: block;
   width: 100%;
-  padding: 1.25rem 0 0;
+  padding: 1rem 0 0;
   border-top: none;
   border-left: none;
   border-right: none;
