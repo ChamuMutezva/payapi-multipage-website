@@ -136,6 +136,7 @@ const FormContact = () => {
           type="email"
           name="email"
           aria-required="true"
+          aria-label="eamil address"
           required
           id="email"
           value={email}
