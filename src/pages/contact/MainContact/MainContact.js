@@ -7,8 +7,10 @@ const MainContact = () => {
             <div className="contact__primary">
                 <FormContact />
                 <div className="hero hero__contact">
-                    <HeroImages heroTitle={true}
-                     title="Join the thousands of innovators already building with us"/>
+                <h2 className="hero__title hero__title__contact">
+                    Join the thousands of innovators already building with us
+                </h2>
+                    <HeroImages  />
                 </div>
             </div>
             <CallToActionShared />

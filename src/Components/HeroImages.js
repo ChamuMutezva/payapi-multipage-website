@@ -6,10 +6,10 @@ import google from "../assets/shared/desktop/google.svg"
 import nvidia from "../assets/shared/desktop/nvidia.svg"
 const HeroImages = (props) => {
     const heroImageHome = props.heroHome ? "hero__img__home" : ""
-    const heroTitle= props.heroTitle ? "hero__title__contact" : ""
+  //  const heroTitle= props.heroTitle ? "hero__title__contact" : ""
     return (
         <div className="hero__image__container">
-            <h2 className={`hero__title ${heroTitle}`}>{props.title}</h2>
+           {/* <h2 className={`hero__title ${heroTitle}`}>{props.title}</h2> */}
             <div className="hero__images">
                 <img className={`hero__tesla hero__img ${heroImageHome}`} src={tesla} alt="tesla corporation private limited" />
                 <img className={`hero__microsoft hero__img ${heroImageHome}`} src={microsoft} alt="microsoft corporation private limited" />

@@ -21,6 +21,8 @@
         }
         .hero__contact {
             margin-top: 0;
+            flex-direction: column;
+            align-items: baseline;
         }
     }
 }
