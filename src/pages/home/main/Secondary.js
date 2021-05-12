@@ -1,5 +1,5 @@
 import Card from "../../../Components/Card"
-import Card2 from "../../../Components/Card2"
+//import Card2 from "../../../Components/Card2"
 import CardImplementation from "../../../assets/home/desktop/illustration-easy-to-implement.svg"
 import PhoneUx from "../../../assets/home/desktop/illustration-simple-ui.svg"
 import PersonalFinances from "../../../assets/home/desktop/icon-personal-finances.svg"
@@ -23,15 +23,15 @@ const Secondary = () => {
                 />
             </div>
             <div className="cards__two">
-                <Card2 src={PersonalFinances} alt="personal finances steps"                        
+                <Card src={PersonalFinances} alt="personal finances steps"                        
                          subtitle="Personal Finances" primary={true}
                          summary=" Consolidate financial data from multiple sources and categorize transactions up to
                          2 years of history. Analyze reports to reconcile activities in your account."/>
-                <Card2 src={Bankings} alt="types of banking and coverage" 
+                <Card src={Bankings} alt="types of banking and coverage" 
                          subtitle="Banking & Coverage" primary={true}
                          summary="With our platform, you can speed up account onboarding and support ongoing payments 
                         for checking, savings, credit card, and brokerage accounts."/>
-                <Card2 src={Consumer} alt="banking payments systems" 
+                <Card src={Consumer} alt="banking payments systems" 
                          subtitle="Consumer Payments" primary={true}
                          summary="It’s easier to set up secure bank payments with us through a flow designed with the 
                          user experience in mind. Customers could instantly authenticate their account."/>
