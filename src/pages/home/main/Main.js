@@ -1,6 +1,6 @@
-import Hero from '../../../Components/HeroComponent'
+import Hero from '../../Components/HeroComponent'
 import Secondary from './Secondary'
-import CallToActionShared from '../../../Components/CallToActionShared'
+import CallToActionShared from '../../Components/CallToActionShared'
 const Main = () => {
     return (
         <main className="main main__home">

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Link } from "react-router-dom"
-import Logo from '../assets/shared/desktop/logo.svg'
-import Hamburger from '../assets/shared/mobile/menu.svg'
-import Close from '../assets/shared/mobile/close.svg'
+import Logo from '../../assets/shared/desktop/logo.svg'
+import Hamburger from '../../assets/shared/mobile/menu.svg'
+import Close from '../../assets/shared/mobile/close.svg'
 import Buttton from './Button'
 import NavListItems from './NavList'
 const Navigation = () => {

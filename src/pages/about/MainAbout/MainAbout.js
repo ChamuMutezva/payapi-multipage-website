@@ -1,7 +1,7 @@
-import Mission from '../../../Components/Mission'
+import Mission from '../../Components/Mission'
 import HeroAbout from './HeroAbout'
 import PrimaryAbout from './PrimaryAbout'
-import CallToActionShared from '../../../Components/CallToActionShared'
+import CallToActionShared from '../../Components/CallToActionShared'
 const MainAbout = () => {
     return (
         <main className="main main__about">

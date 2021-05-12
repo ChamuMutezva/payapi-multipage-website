@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Ticked from '../../../assets/shared/desktop/icon-check.svg'
-import CallToActionShared from '../../../Components/CallToActionShared'
+import CallToActionShared from '../../Components/CallToActionShared'
 const Main = () => {
     return (
         <main className="main main__pricing">

@@ -1,5 +1,5 @@
-import Navigation from '../../../Components/Navigation'
-import CallToAction from '../../../Components/CallToAction'
+import Navigation from '../../Components/Navigation'
+import CallToAction from '../../Components/CallToAction'
 import Phone_img from '../../../assets/home/desktop/illustration-phone-mockup.svg'
 
 const HomeHeader = () => {
