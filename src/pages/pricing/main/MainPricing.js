@@ -1,93 +1,56 @@
 import { Link } from "react-router-dom"
+//import PlanList from '../../Components/PlanList'
+import { FreePlan, BasicPlan, PremiumPlan } from '../../Components/DataList'
 import Ticked from '../../../assets/shared/desktop/icon-check.svg'
 import CallToActionShared from '../../Components/CallToActionShared'
 const Main = () => {
+
     return (
         <main className="main main__pricing">
             <div className="plans">
+
+                {/* Free plan - first plan */}
                 <div className="plan plan1">
                     <div className="sub__pricing">
                         <h2 className="pricing__title">Free Plan</h2>
                         <p className="paragraph pricing__summary">Build and test
-                                 using our core set of products with up to 100 API requests
+                        using our core set of products with up to 100 API requests
                         </p>
                         <strong className="main__pricing__cost">$0.00</strong>
                     </div>
+
                     <div className="sub__pricing sub__pricing__list">
                         <ul className="plan__list">
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="checked item" />
-                                <span className="transactions">Transactions</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="checked item" />
-                                <span className="transactions"> Auth</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="checked item" />
-                                <span className="transactions"> Identity</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="not__ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions"> Investments</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="not__ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions">Assets</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="not__ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions">Liabilities</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="not__ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions">Income</span>
-                            </li>
+                            {FreePlan.map(plan => {
+                                return <li className="plan__list__item">
+                                    <img className={plan.classname} src={Ticked} alt={plan.alt} />
+                                    <span className="transactions">{plan.action}</span>
+                                </li>
+                            })}
                         </ul>
                         <Link className="link--btn pricing__link--btn" to="/contact">Request Access </Link>
                     </div>
                 </div>
 
-                {/* plan number 2*/}
+                {/* plan number 2 basic plan*/}
 
                 <div className="plan plan2">
                     <div className="sub__pricing">
                         <h2 className="pricing__title"> Basic Plan</h2>
                         <p className="paragraph pricing__summary">Launch your project with unlimited
                         requests and no contractual minimums
-                </p>
+                        </p>
                         <strong className="main__pricing__cost">$249.00</strong>
                     </div>
                     <div className="sub__pricing sub__pricing__list">
                         <ul className="plan__list">
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="checked item" />
-                                <span className="transactions">Transactions</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="checked item" />
-                                <span className="transactions"> Auth</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="checked item" />
-                                <span className="transactions"> Identity</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions"> Investments</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions">Assets</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="not__ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions">Liabilities</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="not__ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions">Income</span>
-                            </li>
+                            {BasicPlan.map(plan => {
+                                return <li className="plan__list__item">
+                                    <img className={plan.classname} src={Ticked} alt={plan.alt} />
+                                    <span className="transactions">{plan.action}</span>
+                                </li>
+                            })}
+
                         </ul>
                         <Link className="link--btn pricing__link--btn" to="/contact">Request Access </Link>
                     </div>
@@ -104,34 +67,12 @@ const Main = () => {
                     </div>
                     <div className="sub__pricing sub__pricing__list">
                         <ul className="plan__list">
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="checked item" />
-                                <span className="transactions">Transactions</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="checked item" />
-                                <span className="transactions"> Auth</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="checked item" />
-                                <span className="transactions"> Identity</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions"> Investments</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions">Assets</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions">Liabilities</span>
-                            </li>
-                            <li className="plan__list__item">
-                                <img className="ticked" src={Ticked} alt="item not checked" />
-                                <span className="transactions">Income</span>
-                            </li>
+                            {PremiumPlan.map(plan => {
+                                return <li className="plan__list__item">
+                                    <img className={plan.classname} src={Ticked} alt={plan.alt} />
+                                    <span className="transactions">{plan.action}</span>
+                                </li>
+                            })}
                         </ul>
                         <Link className="link--btn pricing__link--btn" to="/contact">Request Access </Link>
                     </div>
