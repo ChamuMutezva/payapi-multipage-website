@@ -83,5 +83,5 @@ Users should be able to:
 - Twitter - [@ChamuMutezva](https://twitter.com/ChamuMutezva)
 
 ## Acknowledgments
-
-Frontend Mentor community leaders for providing a platform to engage with fellow learners and mentors. This makes the learning exciting.
+- Many thanks to [Steven Toben] at the Frontend Mentor Slack channel for a well informed review and providing  advice and ways on how to fix some of the React issues.
+- Frontend Mentor community leaders for providing a platform to engage with fellow learners and mentors. This makes the learning exciting.
