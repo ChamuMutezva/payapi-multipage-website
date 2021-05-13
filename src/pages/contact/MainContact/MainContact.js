@@ -13,7 +13,7 @@ const MainContact = () => {
                     <HeroImages  />
                 </div>
             </div>
-            <CallToActionShared />
+            <CallToActionShared  />
         </main>
     )
 }
