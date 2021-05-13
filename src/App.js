@@ -5,7 +5,7 @@ import HomePage from './pages/home/home_page'
 import AboutPage from './pages/about/about_page'
 import ContactPage from './pages/contact/contact_page'
 import PricingPage from './pages/pricing/pricing_page'
-
+import Footer from './pages/Components/Footer'
 //Function to scroll to top of page when navigating 
 //to a new page. at the end of a page focus of page will
 //be at the bottom of the page
@@ -39,7 +39,8 @@ function App() {
             <PricingPage />
           </Route>
         </Switch>
-      </Router>
+        <Footer />
+      </Router>      
     </div>
   );
 }

@@ -577,17 +577,6 @@ img:not([alt]) {
   border: 2px solid transparent;
   border-radius: 20px;
   padding: 0.1rem 0.5rem;
-  /*
-  &:hover::before {
-      position: absolute;
-      content: "";
-      bottom: -5px;
-      left: 10px;
-      width: 70%;
-      height: 4px;
-      background-color: firebrick
-  }
-  */
 }
 .header .anchor:focus, .header .anchor:hover {
   outline: 2px solid #BA4270;

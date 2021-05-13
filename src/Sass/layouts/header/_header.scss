@@ -101,23 +101,12 @@
         border-radius: 20px;
         padding: .1rem .5rem;
 
-        /*
-        &:hover::before {
-            position: absolute;
-            content: "";
-            bottom: -5px;
-            left: 10px;
-            width: 70%;
-            height: 4px;
-            background-color: firebrick
-        }
-        */
-         &:focus,
+        &:focus,
         &:hover {
             outline: 2px solid base.$anchor-focus;
             font-weight: 900;
         }
-        
+
         &:hover {
             cursor: pointer;
         }

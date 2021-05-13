@@ -6,7 +6,7 @@ const AboutPage = () => {
         <>
             <AboutHeader />
             <MainAbout />
-            <Footer />
+            {/*<Footer />*/}
         </>
     )
 }
