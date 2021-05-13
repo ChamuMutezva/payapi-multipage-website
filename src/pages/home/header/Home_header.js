@@ -9,9 +9,8 @@ const HomeHeader = () => {
             <div className="cta">
                 <div className="cta__container">
                     <img className="cta__img" src={Phone_img} alt="payapi in action on mobile phone" />
-                </div>
-               
-                <CallToAction />
+                </div>               
+                <CallToAction questions={true}/>
             </div>
 
         </header>

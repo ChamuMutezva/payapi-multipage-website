@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-//import PlanList from '../../Components/PlanList'
 import { FreePlan, BasicPlan, PremiumPlan } from '../../Components/DataList'
 import Ticked from '../../../assets/shared/desktop/icon-check.svg'
 import CallToActionShared from '../../Components/CallToActionShared'
@@ -22,7 +21,7 @@ const Main = () => {
                     <div className="sub__pricing sub__pricing__list">
                         <ul className="plan__list">
                             {FreePlan.map(plan => {
-                                return <li className="plan__list__item">
+                                return <li key={plan.id} className="plan__list__item">
                                     <img className={plan.classname} src={Ticked} alt={plan.alt} />
                                     <span className="transactions">{plan.action}</span>
                                 </li>
@@ -45,7 +44,7 @@ const Main = () => {
                     <div className="sub__pricing sub__pricing__list">
                         <ul className="plan__list">
                             {BasicPlan.map(plan => {
-                                return <li className="plan__list__item">
+                                return <li key={plan.id} className="plan__list__item">
                                     <img className={plan.classname} src={Ticked} alt={plan.alt} />
                                     <span className="transactions">{plan.action}</span>
                                 </li>
@@ -68,7 +67,7 @@ const Main = () => {
                     <div className="sub__pricing sub__pricing__list">
                         <ul className="plan__list">
                             {PremiumPlan.map(plan => {
-                                return <li className="plan__list__item">
+                                return <li key={plan.id} className="plan__list__item">
                                     <img className={plan.classname} src={Ticked} alt={plan.alt} />
                                     <span className="transactions">{plan.action}</span>
                                 </li>
