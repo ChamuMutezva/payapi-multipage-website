@@ -1,4 +1,14 @@
-@use '../base';
+@use "../base";
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include base.mQ(720px) {
+        flex-direction: row;
+    }
+}
 
 .cta__summary__shared {
     padding: 0 24px;

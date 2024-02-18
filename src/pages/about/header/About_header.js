@@ -1,5 +1,5 @@
-import Navigation from '../../Components/Navigation'
-import HeaderTitle from '../../Components/HeaderTitle'
+import Navigation from '../../../Components/navigation/Navigation'
+import HeaderTitle from '../../../Components/HeaderTitle'
 const AboutHeader = () => {
     return (
         <header className="header header__secondary">

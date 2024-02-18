@@ -52,6 +52,17 @@ img:not([alt]) {
     scroll-behavior: auto !important;
   }
 }
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
 .btn {
   max-width: 252px;
   width: 100%;
@@ -246,6 +257,18 @@ img:not([alt]) {
     z-index: 1;
     background-size: 150% 100%;
     background-repeat: no-repeat;
+  }
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 720px) {
+  .cta {
+    flex-direction: row;
   }
 }
 
@@ -495,10 +518,13 @@ img:not([alt]) {
 
 .header {
   position: relative;
-  padding-bottom: 2.5rem;
+  padding: 2.5rem 1.5rem;
 }
 .header::before {
   position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0;
   content: "";
   width: 100%;
   min-height: 230px;
@@ -518,7 +544,6 @@ img:not([alt]) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 1.5rem 0;
 }
 .header .menu__control {
   position: relative;
@@ -608,9 +633,6 @@ img:not([alt]) {
 .header .toggle__btn__close {
   display: block;
   position: relative;
-}
-.header .toggle__btn__open {
-  display: none;
 }
 @media screen and (min-width: 720px) {
   .header::before {
@@ -713,7 +735,7 @@ img:not([alt]) {
   outline: 3px solid #BA4270;
 }
 .form:focus-within {
-  border: 2px solid #1d0404;
+  border: 2px solid rgb(29, 4, 4);
 }
 .form .sr-only {
   position: absolute;

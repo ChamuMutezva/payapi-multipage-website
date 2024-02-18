@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 import NavListItems from "./NavList"
-import Logo from '../../assets/shared/desktop/logo.svg'
-import Facebook from '../../assets/shared/desktop/facebook.svg'
-import Twitter from '../../assets/shared/desktop/twitter.svg'
-import LinkeIn from '../../assets/shared/desktop/linkedin.svg'
+import Logo from '../assets/shared/desktop/logo.svg'
+import Facebook from '../assets/shared/desktop/facebook.svg'
+import Twitter from '../assets/shared/desktop/twitter.svg'
+import LinkeIn from '../assets/shared/desktop/linkedin.svg'
 
 const Footer = () => {
     return (

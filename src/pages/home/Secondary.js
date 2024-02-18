@@ -1,10 +1,9 @@
 import Card from "../../Components/Card"
-//import Card2 from "../../../Components/Card2"
-import CardImplementation from "../../../assets/home/desktop/illustration-easy-to-implement.svg"
-import PhoneUx from "../../../assets/home/desktop/illustration-simple-ui.svg"
-import PersonalFinances from "../../../assets/home/desktop/icon-personal-finances.svg"
-import Bankings from "../../../assets/home/desktop/icon-banking-and-coverage.svg"
-import Consumer from "../../../assets/home/desktop/icon-consumer-payments.svg"
+import CardImplementation from "../../assets/home/desktop/illustration-easy-to-implement.svg"
+import PhoneUx from "../../assets/home/desktop/illustration-simple-ui.svg"
+import PersonalFinances from "../../assets/home/desktop/icon-personal-finances.svg"
+import Bankings from "../../assets/home/desktop/icon-banking-and-coverage.svg"
+import Consumer from "../../assets/home/desktop/icon-consumer-payments.svg"
 
 const Secondary = () => {
     return (

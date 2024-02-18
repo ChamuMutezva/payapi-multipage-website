@@ -1,13 +1,17 @@
-@use '../../base';
-@use '../../components';
+@use "../../base";
+@use "../../components";
 
 //header section for all pages
 .header {
     position: relative;
-    padding-bottom: base.calculateRem(40);
+    padding: 2.5rem 1.5rem;
+    // padding-bottom: base.calculateRem(40);
 
     &::before {
         position: absolute;
+        top: 0;
+        left: 0;
+        letter-spacing: 0;
         content: "";
         width: 100%;
         min-height: 230px;
@@ -18,12 +22,12 @@
     }
 
     .logo--link {
-        &:focus>img {
+        &:focus > img {
             outline: 2px solid base.$anchor-focus;
         }
 
         img {
-            padding: .4rem;
+            padding: 0.4rem;
         }
     }
 
@@ -32,7 +36,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: base.calculateRem(40) base.calculateRem(24) 0;
+      //  padding: base.calculateRem(40) base.calculateRem(24) 0;
     }
 
     .menu__control {
@@ -99,7 +103,7 @@
         font-weight: 300;
         border: 2px solid transparent;
         border-radius: 20px;
-        padding: .1rem .5rem;
+        padding: 0.1rem 0.5rem;
 
         &:focus,
         &:hover {
@@ -110,7 +114,6 @@
         &:hover {
             cursor: pointer;
         }
-
     }
 
     // cta section for home page
@@ -123,7 +126,6 @@
             color: base.$tx-grey-mid;
             font-weight: 700;
         }
-
     }
 
     .cta__summary {
@@ -146,7 +148,7 @@
     }
 
     .toggle__btn__open {
-        display: none;
+        // display: none;
     }
 
     @include base.mQ(720px) {
@@ -197,13 +199,11 @@
             color: base.$tx-grey-mid;
         }
 
-
-        // cta section      
+        // cta section
         .cta__summary {
             max-width: 573px;
             margin: auto;
         }
-
     }
 
     //desktop
@@ -263,7 +263,7 @@
         display: block;
         margin: 0 auto base.calculateRem(20);
         max-width: 327px;
-        padding: .7rem 1rem;
+        padding: 0.7rem 1rem;
         width: 100%;
         border-radius: 24px;
         border: 3px solid transparent;
@@ -291,7 +291,6 @@
             margin: 0;
             display: inline-block;
         }
-
     }
 
     @include base.mQ(1280px) {
@@ -300,9 +299,7 @@
         .email {
             max-width: 295px;
         }
-
     }
-
 }
 
 .header__secondary {
