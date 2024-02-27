@@ -5,9 +5,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1.5rem;
+
     @include base.mQ(720px) {
         flex-direction: row;
     }
+}
+.cta__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .cta__summary__shared {

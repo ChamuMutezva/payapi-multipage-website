@@ -13,12 +13,12 @@ const HomePage = () => {
                         alt="payapi in action on mobile phone"
                     />
                 </div>
-                <CallToAction questions={true} />
+                <CallToAction title="Start building with our APIs for absolutely free." questions={true} />
             </div>
 
             <Hero />
             <Secondary />
-            <CallToAction />
+            <CallToAction title="Ready to start" />
         </main>
     );
 };

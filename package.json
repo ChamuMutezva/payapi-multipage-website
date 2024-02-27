@@ -17,8 +17,9 @@
   },
   "scripts": {
     "sass": "sass src/Sass:src/Css --watch --no-source-map",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -41,6 +42,8 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.32.11"
+    "@vitejs/plugin-react": "^4.2.1",
+    "sass": "^1.32.11",
+    "vite": "^5.1.4"
   }
 }

@@ -4,8 +4,7 @@
 //header section for all pages
 .header {
     position: relative;
-    padding: 2.5rem 1.5rem;
-    // padding-bottom: base.calculateRem(40);
+ 
 
     &::before {
         position: absolute;
@@ -36,7 +35,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-      //  padding: base.calculateRem(40) base.calculateRem(24) 0;
+       padding: base.calculateRem(40) base.calculateRem(24) 0;
     }
 
     .menu__control {

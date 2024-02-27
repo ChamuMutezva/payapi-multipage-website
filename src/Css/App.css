@@ -265,11 +265,20 @@ img:not([alt]) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem;
 }
 @media screen and (min-width: 720px) {
   .cta {
     flex-direction: row;
   }
+}
+
+.cta__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .cta__summary__shared {
@@ -398,19 +407,16 @@ img:not([alt]) {
 .header__title {
   font-size: 2rem;
   font-family: "DM Serif Display", serif;
-  line-height: 36px;
+  line-height: 1.125;
   letter-spacing: -0.25px;
   text-align: center;
   color: #36536b;
-  margin-bottom: 1.5625rem;
-  padding: 0 0.9375rem;
 }
 @media screen and (min-width: 720px) {
   .header__title {
     font-size: 3rem;
     line-height: 56px;
     letter-spacing: -0.37px;
-    margin-top: -1.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -518,7 +524,6 @@ img:not([alt]) {
 
 .header {
   position: relative;
-  padding: 2.5rem 1.5rem;
 }
 .header::before {
   position: absolute;
@@ -544,6 +549,7 @@ img:not([alt]) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2.5rem 1.5rem 0;
 }
 .header .menu__control {
   position: relative;
@@ -779,9 +785,6 @@ img:not([alt]) {
   }
 }
 
-.main {
-  margin-top: 3rem;
-}
 .main .hero__container {
   background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
   background-repeat: no-repeat;

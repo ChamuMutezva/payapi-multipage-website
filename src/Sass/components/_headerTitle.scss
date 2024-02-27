@@ -1,55 +1,51 @@
-@use '../base';
+@use "../base";
 
 .header__title {
     font-size: base.calculateRem(32);
     font-family: base.$heading-font;
-    line-height: 36px;
+    line-height: 1.125;
     letter-spacing: -0.25px;
     text-align: center;
     color: base.$tx-dark-grey;
-    margin-bottom:  base.calculateRem(25);
-    padding: 0  base.calculateRem(15);
+   // margin-bottom: base.calculateRem(25);
+    // padding: 0 base.calculateRem(15);
 
     @include base.mQ(720px) {
         font-size: base.calculateRem(48);
         line-height: 56px;
         letter-spacing: -0.37px;
-        margin-top: -(base.calculateRem(20));
+      //  margin-top: -(base.calculateRem(20));
     }
 
     @include base.mQ(1280px) {
-
         text-align: left;
         font-size: base.calculateRem(72);
         line-height: 72px;
         letter-spacing: -0.55px;
         margin-top: -(base.calculateRem(96));
         margin-bottom: base.calculateRem(54);
-
     }
 }
 
-//secondary title 
+//secondary title
 .secondary__title {
-    margin-top:  base.calculateRem(50);
+    margin-top: base.calculateRem(50);
     margin-bottom: 0;
 
     @include base.mQ(720px) {
-        margin-top:  base.calculateRem(65);
-        padding: 0  base.calculateRem(97);
-
+        margin-top: base.calculateRem(65);
+        padding: 0 base.calculateRem(97);
     }
 
-    @include base.mQ(1280px) { 
-        padding: 0  base.calculateRem(165);    
-        max-width: 1230px;  
+    @include base.mQ(1280px) {
+        padding: 0 base.calculateRem(165);
+        max-width: 1230px;
     }
-
-
 }
 
-@include base.mQ(1280px) {    
+@include base.mQ(1280px) {
     .about__title {
-        padding:  base.calculateRem(10)  base.calculateRem(108) 0  base.calculateRem(260);
+        padding: base.calculateRem(10) base.calculateRem(108) 0
+            base.calculateRem(260);
     }
 }

@@ -11,13 +11,13 @@ const Secondary = () => {
             <div className="cards__one">
                 <Card src={CardImplementation} alt="illustration on implementation"                     
                     title="Easy to implement"
-                    summary="Our API comes with just a few lines of code. You’ll be up and running in
+                    summary="Our API comes with just a few lines of code. You'll be up and running in
                              no time. We built our documentation page to integrate payments functionality
                              with ease."
                 />
                 <Card src={PhoneUx} alt=""
                     title="Simple UI & UX"
-                    summary="Our pre-built form is easy to integrate in your app or website’s checkout 
+                    summary="Our pre-built form is easy to integrate in your app or website's checkout 
                             flow and designed to optimize conversion."
                 />
             </div>
