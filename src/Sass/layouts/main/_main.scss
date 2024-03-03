@@ -1,109 +1,101 @@
-@use '../../base';
-@use '../../components';
+@use "../../base";
+@use "../../components";
 
-.main {
-   // margin-top: base.calculateRem(48);
+.hero__container {
+    background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: 50% -110%;
+    background-color: base.$bg-dark-grey;
+    padding-bottom: base.calculateRem(100);
+}
+
+.hero__images {
+    @include base.home-hero-img;
+}
+
+.hero__signup {
+    color: base.$tx-white;
+    text-align: center;
+    padding-top: base.calculateRem(5);
+    max-width: 457px;
+    margin: auto;
+}
+
+.hero__title {
+    font-size: base.calculateRem(32);
+    line-height: 36px;
+    font-family: base.$heading-font;
+    letter-spacing: -0.25px;
+}
+
+.hero__summary {
+    font-size: base.calculateRem(15);
+    line-height: 28px;
+    font-weight: 200;
+    padding: base.calculateRem(12) base.calculateRem(24);
+}
+
+.link--btn {
+    font-size: 1rem;
+    letter-spacing: -0.12px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid base.$tx-white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 24px;
+    display: block;
+    margin: 56px auto 0;
+    max-width: 130px;
+
+    &:focus,
+    &:hover {
+        outline: 2px solid base.$bg-dark-grey;
+        border: 2px solid transparent;
+        background-color: base.$tx-white;
+        color: base.$tx-dark-grey;
+    }
+}
+
+@include base.mQ(45rem) {
+    // margin-top: base.calculateRem(60);
 
     .hero__container {
-        background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
-        background-repeat: no-repeat;
-        background-repeat: no-repeat;
-        background-size: 120%;
-        background-position: 50% -110%;
-        background-color: base.$bg-dark-grey;
-        padding-bottom: base.calculateRem(100);
+        background-size: 50%;
+        background-position: -25% 130%;
+        padding-top: base.calculateRem(100);
+    }
+}
+
+@include base.mQ(80rem) {
+    //  margin-top: -(base.calculateRem(43));
+
+    .secondary__cards {
+        margin-bottom: base.calculateRem(100);
     }
 
-    .hero__images {
-        @include base.home-hero-img;
-    }
-
-    .hero__signup {
-        color: base.$tx-white;
-        text-align: center;
-        padding-top: base.calculateRem(5);
-        max-width: 457px;
-        margin: auto;
+    .hero {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: left;
+        align-items: center;
+        padding: 0 base.calculateRem(165) 0 0;
     }
 
     .hero__title {
-        font-size: base.calculateRem(32);
-        line-height: 36px;
-        font-family: base.$heading-font;
-        letter-spacing: -0.25px;
+        text-align: left;
+        font-size: base.calculateRem(48);
+        line-height: 56px;
+        letter-spacing: -0.37px;
     }
 
     .hero__summary {
-        font-size: base.calculateRem(15);
-        line-height: 28px;
-        font-weight: 200;
-        padding: base.calculateRem(12) base.calculateRem(24);
+        text-align: left;
+        padding: base.calculateRem(20) 0;
     }
 
     .link--btn {
-        font-size: 1rem;
-        letter-spacing: -0.12px;
-        color: white;
-        text-decoration: none;
-        border: 2px solid base.$tx-white;
-        padding: 0.9rem 1.8rem;
-        border-radius: 24px;
-        display: block;
-        margin: 56px auto 0;
-        max-width: 130px;
-
-        &:focus, &:hover {
-            outline: 2px solid base.$bg-dark-grey;
-            border: 2px solid transparent;
-            background-color: base.$tx-white;
-            color: base.$tx-dark-grey;
-        }
-    }
-
-    
-    
-
-    @include base.mQ(720px) {
-        margin-top: base.calculateRem(60);
-
-        .hero__container {
-            background-size: 50%;
-            background-position: -25% 130%;
-            padding-top: base.calculateRem(100);
-        }
-
-
-    }
-
-    @include base.mQ(1280px) {
-        margin-top: -(base.calculateRem(43));
-
-        .secondary__cards {
-            margin-bottom: base.calculateRem(100);
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: left;
-            align-items: center;
-            padding: 0 base.calculateRem(165) 0 0;
-        }
-
-        .hero__title {
-            text-align: left;
-            font-size: base.calculateRem(48);
-            line-height: 56px;
-            letter-spacing: -0.37px;
-        }
-
-        .hero__summary {
-            text-align: left;
-            padding: base.calculateRem(20) 0;
-        }
-
-        .link--btn {
-            margin-left: 0;
-        }
+        margin-left: 0;
     }
 }

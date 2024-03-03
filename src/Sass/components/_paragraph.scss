@@ -6,7 +6,7 @@
     color: base.$tx-grey-mid;
     margin-top: 20px;
     line-height: 28px;
-    @include base.mQ(1280px)  {
+    @include base.mQ(80rem)  {
         text-align: left;
     }
 }

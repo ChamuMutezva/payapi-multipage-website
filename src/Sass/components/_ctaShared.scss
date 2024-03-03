@@ -6,8 +6,9 @@
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
+    background-color: base.$bg-main-color;
 
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         flex-direction: row;
     }
 }
@@ -39,7 +40,7 @@
         text-align: center;
     }
 
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
         display: flex;
         align-items: baseline;
         justify-content: space-between;

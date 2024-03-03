@@ -41,13 +41,13 @@
         max-width: 100vw;
     }
 
-    .js__primaryImg {
+    .btn__formImg {
         width: 32%;
         margin: auto;
     }
 
   
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
 
         padding: 0;
 
@@ -80,7 +80,7 @@
         }
     }
 
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
         .card__summary {
             text-align: left;
         }
@@ -104,21 +104,21 @@
 }
 
 .cards__two {
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         display: flex;
         flex-wrap: nowrap;
         padding: base.calculateRem(39);
         gap: 15px;
     }
 
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
         padding: 0 base.calculateRem(165);
     }
 
 }
 
 .cards__one {
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
         .card {
             display: flex;
             justify-content: space-between;

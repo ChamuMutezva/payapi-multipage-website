@@ -6,7 +6,7 @@ const HeroAbout = () => {
         <picture className="about__img">            
             <source media="(max-width:719px)" srcSet={mobileTeam}/>
             <source media="(max-width:1279px)" srcSet={tabletTeam}/>
-            <source media="(min-width: 1280px)" srcSet={deskTeam} />
+            <source media="(min-width: 80rem)" srcSet={deskTeam} />
             <img className="hero__about__img" src={mobileTeam} alt="team members at work"/>
         </picture>
     )

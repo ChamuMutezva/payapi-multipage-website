@@ -16,7 +16,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "sass": "sass src/Sass:src/Css --watch --no-source-map",
+    "sass": "sass src/sass:src/css --watch --no-source-map",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",

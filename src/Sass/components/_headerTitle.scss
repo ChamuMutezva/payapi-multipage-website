@@ -10,14 +10,14 @@
    // margin-bottom: base.calculateRem(25);
     // padding: 0 base.calculateRem(15);
 
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         font-size: base.calculateRem(48);
         line-height: 56px;
         letter-spacing: -0.37px;
       //  margin-top: -(base.calculateRem(20));
     }
 
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
         text-align: left;
         font-size: base.calculateRem(72);
         line-height: 72px;
@@ -32,18 +32,18 @@
     margin-top: base.calculateRem(50);
     margin-bottom: 0;
 
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         margin-top: base.calculateRem(65);
         padding: 0 base.calculateRem(97);
     }
 
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
         padding: 0 base.calculateRem(165);
         max-width: 1230px;
     }
 }
 
-@include base.mQ(1280px) {
+@include base.mQ(80rem) {
     .about__title {
         padding: base.calculateRem(10) base.calculateRem(108) 0
             base.calculateRem(260);

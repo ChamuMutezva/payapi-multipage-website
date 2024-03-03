@@ -58,7 +58,7 @@
 
     }
 
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         margin-top: base.calculateRem(10);
 
         .missions {
@@ -110,7 +110,7 @@
         }
     }
 
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
 
         margin-top: 10px;
         .about__list {

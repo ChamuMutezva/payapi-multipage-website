@@ -4,7 +4,7 @@
 //header section for all pages
 .header {
     position: relative;
- 
+    background-color: base.$bg-main-color; 
 
     &::before {
         position: absolute;
@@ -12,9 +12,9 @@
         left: 0;
         letter-spacing: 0;
         content: "";
-        width: 100%;
-        min-height: 230px;
-        background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
+        width: 100vw;
+        min-height: 230px;        
+        background-image: url(/assets/shared/desktop/bg-pattern-circle.svg);
         background-position: 50% 100%;
         background-repeat: no-repeat;
         opacity: 0.4;
@@ -150,7 +150,7 @@
         // display: none;
     }
 
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         &::before {
             min-height: 340px;
             background-position: 50% 100%;
@@ -207,7 +207,7 @@
 
     //desktop
 
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
         padding-bottom: 0;
 
         &::before {
@@ -252,68 +252,20 @@
     }
 }
 
-//header form
-
-.form {
-    position: relative;
-    z-index: 1;
-
-    .email {
-        display: block;
-        margin: 0 auto base.calculateRem(20);
-        max-width: 327px;
-        padding: 0.7rem 1rem;
-        width: 100%;
-        border-radius: 24px;
-        border: 3px solid transparent;
-        font-weight: 700;
-        box-shadow: 2px 2px 3px 2px base.$tx-grey-mid;
-
-        &:focus {
-            outline: 3px solid base.$anchor-focus;
-        }
-    }
-
-    &:focus-within {
-        border: 2px solid rgb(29, 4, 4);
-    }
-
-    // screen reader
-    .sr-only {
-        @include base.screen-reader;
-    }
-
-    @include base.mQ(720px) {
-        text-align: center;
-
-        .email {
-            margin: 0;
-            display: inline-block;
-        }
-    }
-
-    @include base.mQ(1280px) {
-        text-align: left;
-
-        .email {
-            max-width: 295px;
-        }
-    }
-}
 
 .header__secondary {
     &::before {
         background-position: -18% 115%;
     }
 
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         &::before {
             background-position: -40% 100%;
             background-size: 200%;
         }
     }
 
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
         &::before {
             background-position: -258% 143%;
             background-size: 113%;

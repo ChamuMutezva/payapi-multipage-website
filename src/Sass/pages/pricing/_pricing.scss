@@ -80,7 +80,7 @@
 
     // medium , tablet devices
 
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         padding: 0 base.calculateRem(39);
 
         .plans {
@@ -92,7 +92,7 @@
     }
 
     // desktop devices
-    @include base.mQ(1280px) {
+    @include base.mQ(80rem) {
         padding: base.calculateRem(80) base.calculateRem(165) 0;
 
         .pricing__title {
