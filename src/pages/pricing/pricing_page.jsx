@@ -4,7 +4,9 @@ import MainPricing from './main/MainPricing'
 const PricingPage = () => {
     return(
         <div>
+            {/*
             <PricingHeader />
+    */}
             <MainPricing />
            
         </div>

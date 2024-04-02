@@ -3,8 +3,7 @@
 .App {
     background-color: base.$bg-very-light-grey;
     font-family: base.$main-font;
-    font-size: 15px;
-    overflow-x: hidden;
+        overflow-x: hidden;
     min-height: 100vh;  
     
     @include base.mQ(1650px) {
@@ -13,11 +12,3 @@
         margin: 0 auto;
     }
 }
-/*
-@include base.mQ(1650px) {
-    .App {
-    width: 95%;
-    max-width: 1490px;
-    margin: 0 auto;
-    }
-}*/

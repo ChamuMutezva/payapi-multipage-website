@@ -1,13 +1,15 @@
-import ContactHeader from './header/contact_header'
-import MainContact from './MainContact/MainContact'
+import ContactHeader from "./header/contact_header";
+import MainContact from "./MainContact/MainContact";
 //import Footer from '../Components/Footer'
-const ContactPage  = () => {
-    return(
+const ContactPage = () => {
+    return (
         <>
+            {/*
         <ContactHeader />
-        <MainContact />
-        {/*<Footer />*/}
+    */}
+            <MainContact />
+            {/*<Footer />*/}
         </>
-    )
-}
-export default ContactPage
+    );
+};
+export default ContactPage;

@@ -1,274 +1,103 @@
 @use "../../base";
 @use "../../components";
 
-//header section for all pages
+// header component
 .header {
     position: relative;
-    background-color: base.$bg-main-color; 
+    background-color: base.$bg-main-color;
+    padding: 2.5rem 1.5rem;
 
     &::before {
         position: absolute;
         top: 0;
         left: 0;
-        letter-spacing: 0;
         content: "";
         width: 100vw;
-        min-height: 230px;        
+        min-height: 15rem;
         background-image: url(/assets/shared/desktop/bg-pattern-circle.svg);
         background-position: 50% 100%;
         background-repeat: no-repeat;
         opacity: 0.4;
     }
+}
 
-    .logo--link {
-        &:focus > img {
-            outline: 2px solid base.$anchor-focus;
-        }
+// navigation
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        img {
-            padding: 0.4rem;
-        }
-    }
-
-    nav {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       padding: base.calculateRem(40) base.calculateRem(24) 0;
-    }
-
-    .menu__control {
-        position: relative;
-        z-index: 3;
-    }
-
-    .close__menu {
-        position: absolute;
-        top: 0;
-        left: 0;
-        // display: none;
-    }
-
-    .hamburger,
-    .close__menu {
-        background: inherit;
-        border: transparent;
-
-        &:focus {
-            outline: 3px dotted base.$anchor-focus;
-        }
-    }
-
-    .modal {
-        display: none;
-        position: absolute;
-        width: 50%;
-        width: 80%;
-        right: 0;
-        top: 0px;
-        background-color: base.$bg-dark-grey;
-        padding-bottom: base.calculateRem(335);
-    }
-
-    .nav__list {
-        padding-top: base.calculateRem(139);
-        padding-bottom: base.calculateRem(36);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-
-        &::before {
-            position: absolute;
-            content: "";
-            width: 80%;
-            height: 1px;
-            background: white;
-            top: 95px;
-            left: 50%;
-            margin-left: -40%;
-        }
-    }
-
-    li {
-        list-style: none;
-    }
-
-    .anchor {
-        position: relative;
-        text-decoration: none;
-        color: base.$tx-white;
-        font-weight: 300;
-        border: 2px solid transparent;
-        border-radius: 20px;
-        padding: 0.1rem 0.5rem;
-
-        &:focus,
-        &:hover {
-            outline: 2px solid base.$anchor-focus;
-            font-weight: 900;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    // cta section for home page
-    .cta__questions {
-        margin: base.calculateRem(24) auto 0;
-        text-align: center;
-        color: base.$tx-grey-mid;
-
-        .cta__summary--anchor {
-            color: base.$tx-grey-mid;
-            font-weight: 700;
-        }
-    }
-
-    .cta__summary {
-        padding: 0 base.calculateRem(24);
-    }
-
-    .cta__img {
-        width: 54%;
-        margin: auto;
-    }
-
-    .modal__open {
-        display: block;
-        z-index: 2;
-    }
-
-    .toggle__btn__close {
-        display: block;
-        position: relative;
-    }
-
-    .toggle__btn__open {
-        // display: none;
-    }
-
+.modal {
+    display: none;
+    position: absolute;
+    width: 80%;
+    height: 100vh;
+    right: 0;
+    top: 0px;
+    background-color: base.$bg-dark-grey;
+    z-index: 2;
     @include base.mQ(45rem) {
-        &::before {
-            min-height: 340px;
-            background-position: 50% 100%;
-            background-size: 120%;
-        }
-
-        .cta__container {
-            margin-top: base.calculateRem(25);
-        }
-
-        .cta__img {
-            width: 32%;
-        }
-
-        .menu__control {
-            display: none;
-        }
-
-        .modal {
-            width: 75%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding-bottom: base.calculateRem(10);
-            background-color: transparent;
-        }
-
-        nav {
-            padding: base.calculateRem(40) base.calculateRem(39) 0;
-        }
-
-        .nav__list {
-            flex-direction: row;
-            padding-top: base.calculateRem(55);
-            padding-bottom: base.calculateRem(50);
-            justify-content: flex-start;
-            gap: 15px;
-
-            &::before {
-                width: 0;
-            }
-        }
-
-        .anchor {
-            color: base.$tx-grey-mid;
-        }
-
-        // cta section
-        .cta__summary {
-            max-width: 573px;
-            margin: auto;
-        }
-    }
-
-    //desktop
-
-    @include base.mQ(80rem) {
-        padding-bottom: 0;
-
-        &::before {
-            min-height: 640px;
-            background-position: 130% 140%;
-            background-size: 55%;
-        }
-
-        nav {
-            padding: base.calculateRem(40) base.calculateRem(165) 0;
-        }
-
-        .modal {
-            width: 75%;
-            justify-content: space-between;
-            margin: auto;
-        }
-
-        .cta {
-            display: flex;
-            flex-direction: row-reverse;
-            padding: 0 base.calculateRem(165);
-            margin-top: 0; //base.calculateRem(32);
-        }
-
-        .cta__container {
-            flex: 1 1 40%;
-        }
-
-        .cta__summary {
-            flex: 1 1 60%;
-            max-width: 100%;
-        }
-
-        .cta__img {
-            width: 95%;
-        }
-
-        .cta__questions {
-            text-align: left;
-        }
+        position: relative;
+        height: auto;
+        display: block;
+        background-color: inherit;
     }
 }
 
-
-.header__secondary {
-    &::before {
-        background-position: -18% 115%;
+.modal__open {
+    display: block;
+    // z-index: 2;
+}
+.menu__control {
+    position: relative;
+    z-index: 10;
+    @include base.mQ(45rem) {
+        display: none;
     }
+}
+
+.nav__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 
     @include base.mQ(45rem) {
-        &::before {
-            background-position: -40% 100%;
-            background-size: 200%;
-        }
+        flex-direction: row;
     }
+}
+.hamburger {
+    border: transparent;
+}
+.toggle__btn__open {
+    background: base.$bg-dark-grey;
+}
 
-    @include base.mQ(80rem) {
-        &::before {
-            background-position: -258% 143%;
-            background-size: 113%;
-        }
+.modal::before {
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background: #979797;
+    content: "";
+    top: 6rem;
+    left: 50%;
+    margin-left: -45%;
+}
+
+.anchor {
+    font-size: 1.25rem;
+    color: base.$tx-white;
+    font-weight: 700;
+    text-decoration: none;
+    @include base.mQ(45rem) {
+        color: base.$tx-dark-grey;
     }
+}
+
+.logo__wrapper {
+    position: relative;
+    z-index: 0;
 }
