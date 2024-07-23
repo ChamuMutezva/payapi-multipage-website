@@ -4,7 +4,10 @@
 //header section for all pages
 .header {
     position: relative;
-    background-color: base.$bg-main-color; 
+    background-color: base.$bg-main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &::before {
         position: absolute;
@@ -13,141 +16,11 @@
         letter-spacing: 0;
         content: "";
         width: 100vw;
-        min-height: 230px;        
+        min-height: 230px;
         background-image: url(/assets/shared/desktop/bg-pattern-circle.svg);
         background-position: 50% 100%;
         background-repeat: no-repeat;
         opacity: 0.4;
-    }
-
-    .logo--link {
-        &:focus > img {
-            outline: 2px solid base.$anchor-focus;
-        }
-
-        img {
-            padding: 0.4rem;
-        }
-    }
-
-    nav {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       padding: base.calculateRem(40) base.calculateRem(24) 0;
-    }
-
-    .menu__control {
-        position: relative;
-        z-index: 3;
-    }
-
-    .close__menu {
-        position: absolute;
-        top: 0;
-        left: 0;
-        // display: none;
-    }
-
-    .hamburger,
-    .close__menu {
-        background: inherit;
-        border: transparent;
-
-        &:focus {
-            outline: 3px dotted base.$anchor-focus;
-        }
-    }
-
-    .modal {
-        display: none;
-        position: absolute;
-        width: 50%;
-        width: 80%;
-        right: 0;
-        top: 0px;
-        background-color: base.$bg-dark-grey;
-        padding-bottom: base.calculateRem(335);
-    }
-
-    .nav__list {
-        padding-top: base.calculateRem(139);
-        padding-bottom: base.calculateRem(36);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-
-        &::before {
-            position: absolute;
-            content: "";
-            width: 80%;
-            height: 1px;
-            background: white;
-            top: 95px;
-            left: 50%;
-            margin-left: -40%;
-        }
-    }
-
-    li {
-        list-style: none;
-    }
-
-    .anchor {
-        position: relative;
-        text-decoration: none;
-        color: base.$tx-white;
-        font-weight: 300;
-        border: 2px solid transparent;
-        border-radius: 20px;
-        padding: 0.1rem 0.5rem;
-
-        &:focus,
-        &:hover {
-            outline: 2px solid base.$anchor-focus;
-            font-weight: 900;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    // cta section for home page
-    .cta__questions {
-        margin: base.calculateRem(24) auto 0;
-        text-align: center;
-        color: base.$tx-grey-mid;
-
-        .cta__summary--anchor {
-            color: base.$tx-grey-mid;
-            font-weight: 700;
-        }
-    }
-
-    .cta__summary {
-        padding: 0 base.calculateRem(24);
-    }
-
-    .cta__img {
-        width: 54%;
-        margin: auto;
-    }
-
-    .modal__open {
-        display: block;
-        z-index: 2;
-    }
-
-    .toggle__btn__close {
-        display: block;
-        position: relative;
-    }
-
-    .toggle__btn__open {
-        // display: none;
     }
 
     @include base.mQ(45rem) {
@@ -156,56 +29,7 @@
             background-position: 50% 100%;
             background-size: 120%;
         }
-
-        .cta__container {
-            margin-top: base.calculateRem(25);
-        }
-
-        .cta__img {
-            width: 32%;
-        }
-
-        .menu__control {
-            display: none;
-        }
-
-        .modal {
-            width: 75%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding-bottom: base.calculateRem(10);
-            background-color: transparent;
-        }
-
-        nav {
-            padding: base.calculateRem(40) base.calculateRem(39) 0;
-        }
-
-        .nav__list {
-            flex-direction: row;
-            padding-top: base.calculateRem(55);
-            padding-bottom: base.calculateRem(50);
-            justify-content: flex-start;
-            gap: 15px;
-
-            &::before {
-                width: 0;
-            }
-        }
-
-        .anchor {
-            color: base.$tx-grey-mid;
-        }
-
-        // cta section
-        .cta__summary {
-            max-width: 573px;
-            margin: auto;
-        }
     }
-
-    //desktop
 
     @include base.mQ(80rem) {
         padding-bottom: 0;
@@ -215,43 +39,218 @@
             background-position: 130% 140%;
             background-size: 55%;
         }
+    }
+}
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: base.calculateRem(40) base.calculateRem(24);
+    width: 100%;
+    max-width: base.calculateRem(1110);
+    @include base.mQ(45rem) {
+        padding: base.calculateRem(40) base.calculateRem(39);
+    }
+}
 
-        nav {
-            padding: base.calculateRem(40) base.calculateRem(165) 0;
-        }
+.logo--link {
+    img {
+        padding: 0.4rem;
+    }
+}
 
-        .modal {
-            width: 75%;
-            justify-content: space-between;
-            margin: auto;
-        }
+.menu__control {
+    position: relative;
+    z-index: 3;
+    @include base.mQ(45rem) {
+        display: none;
+    }
+}
 
-        .cta {
-            display: flex;
-            flex-direction: row-reverse;
-            padding: 0 base.calculateRem(165);
-            margin-top: 0; //base.calculateRem(32);
-        }
+.close__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // display: none;
+}
 
-        .cta__container {
-            flex: 1 1 40%;
-        }
+.hamburger,
+.close__menu {
+    background: inherit;
+    border: transparent;
 
-        .cta__summary {
-            flex: 1 1 60%;
-            max-width: 100%;
-        }
+    &:focus {
+        outline: 3px dotted base.$anchor-focus;
+    }
+}
 
-        .cta__img {
-            width: 95%;
-        }
+.modal {
+    display: none;
+    position: absolute;
+    // width: 50%;
+    width: 80%;
+    right: 0;
+    top: 0px;
+    background-color: base.$bg-dark-grey;
+    padding-bottom: base.calculateRem(335);
+    padding-inline: 1rem;
+    @include base.mQ(45rem) {
+        // width: 75%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0;
+        padding-inline: 0;
+        background-color: transparent;
+    }
+    @include base.mQ(80rem) {
+        width: 75%;
+        justify-content: space-between;
+        margin: auto;
+    }
+}
 
-        .cta__questions {
-            text-align: left;
+.nav__list {
+    padding-top: base.calculateRem(139);
+    padding-bottom: base.calculateRem(36);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 80%;
+        height: 1px;
+        background: white;
+        top: 95px;
+        left: 50%;
+        margin-left: -40%;
+    }
+
+    @include base.mQ(45rem) {
+        flex-direction: row;
+        padding-top: 0;
+        padding-bottom: 0;
+        justify-content: flex-start;
+        gap: 15px;
+
+        &::before {
+            width: 0;
         }
     }
 }
 
+li {
+    list-style: none;
+}
+
+.anchor {
+    position: relative;
+    text-decoration: none;
+    color: base.$tx-white;
+    font-weight: 300;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 0.1rem 0.5rem;
+    outline: 2px solid transparent;
+
+    &:focus,
+    &:hover {
+        outline: 2px solid base.$anchor-focus;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+    @include base.mQ(45rem) {
+        color: base.$tx-grey-mid;
+    }
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: base.$bg-main-color;
+    padding-bottom: 2.5rem;
+
+    @include base.mQ(80rem) {
+        flex-direction: row;
+        flex-direction: row-reverse;
+        padding: 0 base.calculateRem(165);
+        margin-top: 0; //base.calculateRem(32);
+    }
+}
+
+.cta__container {
+    @include base.mQ(45rem) {
+        margin-top: base.calculateRem(25);
+    }
+    @include base.mQ(80rem) {
+        flex: 1 1 40%;
+    }
+}
+
+// cta section for home page
+.cta__questions {
+    margin-top: base.calculateRem(24);
+    margin-bottom: base.calculateRem(24);
+    text-align: center;
+    color: base.$tx-grey-mid;
+
+    @include base.mQ(80rem) {
+        text-align: left;
+    }
+}
+
+.cta__summary--anchor {
+    color: base.$tx-grey-mid;
+    font-weight: 700;
+}
+
+.cta__summary {
+    padding: 0 base.calculateRem(24);
+    // cta section
+    @include base.mQ(45rem) {
+        max-width: 573px;
+        margin: auto;
+    }
+
+    @include base.mQ(80rem) {
+        flex: 1 1 60%;
+        max-width: 100%;
+    }
+}
+
+.cta__img {
+    // width: 54%;
+    margin: auto;
+    @include base.mQ(45rem) {
+        //  width: 32%;
+    }
+
+    @include base.mQ(80rem) {
+        //  width: 95%;
+    }
+}
+
+.modal__open {
+    display: block;
+    z-index: 2;
+    @include base.mQ(45rem) {
+        display: flex;
+    }
+}
+
+.toggle__btn__close {
+    display: block;
+    position: relative;
+}
 
 .header__secondary {
     &::before {

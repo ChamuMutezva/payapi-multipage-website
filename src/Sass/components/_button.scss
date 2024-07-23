@@ -1,7 +1,7 @@
 @use "../base";
 
 .btn {
-    max-width: 21rem;
+    max-width: 15.75rem;
     width: 100%;
     background-color: base.$bg-btn-pink;
     color: base.$tx-white;
@@ -22,27 +22,9 @@
 
     @include base.mQ(45rem) {
         margin: 0;
-
+        max-width: 10.8rem;
         display: inline-block;
         padding: 0.7rem 1rem;
-    }
-}
-
-.btn__form {
-    //font-weight: 700;
-    //max-width: 327px;
-
-    @include base.mQ(45rem) {
-        //	max-width: 173px;
-        //	margin-left: -48px;
-        //	margin-left: -(base.calculateRem(48));
-        //	display: inline-block;
-    }
-}
-
-.js__secondary--btn {
-    @include base.mQ(80rem) {
-        margin-right: base.calculateRem(165);
     }
 }
 

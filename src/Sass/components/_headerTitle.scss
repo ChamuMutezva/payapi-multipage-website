@@ -7,8 +7,8 @@
     letter-spacing: -0.25px;
     text-align: center;
     color: base.$tx-dark-grey;
-   // margin-bottom: base.calculateRem(25);
-    // padding: 0 base.calculateRem(15);
+    margin-bottom: base.calculateRem(25);
+   
 
     @include base.mQ(45rem) {
         font-size: base.calculateRem(48);

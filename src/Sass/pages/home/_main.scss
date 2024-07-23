@@ -3,9 +3,9 @@
 .App {
     background-color: base.$bg-very-light-grey;
     font-family: base.$main-font;
-    font-size: 15px;
-    overflow-x: hidden;
-    min-height: 100vh;  
+    font-size: 1rem;
+   // overflow-x: hidden;
+   // min-height: 100vh;  
     
     @include base.mQ(1650px) {
         width: 95%;

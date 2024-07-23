@@ -5,7 +5,8 @@ import {
     Route,
     useLocation,
 } from "react-router-dom";
-import "./sass/App.scss";
+import "./Sass/App.scss";
+
 import HomePage from "./pages/home/home_page";
 import AboutPage from "./pages/about/about_page";
 import ContactPage from "./pages/contact/contact_page";

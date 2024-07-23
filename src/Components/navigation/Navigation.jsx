@@ -13,7 +13,7 @@ const Navigation = () => {
         console.log(showMenu);
     };
     return (
-        <nav aria-label="main navigation">
+        <nav aria-label="main navigation" className="nav">
             <div className="logo__wrapper">
                 <Link to="/" className="logo--link">
                     <img src={Logo} alt="well come to payapi" />

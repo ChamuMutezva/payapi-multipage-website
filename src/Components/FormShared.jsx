@@ -9,7 +9,7 @@ const SharedForm = () => {
             <label className="sr-only" htmlFor="email">Email (Required):</label>
             <input type="email"
                 className="email" name="email"                
-                id="email-temp" required aria-required="true"
+                id="email" required aria-required="true"
                 placeholder="Enter email address" />
             <Button primary={true} title="Schedule a demo" />
         </form>

@@ -1,23 +1,15 @@
 @use "../base";
 
-.cta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: base.$bg-main-color;
-
-    @include base.mQ(45rem) {
-        flex-direction: row;
-    }
-}
 .cta__summary {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: column;   
     justify-content: center;
     align-items: center;
+
+    @include base.mQ(80rem) {
+        align-items: baseline;
+     }
+
 }
 
 .cta__summary__shared {
