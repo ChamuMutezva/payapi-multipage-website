@@ -20,7 +20,7 @@
         background-image: url(/assets/shared/desktop/bg-pattern-circle.svg);
         background-position: 50% 100%;
         background-repeat: no-repeat;
-        opacity: 0.4;
+      //  opacity: 0.4;
     }
 
     @include base.mQ(45rem) {
@@ -46,7 +46,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: base.calculateRem(40) base.calculateRem(24);
+    padding: base.calculateRem(40) base.calculateRem(24) 0;
     width: 100%;
     max-width: base.calculateRem(1110);
     @include base.mQ(45rem) {
@@ -72,7 +72,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    // display: none;
+
 }
 
 .hamburger,
@@ -168,74 +168,6 @@ li {
     }
     @include base.mQ(45rem) {
         color: base.$tx-grey-mid;
-    }
-}
-
-.cta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: base.$bg-main-color;
-    padding-bottom: 2.5rem;
-
-    @include base.mQ(80rem) {
-        flex-direction: row;
-        flex-direction: row-reverse;
-        padding: 0 base.calculateRem(165);
-        margin-top: 0; //base.calculateRem(32);
-    }
-}
-
-.cta__container {
-    @include base.mQ(45rem) {
-        margin-top: base.calculateRem(25);
-    }
-    @include base.mQ(80rem) {
-        flex: 1 1 40%;
-    }
-}
-
-// cta section for home page
-.cta__questions {
-    margin-top: base.calculateRem(24);
-    margin-bottom: base.calculateRem(24);
-    text-align: center;
-    color: base.$tx-grey-mid;
-
-    @include base.mQ(80rem) {
-        text-align: left;
-    }
-}
-
-.cta__summary--anchor {
-    color: base.$tx-grey-mid;
-    font-weight: 700;
-}
-
-.cta__summary {
-    padding: 0 base.calculateRem(24);
-    // cta section
-    @include base.mQ(45rem) {
-        max-width: 573px;
-        margin: auto;
-    }
-
-    @include base.mQ(80rem) {
-        flex: 1 1 60%;
-        max-width: 100%;
-    }
-}
-
-.cta__img {
-    // width: 54%;
-    margin: auto;
-    @include base.mQ(45rem) {
-        //  width: 32%;
-    }
-
-    @include base.mQ(80rem) {
-        //  width: 95%;
     }
 }
 

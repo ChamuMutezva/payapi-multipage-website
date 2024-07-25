@@ -1,10 +1,13 @@
 @use "../base";
 
 .form {
+    // max-width: 573px;
+    margin: auto;
+    text-align: center;
     position: relative;
     z-index: 1;
     width: 100%;
-    opacity: 0.75;
+    // opacity: 0.75;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +37,10 @@
     width: 100%;
     border-radius: 24px;
     border: 1px solid transparent;
+    font-size: 1rem;
     font-weight: 700;
+    color: base.$tx-dark-grey;
+    font-family: base.$main-font;
     box-shadow: 2px 2px 3px 2px base.$tx-grey-mid;
 
     &:focus {

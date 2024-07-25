@@ -1,7 +1,7 @@
 @use "../../base";
 @use "../../components";
 
-.hero__container {
+.primary__container {
     background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
     background-repeat: no-repeat;
     background-repeat: no-repeat;
@@ -9,13 +9,14 @@
     background-position: 50% -110%;
     background-color: base.$bg-dark-grey;
     padding-bottom: base.calculateRem(100);
+    padding-top: 1rem;
 }
 
-.hero__images {
-    @include base.home-hero-img;
+.primary__images {
+    @include base.home-primary-img;
 }
 
-.hero__signup {
+.primary__signup {
     color: base.$tx-white;
     text-align: center;
     padding-top: base.calculateRem(5);
@@ -23,14 +24,14 @@
     margin: auto;
 }
 
-.hero__title {
+.primary__title {
     font-size: base.calculateRem(32);
     line-height: 36px;
     font-family: base.$heading-font;
     letter-spacing: -0.25px;
 }
 
-.hero__summary {
+.primary__summary {
     font-size: base.calculateRem(15);
     line-height: 28px;
     font-weight: 200;
@@ -61,7 +62,7 @@
 @include base.mQ(45rem) {
     // margin-top: base.calculateRem(60);
 
-    .hero__container {
+    .primary__container {
         background-size: 50%;
         background-position: -25% 130%;
         padding-top: base.calculateRem(100);
@@ -75,7 +76,7 @@
         margin-bottom: base.calculateRem(100);
     }
 
-    .hero {
+    .primary {
         display: flex;
         flex-direction: row-reverse;
         justify-content: left;
@@ -83,14 +84,14 @@
         padding: 0 base.calculateRem(165) 0 0;
     }
 
-    .hero__title {
+    .primary__title {
         text-align: left;
         font-size: base.calculateRem(48);
         line-height: 56px;
         letter-spacing: -0.37px;
     }
 
-    .hero__summary {
+    .primary__summary {
         text-align: left;
         padding: base.calculateRem(20) 0;
     }

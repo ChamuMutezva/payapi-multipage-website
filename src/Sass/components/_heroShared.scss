@@ -1,0 +1,105 @@
+@use "../base";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: base.$bg-main-color;
+    padding: 0 1.5rem 2.5rem;
+
+    @include base.mQ(80rem) {
+        flex-direction: row;
+        flex-direction: row-reverse;
+        padding: 0 base.calculateRem(165);
+        margin-top: 0;
+    }
+}
+
+.hero__title {
+    text-align: center;
+    font-size: base.calculateRem(32);
+    color: base.$tx-dark-grey;
+    line-height: 1.125;
+    font-family: base.$heading-font;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @include base.mQ(45rem) {
+        margin-top: base.calculateRem(25);
+    }
+    @include base.mQ(80rem) {
+        flex: 1 1 40%;
+    }
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero__link__text {
+    color: base.$tx-grey-mid;
+    font-size: 1rem;
+}
+
+.hero--link {
+    color: base.$tx-grey-mid;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+// hero section for home page
+.hero__questions {
+    margin-top: base.calculateRem(24);
+    margin-bottom: base.calculateRem(24);
+    text-align: center;
+    color: base.$tx-grey-mid;
+
+    @include base.mQ(80rem) {
+        text-align: left;
+    }
+}
+
+.hero__summary--anchor {
+    color: base.$tx-grey-mid;
+    font-weight: 700;
+}
+
+.hero__summary {
+    padding: 0 base.calculateRem(24);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include base.mQ(45rem) {
+        max-width: 573px;
+        margin: auto;
+    }
+
+    @include base.mQ(80rem) {
+        flex: 1 1 60%;
+        max-width: 100%;
+        align-items: baseline;
+    }
+}
+
+.hero__img {
+    margin: auto;
+    width: 62%;
+}
+
+.hero__summary__shared {
+    padding: 0 24px;
+
+    @include base.mQ(80rem) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 0 165px;
+    }
+}

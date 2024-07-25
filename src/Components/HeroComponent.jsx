@@ -2,15 +2,15 @@ import { Link } from "react-router-dom"
 import HeroImages from './HeroImages'
 const HeroComponent = () => {
     return (
-        <section className="hero__container">
-            <div className="hero">
+        <section className="primary__container">
+            <div className="primary">
                 <HeroImages heroHome={true} />
-                <div className="hero__signup">
-                    <h2 className="hero__title">
+                <div className="primary__signup">
+                    <h2 className="primary__title">
                         Who we work with
                     </h2>
 
-                    <p className="hero__summary">
+                    <p className="primary__summary">
                         Today, millions of people around the world have successfully connected
                         their accounts to apps they love using our API. We provide developers
                         with the tools they need to create easy and accessible experiences

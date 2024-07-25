@@ -20,7 +20,7 @@
         margin-bottom: base.calculateRem(42);
     }
 
-    .hero__about__img {
+    .primary__about__img {
         margin: base.calculateRem(76) auto base.calculateRem(50);
     }
 
@@ -147,7 +147,7 @@
             }
         }
 
-        .hero__image__container {
+        .primary__image__container {
             max-width: 541px;
         }
     }

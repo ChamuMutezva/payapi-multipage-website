@@ -17,8 +17,8 @@
   }
 }
 
-//hero image
-@mixin home-hero-img {
+//primary image
+@mixin home-primary-img {
   padding: 52px 24px;
   max-width: 536px;
   display: grid;
@@ -27,28 +27,28 @@
   place-items: center;
   margin: auto;
 
-  .hero__img__home {
+  .primary__img__home {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
   }
 
   @include mQ(375px) {
     place-items: flex-start;
 
-    .hero__img:nth-child(2n) {
+    .primary__img:nth-child(2n) {
       justify-self: end;
     }
   }
 
   @include mQ(498px) {
-    .hero__img:not(:first-child) {
+    .primary__img:not(:first-child) {
       justify-self: end;
     }
 
-    .hero__img:nth-child(4n) {
+    .primary__img:nth-child(4n) {
       justify-self: start;
     }
 
-    .hero__img:nth-child(5n) {
+    .primary__img:nth-child(5n) {
       justify-self: center;
     }
   }
