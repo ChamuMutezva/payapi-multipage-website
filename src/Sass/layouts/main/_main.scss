@@ -8,8 +8,21 @@
     background-size: 120%;
     background-position: 50% -110%;
     background-color: base.$bg-dark-grey;
-    padding-bottom: base.calculateRem(100);
     padding-top: 1rem;
+    @include base.mQ(45rem) {
+        background-size: 93%;
+        background-position: 0% 375%;
+    }
+
+    @include base.mQ(80rem) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5rem base.calculateRem(165);
+        background-size: 50%;
+        background-position: -25% 120%;
+    }
 }
 
 .primary__images {
@@ -22,20 +35,39 @@
     padding-top: base.calculateRem(5);
     max-width: 457px;
     margin: auto;
+    @include base.mQ(80rem) {
+        margin: 0;
+    }
 }
 
 .primary__title {
     font-size: base.calculateRem(32);
-    line-height: 36px;
+    line-height: 1.125;
     font-family: base.$heading-font;
     letter-spacing: -0.25px;
+
+    @include base.mQ(45rem) {
+        text-align: center;
+        font-size: base.calculateRem(48);
+        letter-spacing: -0.37px;
+    }
+
+    @include base.mQ(80rem) {
+        text-align: left;
+    }
 }
 
 .primary__summary {
     font-size: base.calculateRem(15);
-    line-height: 28px;
+    line-height: 1.9;
     font-weight: 200;
     padding: base.calculateRem(12) base.calculateRem(24);
+    color: #fbfcfe;
+
+    @include base.mQ(80rem) {
+        text-align: left;
+        padding: base.calculateRem(20) 0;
+    }
 }
 
 .link--btn {
@@ -46,8 +78,8 @@
     border: 2px solid base.$tx-white;
     padding: 0.9rem 1.8rem;
     border-radius: 24px;
-    display: block;
-    margin: 56px auto 0;
+    display: inline-block;
+    margin: 4rem auto;
     max-width: 130px;
 
     &:focus,
@@ -57,46 +89,7 @@
         background-color: base.$tx-white;
         color: base.$tx-dark-grey;
     }
-}
-
-@include base.mQ(45rem) {
-    // margin-top: base.calculateRem(60);
-
-    .primary__container {
-        background-size: 50%;
-        background-position: -25% 130%;
-        padding-top: base.calculateRem(100);
-    }
-}
-
-@include base.mQ(80rem) {
-    //  margin-top: -(base.calculateRem(43));
-
-    .secondary__cards {
-        margin-bottom: base.calculateRem(100);
-    }
-
-    .primary {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: left;
-        align-items: center;
-        padding: 0 base.calculateRem(165) 0 0;
-    }
-
-    .primary__title {
-        text-align: left;
-        font-size: base.calculateRem(48);
-        line-height: 56px;
-        letter-spacing: -0.37px;
-    }
-
-    .primary__summary {
-        text-align: left;
-        padding: base.calculateRem(20) 0;
-    }
-
-    .link--btn {
+    @include base.mQ(80rem) {
         margin-left: 0;
     }
 }

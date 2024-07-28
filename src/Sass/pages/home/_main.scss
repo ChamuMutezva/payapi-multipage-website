@@ -4,6 +4,7 @@
     background-color: base.$bg-main-color;
     font-family: base.$main-font;
     font-size: 1rem;
+    overflow: hidden;
 
     @include base.mQ(1650px) {
         width: 95%;

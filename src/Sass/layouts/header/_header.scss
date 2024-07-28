@@ -20,7 +20,7 @@
         background-image: url(/assets/shared/desktop/bg-pattern-circle.svg);
         background-position: 50% 100%;
         background-repeat: no-repeat;
-      //  opacity: 0.4;
+        //  opacity: 0.4;
     }
 
     @include base.mQ(45rem) {
@@ -52,6 +52,9 @@
     @include base.mQ(45rem) {
         padding: base.calculateRem(40) base.calculateRem(39);
     }
+    @include base.mQ(45rem) {
+        padding: 2.5rem 0rem;
+    }
 }
 
 .logo--link {
@@ -72,7 +75,6 @@
     position: absolute;
     top: 0;
     left: 0;
-
 }
 
 .hamburger,
@@ -107,8 +109,7 @@
     }
     @include base.mQ(80rem) {
         width: 75%;
-        justify-content: space-between;
-        margin: auto;
+        justify-content: space-between;       
     }
 }
 
@@ -152,7 +153,7 @@ li {
     position: relative;
     text-decoration: none;
     color: base.$tx-white;
-    font-weight: 300;
+    font-weight: 900;
     border: 2px solid transparent;
     border-radius: 20px;
     padding: 0.1rem 0.5rem;

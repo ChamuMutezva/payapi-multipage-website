@@ -1,115 +1,128 @@
-@use '../base';
+@use "../base";
 
 .footer {
-    background-image: url('../../assets/shared//desktop//bg-pattern-circle.svg');
+    background-image: url("../../assets/shared/desktop/bg-pattern-circle.svg");
     position: relative;
     background-repeat: no-repeat;
     background-size: 140%;
     background-position: 50% -100%;
     background-color: #1b262f;
     padding-top: 45px;
-    padding-bottom: 100px;   
-
-    .logo--link {
-
-        // background-color: turquoise;
-        &:focus>img {
-            outline: 2px solid base.$anchor-focus;
-        }
-    }
-
-    .footer__logo {
-        margin: auto;
-
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-
-        &:focus {
-            outline: 2px solid base.$anchor-focus;
-        }
-    }
-
-    // social icons - facebook, twitter , linkeid
-    .social__icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 45px;
-
-        .anchor {
-            &:focus {
-                outline: 2px solid base.$anchor-focus;
-            }
-
-            &:not(:last-child) {
-                margin-right: 25px;
-            }
-        }
-
-    }
+    padding-bottom: 100px;
 
     //medium devices control
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         background-position: -115% 20%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 30px 39px;
+    }
 
-        .logo--link {
-            flex: 1 1 25%;
-        }
-
-        .social__icons {
-            margin-top: 0;
-            flex: 1 1 30%;
-        }
-
-        .footer__nav {
-            display: flex;
-            justify-content: space-evenly;
-            flex: 1 1 75%;
-        }
+    @include base.mQ(45rem) {
+        margin-top: 2.5rem;
     }
 }
 
+.logo--link {
+    // background-color: turquoise;
+    &:focus > img {
+        outline: 2px solid base.$anchor-focus;
+    }
+    @include base.mQ(45rem) {
+        flex: 1 1 25%;
+    }
+}
 
+.footer__logo {
+    margin: auto;
+
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+        brightness(102%) contrast(102%);
+
+    &:focus {
+        outline: 2px solid base.$anchor-focus;
+    }
+    @include base.mQ(45rem) {
+        margin: 0;
+    }
+}
+
+.social__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+
+    @include base.mQ(45rem) {
+        margin-top: 0;
+        flex: 1 1 30%;
+    }
+}
+
+.anchor {
+    &:focus {
+        outline: 2px solid base.$anchor-focus;
+    }
+
+    &:not(:last-child) {
+        margin-right: 25px;
+    }
+}
 // footer list control
+.footer-nav {
+    padding-block: 1rem;
+}
 
 .js__footer__list {
     text-align: center;
     padding-top: 40px;
 
-    .nav__list__item {
-        list-style-type: none;
-
-        &:not(:last-child) {
-            margin-bottom: 25px;
-        }
-    }
-
-    .anchor {
-        color: base.$tx-white;
-        text-decoration: none;
-
-        &:focus, &:focus {
-            outline: 2px solid base.$anchor-focus;
-            font-weight: 900;
-        }
-    }
-
     //medium devices control
-    @include base.mQ(720px) {
+    @include base.mQ(45rem) {
         padding-top: 0;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex: 1 1 75%;
-
-        .nav__list__item {
-            &:not(:last-child) {
-                margin-bottom: 0;
-            }
+    }
+}
+.footer__nav {
+    @include base.mQ(45rem) {
+        display: flex;
+        justify-content: space-evenly;
+        flex: 1 1 75%;
+    }
+}
+.nav__list__item {
+    list-style-type: none;
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+    @include base.mQ(45rem) {
+        &:not(:last-child) {
+            margin-bottom: 0;
         }
     }
+}
 
+.anchor {
+    color: base.$tx-white;
+    text-decoration: none;
+
+}
+
+.nav__list__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    @include base.mQ(45rem) {
+        flex-direction: row;
+        padding-top: 0;
+        padding-bottom: 0;
+        justify-content: flex-start;
+        gap: 15px;
+    }
 }

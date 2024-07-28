@@ -12,7 +12,6 @@ const NavListItems = (props) => {
             <li className="nav__list__item">
                 <Link to="/contact" className="anchor"> contact</Link>
             </li>
-
         </ul>
     )
 }

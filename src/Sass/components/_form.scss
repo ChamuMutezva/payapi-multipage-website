@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 
     &:focus-within {
         opacity: 1;
@@ -27,6 +27,12 @@
     @include base.mQ(80rem) {
         text-align: left;
         justify-content: flex-start;
+    }
+}
+
+.form__centered {
+    @include base.mQ(80rem) {
+        justify-content: center;
     }
 }
 

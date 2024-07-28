@@ -29,7 +29,7 @@ const HomePage = () => {
                     <h1 className={`hero__title`}>
                         Start building with our APIs for absolutely free.
                     </h1>
-                    <SharedForm />
+                    <SharedForm desktopCentered={false} />
                     <p className={"hero__link__text"}>
                         Have any questions?
                         <Link to="/contact" className="hero--link">
@@ -137,19 +137,9 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <div className={`hero__summary`}>
+            <div className={`hero__summary hero__summary__secondary`}>
                 <h2 className={`header__title`}>Ready to start</h2>
-                <SharedForm />
-
-                <p className={"hero__questions"}>
-                    Have any questions?
-                    <Link
-                        to="/contact"
-                        className="anchor hero__summary--anchor"
-                    >
-                        Contact Us
-                    </Link>
-                </p>
+                <SharedForm desktopCentered={true} />
             </div>
         </main>
     );
