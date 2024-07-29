@@ -165,15 +165,41 @@ select {
   margin-top: 0.9375rem;
   padding: 0 1.5rem;
 }
-.card .card__title {
+@media screen and (min-width: 45rem) {
+  .card {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card__title {
   text-align: center;
   font-size: 2.25rem;
-  line-height: 36px;
+  line-height: 1;
   letter-spacing: -0.26px;
   font-family: "DM Serif Display", serif;
   color: #36536b;
 }
-.card .card__subtitle {
+@media screen and (min-width: 45rem) {
+  .card__title {
+    font-size: 3rem;
+    letter-spacing: -0.37px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .card__title {
+    text-align: left;
+  }
+}
+
+.card__subtitle {
   font-family: "DM Serif Display", serif;
   color: #36536b;
   text-align: center;
@@ -181,10 +207,20 @@ select {
   line-height: 25px;
   letter-spacing: -0.14px;
 }
-.card .card__description {
-  margin-top: 1.5625rem;
+
+.card__description {
+  margin: 1.5rem;
 }
-.card .card__summary {
+@media screen and (min-width: 80rem) {
+  .card__description {
+    max-width: 445px;
+    display: grid;
+    place-items: left;
+    place-content: center;
+  }
+}
+
+.card__summary {
   font-size: 0.9375rem;
   line-height: 28px;
   font-weight: 300;
@@ -192,93 +228,71 @@ select {
   text-align: center;
   color: #6C8294;
 }
-.card .card__img {
-  margin: auto;
-  max-width: 100vw;
-}
-.card .btn__formImg {
-  width: 32%;
-  margin: auto;
-}
 @media screen and (min-width: 45rem) {
-  .card {
-    padding: 0;
-  }
-  .card .cards__two {
-    padding: 0 2.4375rem;
-    display: flex;
-    margin: auto;
-  }
-  .card .card__title {
-    font-size: 3rem;
-    line-height: 36px;
-    letter-spacing: -0.37px;
-  }
-  .card .card__summary {
+  .card__summary {
     max-width: 573px;
     margin: auto;
   }
-  .card .card__img {
-    width: 70%;
-    margin-bottom: -2.6875rem;
-  }
-  .card .js__primaryImg {
-    margin-bottom: 2.6875rem;
-    width: 40%;
-  }
 }
 @media screen and (min-width: 80rem) {
-  .card .card__summary {
+  .card__summary {
     text-align: left;
-  }
-  .card .card__title {
-    text-align: left;
-  }
-  .card .card__description {
-    max-width: 445px;
-  }
-  .card .card__img {
-    width: 100%;
-  }
-  .card .js__primaryImg {
-    width: 40%;
   }
 }
 
+@media screen and (min-width: 80rem) {
+  .card__summary__primary {
+    text-align: center;
+  }
+}
+
+.card__img {
+  margin: auto;
+}
+@media screen and (min-width: 45rem) {
+  .card__img {
+    width: 70%;
+    margin-bottom: -2.6875rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .card__img {
+    width: 100%;
+  }
+}
+
+.btn__formImg {
+  width: 32%;
+  margin: auto;
+}
+
+.cards__two {
+  max-width: 69.375rem;
+}
 @media screen and (min-width: 45rem) {
   .cards__two {
     display: flex;
     flex-wrap: nowrap;
     padding: 2.4375rem;
     gap: 15px;
-  }
-}
-@media screen and (min-width: 80rem) {
-  .cards__two {
-    padding: 0 10.3125rem;
+    margin: auto;
   }
 }
 
+.cards__one {
+  max-width: 69.375rem;
+  margin: auto;
+}
+
 @media screen and (min-width: 80rem) {
-  .cards__one .card {
+  .secondary__card {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10.3125rem;
   }
-  .cards__one .card .card__img {
-    margin-left: 0;
-  }
-  .cards__one .card:last-child {
-    position: relative;
+  .secondary__card:last-child {
     flex-direction: row-reverse;
-    z-index: 2;
+    position: relative;
   }
-  .cards__one .card:last-child .card__img {
-    margin-right: 0;
-    margin-left: auto;
-  }
-  .cards__one .card:last-child::before {
+  .secondary__card:last-child::before {
     position: absolute;
     top: -10px;
     right: -75px;
@@ -289,6 +303,19 @@ select {
     z-index: 1;
     background-size: 150% 100%;
     background-repeat: no-repeat;
+    background-position: -50%;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  .js__primaryImg {
+    margin-bottom: 2.6875rem;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .js__primaryImg {
+    width: 40%;
   }
 }
 
@@ -460,6 +487,7 @@ select {
   background-color: #1b262f;
   padding-top: 45px;
   padding-bottom: 100px;
+  margin-top: 2.5rem;
 }
 @media screen and (min-width: 45rem) {
   .footer {
@@ -468,11 +496,6 @@ select {
     justify-content: space-between;
     align-items: center;
     padding: 30px 39px;
-  }
-}
-@media screen and (min-width: 45rem) {
-  .footer {
-    margin-top: 2.5rem;
   }
 }
 

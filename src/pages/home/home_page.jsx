@@ -93,44 +93,60 @@ const HomePage = () => {
 
             <section className="secondary__cards">
                 <div className="cards__one">
-                    <Card
-                        src={CardImplementation}
-                        alt="illustration on implementation"
-                        title="Easy to implement"
-                        summary="Our API comes with just a few lines of code. You'll be up and running in
-                             no time. We built our documentation page to integrate payments functionality
-                             with ease."
-                    />
-                    <Card
-                        src={PhoneUx}
-                        alt=""
-                        title="Simple UI & UX"
-                        summary="Our pre-built form is easy to integrate in your app or website's checkout 
-                            flow and designed to optimize conversion."
-                    />
+                    <div className={`secondary__card`}>
+                        <div className={`card__holder`}>
+                            <img
+                                className={`card__img`}
+                                src={CardImplementation}
+                                alt="illustration on implementation"
+                            />
+                        </div>
+                        <div className="card__description">
+                            <h2 className={"card__title"}>Easy to implement</h2>
+
+                            <p className="card__summary">
+                                Our API comes with just a few lines of code.
+                                You'll be up and running in no time. We built
+                                our documentation page to integrate payments
+                                functionality with ease.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className={`secondary__card`}>
+                        <div className={`card__holder`}>
+                            <img className={`card__img`} src={PhoneUx} alt="" />
+                        </div>
+                        <div className="card__description">
+                            <h2 className={"card__title"}>Simple UI & UX</h2>
+
+                            <p className="card__summary">
+                                Our pre-built form is easy to integrate in your
+                                app or website's checkout flow and designed to
+                                optimize conversion.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div className="cards__two">
                     <Card
                         src={PersonalFinances}
                         alt="personal finances steps"
-                        subtitle="Personal Finances"
-                        primary={true}
+                        subtitle="Personal Finances"                        
                         summary=" Consolidate financial data from multiple sources and categorize transactions up to
                          2 years of history. Analyze reports to reconcile activities in your account."
                     />
                     <Card
                         src={Bankings}
                         alt="types of banking and coverage"
-                        subtitle="Banking & Coverage"
-                        primary={true}
+                        subtitle="Banking & Coverage"                    
                         summary="With our platform, you can speed up account onboarding and support ongoing payments 
                         for checking, savings, credit card, and brokerage accounts."
                     />
                     <Card
                         src={Consumer}
                         alt="banking payments systems"
-                        subtitle="Consumer Payments"
-                        primary={true}
+                        subtitle="Consumer Payments"                        
                         summary="It's easier to set up secure bank payments with us through a flow designed with the 
                          user experience in mind. Customers could instantly authenticate their account."
                     />

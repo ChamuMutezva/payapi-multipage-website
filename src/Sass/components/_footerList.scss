@@ -9,6 +9,7 @@
     background-color: #1b262f;
     padding-top: 45px;
     padding-bottom: 100px;
+    margin-top: 2.5rem;
 
     //medium devices control
     @include base.mQ(45rem) {
@@ -18,14 +19,9 @@
         align-items: center;
         padding: 30px 39px;
     }
-
-    @include base.mQ(45rem) {
-        margin-top: 2.5rem;
-    }
 }
 
 .logo--link {
-    // background-color: turquoise;
     &:focus > img {
         outline: 2px solid base.$anchor-focus;
     }
@@ -109,7 +105,6 @@
 .anchor {
     color: base.$tx-white;
     text-decoration: none;
-
 }
 
 .nav__list__footer {
