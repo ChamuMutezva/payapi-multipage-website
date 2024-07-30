@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import Logo from "../../assets/shared/desktop/logo.svg";
 import Hamburger from "../../assets/shared/mobile/menu.svg";
 import Close from "../../assets/shared/mobile/close.svg";
@@ -10,7 +9,6 @@ const Navigation = () => {
     const [showMenu, setShowMenu] = useState(false);
     const hamburgerClick = () => {
         setShowMenu(!showMenu);
-        console.log(showMenu);
     };
     return (
         <nav aria-label="main navigation" className="nav">
@@ -39,7 +37,7 @@ const Navigation = () => {
                 id="main-menu"
                 className={`modal ${showMenu ? "modal__open" : ""}`}
             >
-                <NavListItems />
+                <NavListItems  onClick={hamburgerClick}/>
                 <Buttton secondary={true} title="Schedule a demo" />
             </div>
         </nav>

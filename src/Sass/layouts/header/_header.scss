@@ -52,8 +52,8 @@
     @include base.mQ(45rem) {
         padding: base.calculateRem(40) base.calculateRem(39);
     }
-    @include base.mQ(45rem) {
-        padding: 2.5rem 0rem;
+    @include base.mQ(80rem) {
+        padding: base.calculateRem(40) 0;
     }
 }
 

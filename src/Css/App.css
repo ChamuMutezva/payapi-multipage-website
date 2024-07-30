@@ -839,9 +839,9 @@ select {
     padding: 2.5rem 2.4375rem;
   }
 }
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 80rem) {
   .nav {
-    padding: 2.5rem 0rem;
+    padding: 2.5rem 0;
   }
 }
 
