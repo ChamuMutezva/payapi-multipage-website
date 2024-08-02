@@ -12,16 +12,16 @@ const Navigation = () => {
     };
     return (
         <nav aria-label="main navigation" className="nav">
-            <div className="logo__wrapper">
-                <Link to="/" className="logo--link">
+            <div className="logo-wrapper">
+                <Link to="/" className="logo-wrapper__link">
                     <img src={Logo} alt="well come to payapi" />
                     <span className="sr-only"> payapi home</span>
                 </Link>
             </div>
-            <div className="menu__control">
+            <div className="menu-control">
                 <button
-                    className={`hamburger ${
-                        showMenu ? "toggle__btn__open" : "toggle__btn__close"
+                    className={`menu-control__btn ${
+                        showMenu ? "menu-control__btn-open" : "menu-control__btn-close"
                     }`}
                     aria-controls="main-menu"
                     aria-expanded={!!showMenu}

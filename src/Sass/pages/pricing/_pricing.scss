@@ -1,115 +1,116 @@
-@use '../../base';
+@use "../../base";
 
 .main__pricing {
-    margin-top: -(base.calculateRem(10));
+    margin-top: 2.5rem;
     text-align: center;
     padding: 0 base.calculateRem(24);
-
-    .pricing__link--btn {
-        color: base.$tx-dark-grey;
-        border: 1px solid base.$tx-dark-grey;
-        padding: 0.7rem 1rem;
-        max-width: 168px;
-        text-align: center;
-        margin-top: base.calculateRem(20);
-
-        &:hover,
-        &:focus {
-            color: base.$tx-white;
-            background-color: base.$tx-dark-grey;
-            //border: none;
-        }
-    }
-
-    .plans {
-        margin-bottom: base.calculateRem(100);
-    }
-
-    .plan {
-        margin-bottom: base.calculateRem(32);
-    }
-
-    .plan__list {
-        //  max-width: 134px;
-        margin: base.calculateRem(24) auto;
-        border-top: 1px solid base.$tx-grey-mid;
-        border-bottom: 1px solid base.$tx-grey-mid;
-        padding-top: base.calculateRem(12);
-        padding-bottom: base.calculateRem(12);
-    }
-
-    .transactions {
-        justify-self: left;
-    }
-
-    .plan__list__item {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        max-width: 134px;
-        margin: base.calculateRem(14) auto;
-        align-items: center;
-    }
-
-    //hide image of items that are not selected
-    .not__ticked {
-        filter: opacity(0);
-    }
-
-    .pricing__title {
-        color: base.$tx-pink;
-        font-family: base.$heading-font;
-        line-height: 32px;
-        font-size: base.calculateRem(24);
-        letter-spacing: -0.18px;
-    }
-
-    .sub__pricing__list {
-        margin-top: base.calculateRem(24);
-    }
-
-    .main__pricing__cost {
-        font-size: base.calculateRem(56);
-        line-height: 56px;
-        letter-spacing: -0.43px;
-        font-family: base.$heading-font;
-        font-weight: 700;
-        color: base.$tx-dark-grey;
-        margin-top: base.calculateRem(32);
-        display: block;
-    }
-
-    // medium , tablet devices
+    max-width: 69.375rem;
+    margin: auto;
 
     @include base.mQ(45rem) {
         padding: 0 base.calculateRem(39);
-
-        .plans {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-evenly;
-            gap: 10px;
-        }
     }
+}
 
-    // desktop devices
+.pricing__link--btn {
+    color: base.$tx-dark-grey;
+    border: 1px solid base.$tx-dark-grey;
+    padding: 0.7rem 1rem;
+    max-width: 10.5rem;
+    text-align: center;
+    margin-top: base.calculateRem(20);
+
+    &:hover,
+    &:focus {
+        color: base.$tx-white;
+        background-color: base.$tx-dark-grey;
+        //border: none;
+    }
+}
+
+.plans {
+    margin-top: 2.5rem;
+    @include base.mQ(45rem) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+}
+
+.plan {
+    margin-bottom: base.calculateRem(32);
+}
+
+.plan__list {
+    //  max-width: 134px;
+    margin: base.calculateRem(24) auto;
+    border-top: 1px solid base.$tx-grey-mid;
+    border-bottom: 1px solid base.$tx-grey-mid;
+    //  padding-top: base.calculateRem(12);
+    //  padding-bottom: base.calculateRem(12);
+}
+
+.transactions {
+    justify-self: left;
+}
+
+.plan__list__item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 134px;
+    margin: base.calculateRem(14) auto;
+    align-items: center;
+
     @include base.mQ(80rem) {
-        padding: base.calculateRem(80) base.calculateRem(165) 0;
+        margin-left: 0;
+    }
+}
 
-        .pricing__title {
-            text-align: left;
-        }
+//hide image of items that are not selected
+img.not__ticked {
+    filter: opacity(0);
+}
+span.not__ticked {
+    opacity: 0.45;
+}
+.pricing__title {
+    color: base.$tx-pink;
+    font-family: base.$heading-font;
+    line-height: 32px;
+    font-size: base.calculateRem(24);
+    letter-spacing: -0.18px;
+    @include base.mQ(80rem) {
+        text-align: left;
+    }
+}
 
-        .pricing__summary {
-            text-align: left;
-        }
+.sub__pricing__list {
+    margin-top: base.calculateRem(24);
+}
 
-        .main__pricing__cost {
-            text-align: left;
-        }
+.main__pricing__cost {
+    font-size: base.calculateRem(56);
+    line-height: 1.3;
+    letter-spacing: -0.43px;
+    font-family: base.$heading-font;
+    font-weight: 700;
+    color: base.$tx-dark-grey;
+    margin-top: base.calculateRem(32);
+    display: block;
+    @include base.mQ(80rem) {
+        text-align: left;
+    }
+}
 
-        .plan__list__item {
-            margin-left: 0;
-        }
+.pricing__summary {
+    visibility: hidden;
+    margin-top: 0;
+    @include base.mQ(45rem) {
+        visibility: visible;
     }
 
+    @include base.mQ(80rem) {
+        text-align: left;
+    }
 }

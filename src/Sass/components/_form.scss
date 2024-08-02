@@ -33,6 +33,7 @@
 .form__centered {
     @include base.mQ(80rem) {
         justify-content: center;
+        flex: 1 1 50%;
     }
 }
 

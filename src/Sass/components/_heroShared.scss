@@ -101,7 +101,7 @@
     justify-content: center;
     align-items: center;
     @include base.mQ(45rem) {
-        max-width: 573px;
+        max-width: 35.8rem;
         margin: auto;
     }
 
@@ -109,12 +109,13 @@
         flex: 1 1 60%;
         max-width: 100%;
         align-items: baseline;
-        padding: 0 10.3125rem;
+        max-width: 69.375rem;
     }
 }
 
 .hero__summary__secondary {
     @include base.mQ(80rem) {
+        flex-direction: row;
         align-items: center;
     }
 }

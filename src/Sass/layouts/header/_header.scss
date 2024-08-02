@@ -19,8 +19,7 @@
         min-height: 230px;
         background-image: url(/assets/shared/desktop/bg-pattern-circle.svg);
         background-position: 50% 100%;
-        background-repeat: no-repeat;
-        //  opacity: 0.4;
+        background-repeat: no-repeat;       
     }
 
     @include base.mQ(45rem) {
@@ -57,13 +56,13 @@
     }
 }
 
-.logo--link {
+.logo-wrapper__link {
     img {
         padding: 0.4rem;
     }
 }
 
-.menu__control {
+.menu-control {
     position: relative;
     z-index: 3;
     @include base.mQ(45rem) {
@@ -77,7 +76,7 @@
     left: 0;
 }
 
-.hamburger,
+.menu-control__btn,
 .close__menu {
     background: inherit;
     border: transparent;
@@ -180,7 +179,7 @@ li {
     }
 }
 
-.toggle__btn__close {
+.menu-control__btn-close {
     display: block;
     position: relative;
 }
