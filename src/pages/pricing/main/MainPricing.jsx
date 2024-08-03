@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { FreePlan, BasicPlan, PremiumPlan } from "../../../Components/DataList";
-import Ticked from "../../../assets/shared/desktop/icon-check.svg";
+
 import SharedForm from "../../../Components/FormShared";
 
 const Main = () => {
+    const Ticked  =  "assets/shared/desktop/icon-check.svg";
     return (
         <main className="main main__pricing">
             <h1 className={`hero__title`}>Pricing</h1>
@@ -132,7 +133,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            
+
             <div className={`hero__summary hero__summary__secondary`}>
                 <h2 className={`header__title`}>Ready to start</h2>
                 <SharedForm desktopCentered={true} />

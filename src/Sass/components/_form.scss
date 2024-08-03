@@ -67,9 +67,10 @@
 }
 
 .form__contact {
-    padding: base.calculateRem(15) base.calculateRem(24);
+    // padding: base.calculateRem(15) base.calculateRem(24);
     max-width: 28rem;
     margin: auto;
+    align-items: normal;
 
     @include base.mQ(80rem) {
         padding: 0.9375rem 0;
@@ -93,16 +94,18 @@
     border-bottom: 1px solid base.$tx-dark-grey;
 
     &:focus {
-        outline: 3px solid base.$tx-dark-grey;
+        outline: 1px solid base.$tx-dark-grey;
     }
 
     &:hover {
-        outline: 3px solid base.$tx-dark-grey;
+        outline: 1px solid base.$tx-dark-grey;
     }
 }
 
 .input__label {
-    font-size: base.calculateRem(12);
+    font-size: base.calculateRem(15);
+    color: base.$tx-dark-grey;
+    opacity: 0.5;
     line-height: 25px;
     letter-spacing: -0.12px;
     position: absolute;

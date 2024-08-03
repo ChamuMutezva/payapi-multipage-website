@@ -104,9 +104,12 @@ const FormContact = () => {
 
     const { fullName, email, company, title, message, terms } = formData;
     return (
-        <form className="form form__contact" onSubmit={handleSubmit}>
+        <form className="form__contact" onSubmit={handleSubmit}>
             {/*name */}
             <div className="details">
+                <label className="input__label name__label" htmlFor="fullname">
+                    Name
+                </label>
                 <input
                     className="form__inputs"
                     type="text"
@@ -118,10 +121,6 @@ const FormContact = () => {
                     onBlur={onBlur}
                     onChange={onChange}
                 />
-                <label className="input__label name__label" htmlFor="fullname">
-                    Name
-                </label>
-                <br />
                 {errors.fullName && (
                     <small className="error__alert">{errors.fullName}</small>
                 )}
@@ -129,6 +128,9 @@ const FormContact = () => {
 
             {/*email address */}
             <div className="details">
+                <label className="input__label" htmlFor="email">
+                    Email
+                </label>
                 <input
                     className="form__inputs"
                     type="email"
@@ -141,11 +143,7 @@ const FormContact = () => {
                     onBlur={onBlur}
                     onChange={onChange}
                 />
-                <label className="input__label" htmlFor="email">
-                    Email
-                </label>
 
-                <br />
                 {errors.email && (
                     <small className="error__alert">{errors.email}</small>
                 )}
@@ -153,6 +151,12 @@ const FormContact = () => {
 
             {/*company name */}
             <div className="details">
+                <label
+                    className="input__label name__label"
+                    htmlFor="companyname"
+                >
+                    Company Name
+                </label>
                 <input
                     className="form__inputs"
                     type="text"
@@ -164,13 +168,7 @@ const FormContact = () => {
                     onBlur={onBlur}
                     onChange={onChange}
                 />
-                <label
-                    className="input__label name__label"
-                    htmlFor="companyname"
-                >
-                    Company Name
-                </label>
-                <br />
+
                 {errors.company && (
                     <small className="error__alert">{errors.company}</small>
                 )}
@@ -178,6 +176,9 @@ const FormContact = () => {
 
             {/*title*/}
             <div className="details">
+                <label className="input__label name__label" htmlFor="titled">
+                    Title
+                </label>
                 <input
                     className="form__inputs"
                     type="text"
@@ -189,11 +190,7 @@ const FormContact = () => {
                     onBlur={onBlur}
                     onChange={onChange}
                 />
-                <label className="input__label name__label" htmlFor="titled">
-                    Title
-                </label>
 
-                <br />
                 {errors.title && (
                     <small className="error__alert">{errors.title}</small>
                 )}
@@ -201,6 +198,9 @@ const FormContact = () => {
 
             {/*message*/}
             <div className="details">
+                <label className="input__label name__label" htmlFor="msg">
+                    Message
+                </label>
                 <textarea
                     name="message"
                     className="form__inputs"
@@ -214,10 +214,6 @@ const FormContact = () => {
                     rows="3"
                 ></textarea>
 
-                <label className="input__label name__label" htmlFor="msg">
-                    Message
-                </label>
-                <br />
                 {errors.message && (
                     <small className="error__alert">{errors.message}</small>
                 )}

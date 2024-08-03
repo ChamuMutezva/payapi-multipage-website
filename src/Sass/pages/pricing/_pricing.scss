@@ -1,7 +1,6 @@
 @use "../../base";
 
 .main__pricing {
-    margin-top: 2.5rem;
     text-align: center;
     padding: 0 base.calculateRem(24);
     max-width: 69.375rem;
@@ -24,7 +23,6 @@
     &:focus {
         color: base.$tx-white;
         background-color: base.$tx-dark-grey;
-        //border: none;
     }
 }
 
@@ -43,12 +41,9 @@
 }
 
 .plan__list {
-    //  max-width: 134px;
     margin: base.calculateRem(24) auto;
     border-top: 1px solid base.$tx-grey-mid;
     border-bottom: 1px solid base.$tx-grey-mid;
-    //  padding-top: base.calculateRem(12);
-    //  padding-bottom: base.calculateRem(12);
 }
 
 .transactions {

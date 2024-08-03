@@ -28,7 +28,9 @@
 .primary__images {
     @include base.home-primary-img;
 }
-
+.contact__images {
+    padding: 52px 0;
+}
 .primary__signup {
     color: base.$tx-white;
     text-align: center;

@@ -1,28 +1,42 @@
-@use '../../base';
+@use "../../base";
 
 .main__contact {
-    .primary__contact {
-        margin-top: base.calculateRem(50);
-    }
-    .primary__title__contact {
-        font-size: base.calculateRem(24);
-        line-height: 32px;
-        letter-spacing: -0.18px;
-        color: base.$tx-dark-grey;
-        padding: 0 24px;
-    }
+    text-align: center;
+    padding: 0 base.calculateRem(24);
+    max-width: 69.375rem;
+    margin: 2.5rem auto;
+}
+
+.contact__title {
+    font-size: base.calculateRem(24);
+    color: base.$tx-grey-mid;
+    max-width: 536px;
+    margin: auto;
+}
+.contact__primary {
+    margin-block: 2.5rem;
     @include base.mQ(80rem) {
-        .contact__primary {
-            padding: base.calculateRem(30) 0px base.calculateRem(30) base.calculateRem(165);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: base.calculateRem(96);
-        }
-        .primary__contact {
-            margin-top: 0;
-            flex-direction: column;
-            align-items: baseline;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: base.calculateRem(96);
+    }
+}
+
+.primary__contact {
+    margin-top: base.calculateRem(50);
+    @include base.mQ(80rem) {
+        margin-top: 0;
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
+.primary__title__contact {
+    font-size: base.calculateRem(24);
+    line-height: 32px;
+    letter-spacing: -0.18px;
+    color: base.$tx-dark-grey;
+    padding: 0 24px;
+    @include base.mQ(80rem) {
     }
 }

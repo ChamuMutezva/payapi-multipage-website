@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom";
 import SharedForm from "../../Components/FormShared";
-import tesla from "../../assets/shared/desktop/tesla.svg";
-import microsoft from "../../assets/shared/desktop/microsoft.svg";
-import hewlett from "../../assets/shared/desktop/hewlett-packard.svg";
-import oracle from "../../assets/shared/desktop/oracle.svg";
-import google from "../../assets/shared/desktop/google.svg";
-import nvidia from "../../assets/shared/desktop/nvidia.svg";
+
 import Card from "../../Components/Card";
-import CardImplementation from "../../assets/home/desktop/illustration-easy-to-implement.svg";
-import PhoneUx from "../../assets/home/desktop/illustration-simple-ui.svg";
-import PersonalFinances from "../../assets/home/desktop/icon-personal-finances.svg";
-import Bankings from "../../assets/home/desktop/icon-banking-and-coverage.svg";
-import Consumer from "../../assets/home/desktop/icon-consumer-payments.svg";
 
 const HomePage = () => {
+    const CardImplementation =
+        "assets/home/desktop/illustration-easy-to-implement.svg";
+    const PhoneUx = "assets/home/desktop/illustration-simple-ui.svg";
+    const PersonalFinances = "assets/home/desktop/icon-personal-finances.svg";
+    const Bankings = "assets/home/desktop/icon-banking-and-coverage.svg";
+    const Consumer = "assets/home/desktop/icon-consumer-payments.svg";
+    const tesla = "assets/shared/desktop/tesla.svg";
+    const microsoft = "assets/shared/desktop/microsoft.svg";
+    const hewlett = "assets/shared/desktop/hewlett-packard.svg";
+    const oracle = "assets/shared/desktop/oracle.svg";
+    const google = "assets/shared/desktop/google.svg";
+    const nvidia = "assets/shared/desktop/nvidia.svg";
     return (
         <main className="main main__home">
             <div className="hero">
@@ -132,21 +134,21 @@ const HomePage = () => {
                     <Card
                         src={PersonalFinances}
                         alt="personal finances steps"
-                        subtitle="Personal Finances"                        
+                        subtitle="Personal Finances"
                         summary=" Consolidate financial data from multiple sources and categorize transactions up to
                          2 years of history. Analyze reports to reconcile activities in your account."
                     />
                     <Card
                         src={Bankings}
                         alt="types of banking and coverage"
-                        subtitle="Banking & Coverage"                    
+                        subtitle="Banking & Coverage"
                         summary="With our platform, you can speed up account onboarding and support ongoing payments 
                         for checking, savings, credit card, and brokerage accounts."
                     />
                     <Card
                         src={Consumer}
                         alt="banking payments systems"
-                        subtitle="Consumer Payments"                        
+                        subtitle="Consumer Payments"
                         summary="It's easier to set up secure bank payments with us through a flow designed with the 
                          user experience in mind. Customers could instantly authenticate their account."
                     />

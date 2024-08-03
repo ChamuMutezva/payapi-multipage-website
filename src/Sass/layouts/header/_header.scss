@@ -152,7 +152,8 @@ li {
     position: relative;
     text-decoration: none;
     color: base.$tx-white;
-    font-weight: 900;
+    opacity: 0.75;
+    font-weight: 400;
     border: 2px solid transparent;
     border-radius: 20px;
     padding: 0.1rem 0.5rem;
@@ -160,12 +161,12 @@ li {
 
     &:focus,
     &:hover {
-        outline: 2px solid base.$anchor-focus;
+        opacity: 1;
+        cursor: pointer;
+        font-weight: 700;
     }
 
-    &:hover {
-        cursor: pointer;
-    }
+   
     @include base.mQ(45rem) {
         color: base.$tx-grey-mid;
     }

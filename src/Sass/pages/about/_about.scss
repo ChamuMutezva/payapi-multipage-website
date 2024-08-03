@@ -1,9 +1,8 @@
-@use '../../base';
+@use "../../base";
 
 .main__about {
-    margin-top: -(base.calculateRem(10));
     text-align: center;
-   
+
     .mission__title {
         color: base.$tx-dark-grey;
         font-family: base.$heading-font;
@@ -26,7 +25,6 @@
 
     .primary__about {
         padding: 0 base.calculateRem(24);
-
     }
 
     .about__list {
@@ -55,7 +53,6 @@
         letter-spacing: -0.43px;
         color: base.$tx-pink;
         font-family: base.$heading-font;
-
     }
 
     @include base.mQ(45rem) {
@@ -106,18 +103,16 @@
 
         .primary__about {
             padding: 0 base.calculateRem(39);
-
         }
     }
 
     @include base.mQ(80rem) {
-
         margin-top: 10px;
         .about__list {
             padding: 1rem base.calculateRem(165);
         }
 
-        .mission {          
+        .mission {
             padding: 0;
         }
 
@@ -127,22 +122,23 @@
         }
         .about__img {
             position: relative;
-            &::before, &::after {
+            &::before,
+            &::after {
                 content: "";
                 position: absolute;
                 width: 170px;
                 height: 170px;
-                background-image: url('../../../assets/shared/desktop/bg-pattern-circle.svg');
+                background-image: url("../../../assets/shared/desktop/bg-pattern-circle.svg");
                 background-repeat: no-repeat;
-                background-size: 290%;   
-                left: 0px;             
+                background-size: 290%;
+                left: 0px;
             }
-            &::before {                
-                top: -(base.calculateRem(170));               
+            &::before {
+                top: -(base.calculateRem(170));
                 transform: rotate(90deg);
             }
-            &::after {               
-                bottom: -(base.calculateRem(170));               
+            &::after {
+                bottom: -(base.calculateRem(170));
                 transform: rotate(180deg);
             }
         }

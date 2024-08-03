@@ -479,6 +479,11 @@ select {
   }
 }
 
+.hero__contact {
+  padding: 0;
+  margin-block: 2.5rem;
+}
+
 .footer {
   position: relative;
   background-color: #1b262f;
@@ -502,7 +507,9 @@ select {
 @media screen and (min-width: 45rem) {
   .footer::before {
     background-size: 100%;
-    background-position: 50% 0%;
+    background-position: 100% 2%;
+    left: auto;
+    right: -44%;
   }
 }
 
@@ -550,13 +557,16 @@ select {
 @media screen and (min-width: 45rem) {
   .social__icons {
     margin-top: 0;
-    flex: 1 1 30%;
+    flex: 1 1 25%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .social__icons {
+    flex: 1 1 50%;
+    justify-content: flex-end;
   }
 }
 
-.anchor:focus {
-  outline: 2px solid #BA4270;
-}
 .anchor:not(:last-child) {
   margin-right: 25px;
 }
@@ -584,6 +594,11 @@ select {
     display: flex;
     justify-content: space-evenly;
     flex: 1 1 75%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer__nav {
+    flex: 1 1 30%;
   }
 }
 
@@ -747,9 +762,9 @@ select {
 }
 
 .form__contact {
-  padding: 0.9375rem 1.5rem;
   max-width: 28rem;
   margin: auto;
+  align-items: normal;
 }
 @media screen and (min-width: 80rem) {
   .form__contact {
@@ -774,14 +789,16 @@ select {
   border-bottom: 1px solid #36536b;
 }
 .form__inputs:focus {
-  outline: 3px solid #36536b;
+  outline: 1px solid #36536b;
 }
 .form__inputs:hover {
-  outline: 3px solid #36536b;
+  outline: 1px solid #36536b;
 }
 
 .input__label {
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
+  color: #36536b;
+  opacity: 0.5;
   line-height: 25px;
   letter-spacing: -0.12px;
   position: absolute;
@@ -963,17 +980,17 @@ li {
   position: relative;
   text-decoration: none;
   color: #ffffff;
-  font-weight: 900;
+  opacity: 0.75;
+  font-weight: 400;
   border: 2px solid transparent;
   border-radius: 20px;
   padding: 0.1rem 0.5rem;
   outline: 2px solid transparent;
 }
 .anchor:focus, .anchor:hover {
-  outline: 2px solid #BA4270;
-}
-.anchor:hover {
+  opacity: 1;
   cursor: pointer;
+  font-weight: 700;
 }
 @media screen and (min-width: 45rem) {
   .anchor {
@@ -1071,6 +1088,10 @@ li {
   }
 }
 
+.contact__images {
+  padding: 52px 0;
+}
+
 .primary__signup {
   color: #ffffff;
   text-align: center;
@@ -1156,7 +1177,6 @@ li {
 }
 
 .main__pricing {
-  margin-top: 2.5rem;
   text-align: center;
   padding: 0 1.5rem;
   max-width: 69.375rem;
@@ -1277,7 +1297,6 @@ span.not__ticked {
 }
 
 .main__about {
-  margin-top: -0.625rem;
   text-align: center;
 }
 .main__about .mission__title {
@@ -1407,27 +1426,47 @@ span.not__ticked {
   }
 }
 
-.main__contact .primary__contact {
-  margin-top: 3.125rem;
+.main__contact {
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 69.375rem;
+  margin: 2.5rem auto;
 }
-.main__contact .primary__title__contact {
+
+.contact__title {
   font-size: 1.5rem;
-  line-height: 32px;
-  letter-spacing: -0.18px;
-  color: #36536b;
-  padding: 0 24px;
+  color: #6C8294;
+  max-width: 536px;
+  margin: auto;
+}
+
+.contact__primary {
+  margin-block: 2.5rem;
 }
 @media screen and (min-width: 80rem) {
-  .main__contact .contact__primary {
-    padding: 1.875rem 0px 1.875rem 10.3125rem;
+  .contact__primary {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 6rem;
   }
-  .main__contact .primary__contact {
+}
+
+.primary__contact {
+  margin-top: 3.125rem;
+}
+@media screen and (min-width: 80rem) {
+  .primary__contact {
     margin-top: 0;
     flex-direction: column;
     align-items: baseline;
   }
+}
+
+.primary__title__contact {
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  color: #36536b;
+  padding: 0 24px;
 }

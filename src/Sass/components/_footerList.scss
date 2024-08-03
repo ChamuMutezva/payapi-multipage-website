@@ -26,7 +26,9 @@
     @include base.mQ(45rem) {
         &::before {
             background-size: 100%;
-            background-position: 50% 0%;
+            background-position: 100% 2%;
+            left: auto;
+            right: -44%;
         }
     }
 }
@@ -74,15 +76,15 @@
 
     @include base.mQ(45rem) {
         margin-top: 0;
-        flex: 1 1 30%;
+        flex: 1 1 25%;
+    }
+    @include base.mQ(80rem) {
+        flex: 1 1 50%;
+        justify-content: flex-end;
     }
 }
 
 .anchor {
-    &:focus {
-        outline: 2px solid base.$anchor-focus;
-    }
-
     &:not(:last-child) {
         margin-right: 25px;
     }
@@ -110,6 +112,9 @@
         display: flex;
         justify-content: space-evenly;
         flex: 1 1 75%;
+    }
+    @include base.mQ(80rem) {
+        flex: 1 1 30%;
     }
 }
 .nav__list__item {
