@@ -46,12 +46,14 @@
 }
 
 .logo-wrapper__link {
+    border: none;
     &:focus > img {
-        outline: 2px solid base.$anchor-focus;
+        outline: 2px dotted base.$anchor-focus;
     }
     @include base.mQ(45rem) {
         flex: 1 1 25%;
     }
+    
 }
 
 .footer__logo {

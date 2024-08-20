@@ -125,10 +125,10 @@ select {
   font-family: "Public Sans", sans-serif;
 }
 .btn:focus {
-  outline: 2px solid black;
+  outline: 2px dotted black;
 }
 .btn:hover {
-  outline: 2px solid black;
+  outline: 2px dotted black;
   cursor: pointer;
 }
 @media screen and (min-width: 45rem) {
@@ -526,8 +526,11 @@ select {
   }
 }
 
+.logo-wrapper__link {
+  border: none;
+}
 .logo-wrapper__link:focus > img {
-  outline: 2px solid #BA4270;
+  outline: 2px dotted #BA4270;
 }
 @media screen and (min-width: 45rem) {
   .logo-wrapper__link {
@@ -883,6 +886,10 @@ select {
   }
 }
 
+.logo-wrapper__link {
+  outline: none;
+  border: none;
+}
 .logo-wrapper__link img {
   padding: 0.4rem;
 }
@@ -981,16 +988,15 @@ li {
   text-decoration: none;
   color: #ffffff;
   opacity: 0.75;
-  font-weight: 400;
+  font-weight: 700;
   border: 2px solid transparent;
-  border-radius: 20px;
   padding: 0.1rem 0.5rem;
   outline: 2px solid transparent;
 }
 .anchor:focus, .anchor:hover {
   opacity: 1;
   cursor: pointer;
-  font-weight: 700;
+  outline: 2px dotted #BA4270;
 }
 @media screen and (min-width: 45rem) {
   .anchor {
@@ -1001,10 +1007,12 @@ li {
 .modal__open {
   display: block;
   z-index: 2;
+  position: fixed;
 }
 @media screen and (min-width: 45rem) {
   .modal__open {
     display: flex;
+    position: relative;
   }
 }
 
